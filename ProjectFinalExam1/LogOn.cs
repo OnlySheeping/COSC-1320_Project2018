@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Form1 : Form
+    public partial class LogOn : Form
     {
-        public Form1()
+        public LogOn()
         {
             InitializeComponent();
         }
@@ -25,6 +25,16 @@ namespace ProjectFinalExam1
         private void Exit(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

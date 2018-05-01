@@ -10,20 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Form3 : Form
+    public partial class AdminMenu : Form
     {
-        //Test commit.
-        public Form3()
+        public AdminMenu()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
