@@ -12,11 +12,7 @@ namespace EventSystem
     public abstract class User
     {
         SqlConnection connection = new SqlConnection();
-        //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-        connection.ConnectionString = "Server=cis1.actx.edu;Database=project;User Id=project;Password = project1;";
-            connection.Open();
-            Console.WriteLine(connection.ServerVersion);
-            Console.ReadKey();
+
         private string firstName
         {
             get
@@ -115,6 +111,13 @@ namespace EventSystem
 
         public bool Login(string userName, string password)
         {
+            
+            //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            connection.Open();
+            Console.WriteLine(connection.ServerVersion);
+            Console.ReadKey();
+
             bool didLoginWork = false;
 
             using (SqlCommand readUsernameRecords = connection.CreateCommand())
