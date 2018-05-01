@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace EventSystem
 {
     public abstract class User
     {
+        SqlConnection connection = new SqlConnection();
+
         private string firstName
         {
             get
@@ -103,9 +109,78 @@ namespace EventSystem
             }
         }
 
-        public void Login()
+        public bool Login(string userName, string password)
         {
-            throw new System.NotImplementedException();
+            
+            //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            connection.Open();
+            Console.WriteLine(connection.ServerVersion);
+            Console.ReadKey();
+
+            bool didLoginWork = false;
+
+            using (SqlCommand readUsernameRecords = connection.CreateCommand())
+            {
+
+                readUsernameRecords.CommandText = "select Username ";
+                readUsernameRecords.CommandText += "from db_owner.User ";
+                readUsernameRecords.CommandText += "where 'Username' = " + userName;
+                readUsernameRecords.CommandText += "and 'Password' = " + password;
+
+                using (SqlDataReader reader = readUsernameRecords.ExecuteReader())
+                {
+                    int userCount = 0;
+
+                    while(reader.HasRows && reader.Read())
+                    {
+                        userCount++;
+                        if(userCount > 1)
+                        {
+                            //BIG Error
+                            didLoginWork = false;
+                            Console.WriteLine("Contact network administrator");
+                            return didLoginWork;
+                        }
+                        else if(userCount == 1)
+                        {
+                            // Put your success logic here.
+                            didLoginWork = true;
+
+                            // Login a success. Carry on.
+
+                            bool roleID = true;
+
+                            readUsernameRecords.CommandText = "select RoleID ";
+                            readUsernameRecords.CommandText += "from db_owner.Role ";
+                            readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
+
+
+                                if (roleID == true)
+                                {
+                                     //Open ParticipantMenu form
+                                
+                                }
+                                else
+                                {
+                                    //Open EventAdmin form
+                                }
+
+                                return didLoginWork;
+
+                        else
+                        {
+                            didLoginWork = false;
+                            Console.WriteLine("There was an issue with your username or password.");
+                            return didLoginWork;
+                        }
+                    }
+
+                }
+            }
+            return didLoginWork;
+            //Console.ReadKey();
+
         }
 
         public void ShowRegisteredEvents()
