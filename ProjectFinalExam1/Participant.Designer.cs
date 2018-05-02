@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.tbxPassword = new System.Windows.Forms.TextBox();
-            this.lblParticipantFirstName = new System.Windows.Forms.Label();
-            this.tbxParticipantFirstName = new System.Windows.Forms.TextBox();
-            this.lblParticipantLastName = new System.Windows.Forms.Label();
-            this.tbxLastName = new System.Windows.Forms.TextBox();
-            this.lblParticipantAge = new System.Windows.Forms.Label();
-            this.tbxParticipantAge = new System.Windows.Forms.TextBox();
-            this.btnAddParticipant = new System.Windows.Forms.Button();
+            this.lblUsersPassword = new System.Windows.Forms.Label();
+            this.tbxUsersPassword = new System.Windows.Forms.TextBox();
+            this.lblUsersFirstName = new System.Windows.Forms.Label();
+            this.tbxUsersFirstName = new System.Windows.Forms.TextBox();
+            this.lblUsersLastName = new System.Windows.Forms.Label();
+            this.tbxUsersLastName = new System.Windows.Forms.TextBox();
+            this.lblUsersAge = new System.Windows.Forms.Label();
+            this.tbxUsersAge = new System.Windows.Forms.TextBox();
+            this.btnAddUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,96 +49,96 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Participant Form ";
             // 
-            // lblPassword
+            // lblUsersPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(17, 61);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password";
-            this.lblPassword.Click += new System.EventHandler(this.label2_Click);
+            this.lblUsersPassword.AutoSize = true;
+            this.lblUsersPassword.Location = new System.Drawing.Point(17, 61);
+            this.lblUsersPassword.Name = "lblUsersPassword";
+            this.lblUsersPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblUsersPassword.TabIndex = 1;
+            this.lblUsersPassword.Text = "Password";
+            this.lblUsersPassword.Click += new System.EventHandler(this.label2_Click);
             // 
-            // tbxPassword
+            // tbxUsersPassword
             // 
-            this.tbxPassword.Location = new System.Drawing.Point(76, 61);
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(180, 20);
-            this.tbxPassword.TabIndex = 2;
-            this.tbxPassword.Visible = false;
+            this.tbxUsersPassword.Location = new System.Drawing.Point(76, 61);
+            this.tbxUsersPassword.Name = "tbxUsersPassword";
+            this.tbxUsersPassword.Size = new System.Drawing.Size(180, 20);
+            this.tbxUsersPassword.TabIndex = 2;
+            this.tbxUsersPassword.Visible = false;
             // 
-            // lblParticipantFirstName
+            // lblUsersFirstName
             // 
-            this.lblParticipantFirstName.AutoSize = true;
-            this.lblParticipantFirstName.Location = new System.Drawing.Point(12, 103);
-            this.lblParticipantFirstName.Name = "lblParticipantFirstName";
-            this.lblParticipantFirstName.Size = new System.Drawing.Size(57, 13);
-            this.lblParticipantFirstName.TabIndex = 3;
-            this.lblParticipantFirstName.Text = "First Name";
+            this.lblUsersFirstName.AutoSize = true;
+            this.lblUsersFirstName.Location = new System.Drawing.Point(12, 103);
+            this.lblUsersFirstName.Name = "lblUsersFirstName";
+            this.lblUsersFirstName.Size = new System.Drawing.Size(57, 13);
+            this.lblUsersFirstName.TabIndex = 3;
+            this.lblUsersFirstName.Text = "First Name";
             // 
-            // tbxParticipantFirstName
+            // tbxUsersFirstName
             // 
-            this.tbxParticipantFirstName.Location = new System.Drawing.Point(75, 100);
-            this.tbxParticipantFirstName.Name = "tbxParticipantFirstName";
-            this.tbxParticipantFirstName.Size = new System.Drawing.Size(177, 20);
-            this.tbxParticipantFirstName.TabIndex = 4;
-            this.tbxParticipantFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbxUsersFirstName.Location = new System.Drawing.Point(75, 100);
+            this.tbxUsersFirstName.Name = "tbxUsersFirstName";
+            this.tbxUsersFirstName.Size = new System.Drawing.Size(177, 20);
+            this.tbxUsersFirstName.TabIndex = 4;
+            this.tbxUsersFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // lblParticipantLastName
+            // lblUsersLastName
             // 
-            this.lblParticipantLastName.AutoSize = true;
-            this.lblParticipantLastName.Location = new System.Drawing.Point(12, 143);
-            this.lblParticipantLastName.Name = "lblParticipantLastName";
-            this.lblParticipantLastName.Size = new System.Drawing.Size(58, 13);
-            this.lblParticipantLastName.TabIndex = 5;
-            this.lblParticipantLastName.Text = "Last Name";
+            this.lblUsersLastName.AutoSize = true;
+            this.lblUsersLastName.Location = new System.Drawing.Point(12, 143);
+            this.lblUsersLastName.Name = "lblUsersLastName";
+            this.lblUsersLastName.Size = new System.Drawing.Size(58, 13);
+            this.lblUsersLastName.TabIndex = 5;
+            this.lblUsersLastName.Text = "Last Name";
             // 
-            // tbxLastName
+            // tbxUsersLastName
             // 
-            this.tbxLastName.Location = new System.Drawing.Point(76, 143);
-            this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(175, 20);
-            this.tbxLastName.TabIndex = 6;
+            this.tbxUsersLastName.Location = new System.Drawing.Point(76, 143);
+            this.tbxUsersLastName.Name = "tbxUsersLastName";
+            this.tbxUsersLastName.Size = new System.Drawing.Size(175, 20);
+            this.tbxUsersLastName.TabIndex = 6;
             // 
-            // lblParticipantAge
+            // lblUsersAge
             // 
-            this.lblParticipantAge.AutoSize = true;
-            this.lblParticipantAge.Location = new System.Drawing.Point(43, 190);
-            this.lblParticipantAge.Name = "lblParticipantAge";
-            this.lblParticipantAge.Size = new System.Drawing.Size(26, 13);
-            this.lblParticipantAge.TabIndex = 7;
-            this.lblParticipantAge.Text = "Age";
+            this.lblUsersAge.AutoSize = true;
+            this.lblUsersAge.Location = new System.Drawing.Point(43, 190);
+            this.lblUsersAge.Name = "lblUsersAge";
+            this.lblUsersAge.Size = new System.Drawing.Size(26, 13);
+            this.lblUsersAge.TabIndex = 7;
+            this.lblUsersAge.Text = "Age";
             // 
-            // tbxParticipantAge
+            // tbxUsersAge
             // 
-            this.tbxParticipantAge.Location = new System.Drawing.Point(76, 187);
-            this.tbxParticipantAge.Name = "tbxParticipantAge";
-            this.tbxParticipantAge.Size = new System.Drawing.Size(100, 20);
-            this.tbxParticipantAge.TabIndex = 8;
+            this.tbxUsersAge.Location = new System.Drawing.Point(76, 187);
+            this.tbxUsersAge.Name = "tbxUsersAge";
+            this.tbxUsersAge.Size = new System.Drawing.Size(100, 20);
+            this.tbxUsersAge.TabIndex = 8;
             // 
-            // btnAddParticipant
+            // btnAddUsers
             // 
-            this.btnAddParticipant.Location = new System.Drawing.Point(125, 237);
-            this.btnAddParticipant.Name = "btnAddParticipant";
-            this.btnAddParticipant.Size = new System.Drawing.Size(75, 23);
-            this.btnAddParticipant.TabIndex = 9;
-            this.btnAddParticipant.Text = "Add";
-            this.btnAddParticipant.UseVisualStyleBackColor = true;
+            this.btnAddUsers.Location = new System.Drawing.Point(125, 237);
+            this.btnAddUsers.Name = "btnAddUsers";
+            this.btnAddUsers.Size = new System.Drawing.Size(75, 23);
+            this.btnAddUsers.TabIndex = 9;
+            this.btnAddUsers.Text = "Add";
+            this.btnAddUsers.UseVisualStyleBackColor = true;
             // 
             // Participant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 309);
-            this.Controls.Add(this.btnAddParticipant);
-            this.Controls.Add(this.tbxParticipantAge);
-            this.Controls.Add(this.lblParticipantAge);
-            this.Controls.Add(this.tbxLastName);
-            this.Controls.Add(this.lblParticipantLastName);
-            this.Controls.Add(this.tbxParticipantFirstName);
-            this.Controls.Add(this.lblParticipantFirstName);
-            this.Controls.Add(this.tbxPassword);
-            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.btnAddUsers);
+            this.Controls.Add(this.tbxUsersAge);
+            this.Controls.Add(this.lblUsersAge);
+            this.Controls.Add(this.tbxUsersLastName);
+            this.Controls.Add(this.lblUsersLastName);
+            this.Controls.Add(this.tbxUsersFirstName);
+            this.Controls.Add(this.lblUsersFirstName);
+            this.Controls.Add(this.tbxUsersPassword);
+            this.Controls.Add(this.lblUsersPassword);
             this.Controls.Add(this.label1);
             this.Name = "Participant";
             this.Text = "Participant";
@@ -150,14 +150,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox tbxPassword;
-        private System.Windows.Forms.Label lblParticipantFirstName;
-        private System.Windows.Forms.TextBox tbxParticipantFirstName;
-        private System.Windows.Forms.Label lblParticipantLastName;
-        private System.Windows.Forms.TextBox tbxLastName;
-        private System.Windows.Forms.Label lblParticipantAge;
-        private System.Windows.Forms.TextBox tbxParticipantAge;
-        private System.Windows.Forms.Button btnAddParticipant;
+        private System.Windows.Forms.Label lblUsersPassword;
+        private System.Windows.Forms.TextBox tbxUsersPassword;
+        private System.Windows.Forms.Label lblUsersFirstName;
+        private System.Windows.Forms.TextBox tbxUsersFirstName;
+        private System.Windows.Forms.Label lblUsersLastName;
+        private System.Windows.Forms.TextBox tbxUsersLastName;
+        private System.Windows.Forms.Label lblUsersAge;
+        private System.Windows.Forms.TextBox tbxUsersAge;
+        private System.Windows.Forms.Button btnAddUsers;
     }
 }
