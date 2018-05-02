@@ -94,6 +94,12 @@
     <Compile Include="MyEvents.Designer.cs">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Participant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Participant.Designer.cs">
+      <DependentUpon>Participant.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParticipantMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="MyEvents.resx">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Participant.resx">
+      <DependentUpon>Participant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParticipantMenu.resx">
       <DependentUpon>ParticipantMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +148,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
