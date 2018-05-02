@@ -37,12 +37,13 @@
             this.tbxLastName = new System.Windows.Forms.TextBox();
             this.lblParticipantAge = new System.Windows.Forms.Label();
             this.tbxParticipantAge = new System.Windows.Forms.TextBox();
+            this.btnAddParticipant = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 9);
+            this.label1.Location = new System.Drawing.Point(105, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 0;
@@ -51,7 +52,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(115, 61);
+            this.lblPassword.Location = new System.Drawing.Point(17, 61);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Location = new System.Drawing.Point(192, 58);
+            this.tbxPassword.Location = new System.Drawing.Point(76, 61);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(180, 20);
             this.tbxPassword.TabIndex = 2;
@@ -115,11 +116,21 @@
             this.tbxParticipantAge.Size = new System.Drawing.Size(100, 20);
             this.tbxParticipantAge.TabIndex = 8;
             // 
+            // btnAddParticipant
+            // 
+            this.btnAddParticipant.Location = new System.Drawing.Point(125, 237);
+            this.btnAddParticipant.Name = "btnAddParticipant";
+            this.btnAddParticipant.Size = new System.Drawing.Size(75, 23);
+            this.btnAddParticipant.TabIndex = 9;
+            this.btnAddParticipant.Text = "Add";
+            this.btnAddParticipant.UseVisualStyleBackColor = true;
+            // 
             // Participant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 309);
+            this.ClientSize = new System.Drawing.Size(329, 309);
+            this.Controls.Add(this.btnAddParticipant);
             this.Controls.Add(this.tbxParticipantAge);
             this.Controls.Add(this.lblParticipantAge);
             this.Controls.Add(this.tbxLastName);
@@ -147,5 +158,6 @@
         private System.Windows.Forms.TextBox tbxLastName;
         private System.Windows.Forms.Label lblParticipantAge;
         private System.Windows.Forms.TextBox tbxParticipantAge;
+        private System.Windows.Forms.Button btnAddParticipant;
     }
 }
