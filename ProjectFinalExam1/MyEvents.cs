@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Form1 : Form
+    public partial class MyEvents : Form
     {
-        public Form1()
+        public MyEvents()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Exit(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

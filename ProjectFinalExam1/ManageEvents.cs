@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Form3 : Form
+    public partial class ManageEvents : Form
     {
         //Test commit.
-        public Form3()
+        public ManageEvents()
         {
             InitializeComponent();
         }
@@ -26,6 +26,12 @@ namespace ProjectFinalExam1
         private void Form3_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new LogOn().Show();
+            this.Hide();
         }
     }
 }

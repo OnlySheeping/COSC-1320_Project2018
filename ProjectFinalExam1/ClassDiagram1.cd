@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjectFinalExam1.AdminMenu" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAEAgAAAAAAAIAABAAAA=</HashCode>
+      <FileName>AdminMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.EventDetailView" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventDetailView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.ListAllEvents" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ListAllEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.LogOn" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAABAAAACAAAADAAAYAAAAIAQAAABEAAA=</HashCode>
+      <FileName>LogOn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.ManageEvents" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8CAAAAQQASAAAFCAEACAAABCIAA4AAAAEAAAAABEAIA=</HashCode>
+      <FileName>ManageEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.ManageParticipants" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAA4AAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ManageParticipants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.MyEvents" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAABAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.ParticipantMenu" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAAAACAAAACAAAYAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ParticipantMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.Program" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectFinalExam1.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

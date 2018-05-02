@@ -9,7 +9,8 @@ using System.Data.Sql;
 
 namespace EventSystem
 {
-    public abstract class User
+	// included EventAdmin, Participant for logon transitioning to each of those pages
+    public abstract class User : EventAdmin, Participant
     {
         SqlConnection connection = new SqlConnection();
 
@@ -135,45 +136,58 @@ namespace EventSystem
                     while(reader.HasRows && reader.Read())
                     {
                         userCount++;
-                        if(userCount > 1)
-                        {
-                            //BIG Error
-                            didLoginWork = false;
-                            Console.WriteLine("Contact network administrator");
-                            return didLoginWork;
-                        }
-                        else if(userCount == 1)
-                        {
-                            // Put your success logic here.
-                            didLoginWork = true;
+						if (userCount > 1)
+						{
+							//BIG Error
+							didLoginWork = false;
+							Console.WriteLine("Contact network administrator");
+							return didLoginWork;
+						}
+						else if (userCount == 1)
+						{
+							// Put your success logic here.
+							didLoginWork = true;
 
-                            // Login a success. Carry on.
+							// Login a success. Carry on.
 
-                            bool roleID = true;
+							bool roleID = true;
 
-                            readUsernameRecords.CommandText = "select RoleID ";
-                            readUsernameRecords.CommandText += "from db_owner.Role ";
-                            readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
+							readUsernameRecords.CommandText = "select RoleID ";
+							readUsernameRecords.CommandText += "from db_owner.Role ";
+							readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
 
 
-                                if (roleID == true)
-                                {
-                                     //Open ParticipantMenu form
-                                
-                                }
-                                else
-                                {
-                                    //Open EventAdmin form
-                                }
+							if (roleID == true)
+							{
+								//Open ParticipantMenu form
+								Participant.Show();
+								//not sure if this will close logon form or not
+								this.Close();
 
-                                return didLoginWork;
+							}
+							else
+							{
+								//Open EventAdmin form
+								EventAdmin.Show();
+							}
 
-                        else
-                        {
-                            didLoginWork = false;
-                            Console.WriteLine("There was an issue with your username or password.");
-                            return didLoginWork;
-                        }
+							return didLoginWork();
+						}
+
+						else
+						{
+							if(userName = ""){
+								MessageBox.Show("Please enter username");
+								}
+							else if(password = ""){
+								MessageBox.Show("Please enter password");
+								}
+							else{
+                                didLoginWork = false;
+							    Console.WriteLine("There was an issue with your username or password.");
+							    return didLoginWork;
+								}
+						}
                     }
 
                 }

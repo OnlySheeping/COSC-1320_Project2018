@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Form2 : Form
+    public partial class ListAllEvents : Form
     {
-        public Form2()
+        public ListAllEvents()
         {
             InitializeComponent();
+        }
+
+        private void ListAllEvents_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
