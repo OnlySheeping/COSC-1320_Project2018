@@ -38,7 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxParticipantManagerList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,13 +138,14 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // listBox1
+            // lbxParticipantManagerList
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(184, 201);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(579, 160);
-            this.listBox1.TabIndex = 16;
+            this.lbxParticipantManagerList.FormattingEnabled = true;
+            this.lbxParticipantManagerList.Location = new System.Drawing.Point(184, 201);
+            this.lbxParticipantManagerList.Name = "lbxParticipantManagerList";
+            this.lbxParticipantManagerList.Size = new System.Drawing.Size(579, 160);
+            this.lbxParticipantManagerList.TabIndex = 16;
+            this.lbxParticipantManagerList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // ManageParticipants
             // 
@@ -153,7 +154,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(777, 424);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbxParticipantManagerList);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
@@ -182,6 +183,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxParticipantManagerList;
     }
 }

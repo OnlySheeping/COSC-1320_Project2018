@@ -19,7 +19,7 @@ namespace ProjectFinalExam1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new ManageEvents().Show();
+           // new Participant().Show();
             this.Hide();
         }
 
@@ -27,6 +27,14 @@ namespace ProjectFinalExam1
         {
             new LogOn().Show();
             this.Hide();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lbxParticipantManagerList.SelectedItem !null)
+                {
+                MessageBox.Show(lbxParticipantManagerList.SelectedItem.Tostring());
+                }
         }
     }
 }
