@@ -10,6 +10,23 @@ namespace EventSystem
 {
     public class EventAdmin : User
     {
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Age { get; set; }
+        public string EventName { get; set; }
+        public string Status { get; set; }
+        public string EventDescription { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string EventNotes { get; set; }
+        public string AgeRequirement { get; set; }
+        public string CategoryID { get; set; }
+        public string Private { get; set; }
+        public string Closed { get; set; }
+        public string Location { get; set; }
+        public string MaxAttendees { get; set; }
+
         SqlConnection connection = new SqlConnection();
 
         public void NewParticipant(string userName, string password,
@@ -96,22 +113,69 @@ namespace EventSystem
                 // SQL EDIT-UPDATE Statement:
                 using (SqlCommand editparticipant = connection.CreateCommand())
                 {
-                    editparticipant.CommandText = "update ";
-                    editparticipant.CommandText += "db_owner.Users ";
-                    editparticipant.CommandText += "set (Password = '" + password;
-                    editparticipant.CommandText += ",' UserFirstName ='" + firstName;
-                    editparticipant.CommandText += ",' UserLastName ='" + lastName;
-                    editparticipant.CommandText += ",' UserAge ='" + age;
-                    editparticipant.CommandText += "');";
-                    editparticipant.CommandText += "where Username = ";
-                    editparticipant.CommandText += "'";
-                    editparticipant.CommandText += userName;
-                    editparticipant.CommandText += "';";
-                    connection.Open();
-                    editparticipant.ExecuteNonQuery();
-                    connection.Close();
-                }
+                    if (Password != null)
+                    {
+                        editparticipant.CommandText = "update ";
+                        editparticipant.CommandText += "db_owner.Users ";
+                        editparticipant.CommandText += "set (Password = '" + password;
+                        editparticipant.CommandText += "');";
+                        editparticipant.CommandText += "where Username = ";
+                        editparticipant.CommandText += "'";
+                        editparticipant.CommandText += userName;
+                        editparticipant.CommandText += "';";
+                        connection.Open();
+                        editparticipant.ExecuteNonQuery();
+                        connection.Close();
+                    }
 
+                    if (FirstName != null)
+                    {
+                        editparticipant.CommandText = "update ";
+                        editparticipant.CommandText += "db_owner.Users ";
+                        editparticipant.CommandText += "set (UserFirstName ='" + firstName;
+                        editparticipant.CommandText += "');";
+                        editparticipant.CommandText += "where Username = ";
+                        editparticipant.CommandText += "'";
+                        editparticipant.CommandText += userName;
+                        editparticipant.CommandText += "';";
+                        connection.Open();
+                        editparticipant.ExecuteNonQuery();
+                        connection.Close();
+
+                    }
+
+                    if (LastName != null)
+                    {
+                        editparticipant.CommandText = "update ";
+                        editparticipant.CommandText += "db_owner.Users ";
+                        editparticipant.CommandText += "set (UserLastName ='" + lastName;
+                        editparticipant.CommandText += "');";
+                        editparticipant.CommandText += "where Username = ";
+                        editparticipant.CommandText += "'";
+                        editparticipant.CommandText += userName;
+                        editparticipant.CommandText += "';";
+                        connection.Open();
+                        editparticipant.ExecuteNonQuery();
+                        connection.Close();
+
+                    }
+
+                    if (Age != null)
+                    {
+                        editparticipant.CommandText = "update ";
+                        editparticipant.CommandText += "db_owner.Users ";
+                        editparticipant.CommandText += "set (UserLastName ='" + age;
+                        editparticipant.CommandText += "');";
+                        editparticipant.CommandText += "where Username = ";
+                        editparticipant.CommandText += "'";
+                        editparticipant.CommandText += userName;
+                        editparticipant.CommandText += "';";
+                        connection.Open();
+                        editparticipant.ExecuteNonQuery();
+                        connection.Close();
+
+                    }
+                }
             }
         }
 
@@ -194,28 +258,214 @@ namespace EventSystem
             // SQL EDIT-UPDATE Statement:
             using (SqlCommand editevent = connection.CreateCommand())
             {
-                editevent.CommandText = "update ";
-                editevent.CommandText += "db_owner.Event ";
-                editevent.CommandText += "set (EventName = '" + eventName;
-                editevent.CommandText += ",' Status ='" + status;
-                editevent.CommandText += ",' EventDescription ='" + eventDescription;
-                editevent.CommandText += ",' StartDate ='" + startDate;
-                editevent.CommandText += ",' EndDate ='" + endDate;
-                editevent.CommandText += ",' EventNotes ='" + eventNotes;
-                editevent.CommandText += ",' AgeRequirement ='" + ageRequirement;
-                editevent.CommandText += ",' CategoryID ='" + categoryID;
-                editevent.CommandText += ",' Private ='" + privateVal;
-                editevent.CommandText += ",' Closed ='" + closed;
-                editevent.CommandText += ",' Location ='" + location;
-                editevent.CommandText += ",' MaxAttendees ='" + maxAttendees;
-                editevent.CommandText += "');";
-                editevent.CommandText += "where EventID = ";
-                editevent.CommandText += "'";
-                editevent.CommandText += eventID;
-                editevent.CommandText += "';";
-                connection.Open();
-                editevent.ExecuteNonQuery();
-                connection.Close();
+                if (EventName!= null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (EventName = '";
+                    editevent.CommandText +=  eventName;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (Status != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (Status = '";
+                    editevent.CommandText +=  status;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (EventDescription != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (EventDescription = '";
+                    editevent.CommandText +=  eventDescription;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (StartDate != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (StartDate = '";
+                    editevent.CommandText += startDate;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (EndDate != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (EndDate = '";
+                    editevent.CommandText += endDate;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (EventNotes != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (EventNotes = '";
+                    editevent.CommandText += eventNotes;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (AgeRequirement != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (AgeRequirement = '";
+                    editevent.CommandText += ageRequirement;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (CategoryID != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (CategoryID = '";
+                    editevent.CommandText += categoryID;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (CategoryID != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (CategoryID = '";
+                    editevent.CommandText += categoryID;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (Private != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (Private = '";
+                    editevent.CommandText += privateVal;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (Closed != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (Closed = '";
+                    editevent.CommandText += closed;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (Location != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (Location = '";
+                    editevent.CommandText += location;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                if (MaxAttendees != null)
+                {
+                    editevent.CommandText = "update ";
+                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "set (MaxAttendees = '";
+                    editevent.CommandText += maxAttendees;
+                    editevent.CommandText += "');";
+                    editevent.CommandText += "where EventID = ";
+                    editevent.CommandText += "'";
+                    editevent.CommandText += eventID;
+                    editevent.CommandText += "';";
+                    connection.Open();
+                    editevent.ExecuteNonQuery();
+                    connection.Close();
+                }
+
             }
 
         }
