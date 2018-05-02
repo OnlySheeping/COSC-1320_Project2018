@@ -16,5 +16,17 @@ namespace ProjectFinalExam1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new ManageEvents().Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new LogOn().Show();
+            this.Hide();
+        }
     }
 }

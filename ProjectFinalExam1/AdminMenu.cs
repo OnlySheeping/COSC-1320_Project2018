@@ -19,6 +19,15 @@ namespace ProjectFinalExam1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            new ManageEvents().Show();
+            this.Hide();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new ManageParticipants().Show();
+            this.Hide();
 
         }
     }
