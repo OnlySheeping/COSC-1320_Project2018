@@ -112,12 +112,12 @@ namespace EventSystem
 
         public bool Login(string userName, string password)
         {
-            
+
             //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
-            Console.ReadKey();
+            //Console.ReadKey();
 
             bool didLoginWork = false;
 
@@ -125,69 +125,65 @@ namespace EventSystem
             {
 
                 readUsernameRecords.CommandText = "select Username ";
-                readUsernameRecords.CommandText += "from db_owner.User ";
-                readUsernameRecords.CommandText += "where 'Username' = " + userName;
-                readUsernameRecords.CommandText += "and 'Password' = " + password;
+                readUsernameRecords.CommandText += "from Project1.dbo.Users ";
+                readUsernameRecords.CommandText += "where Username = ";
+                readUsernameRecords.CommandText += "'";
+                readUsernameRecords.CommandText += userName;
+                readUsernameRecords.CommandText += "'";
+                readUsernameRecords.CommandText += "and Passsword = ";
+                readUsernameRecords.CommandText += "'";
+                readUsernameRecords.CommandText += password;
+                readUsernameRecords.CommandText += "'";
 
                 using (SqlDataReader reader = readUsernameRecords.ExecuteReader())
                 {
                     int userCount = 0;
 
-                    while(reader.HasRows && reader.Read())
+                    while (reader.HasRows && reader.Read())
                     {
                         userCount++;
-						if (userCount > 1)
-						{
-							//BIG Error
-							didLoginWork = false;
-							Console.WriteLine("Contact network administrator");
-							return didLoginWork;
-						}
-						else if (userCount == 1)
-						{
-							// Put your success logic here.
-							didLoginWork = true;
+                        if (userCount > 1)
+                        {
+                            //BIG Error
+                            didLoginWork = false;
+                            Console.WriteLine("Contact network administrator");
+                            return didLoginWork;
+                        }
+                        else if (userCount == 1)
+                        {
+                            // Put your success logic here.
+                            didLoginWork = true;
+                            MessageBox.Show("LogOn Successful!");
 
-							// Login a success. Carry on.
+                            // Login a success. Carry on.
 
-							bool roleID = true;
+                            //bool roleID = true;
 
-							readUsernameRecords.CommandText = "select RoleID ";
-							readUsernameRecords.CommandText += "from db_owner.Role ";
-							readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
+                            //readUsernameRecords.CommandText = "select RoleID ";
+                            //readUsernameRecords.CommandText += "from db_owner.Role ";
+                            //readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
+                        }
 
-
-							if (roleID == true)
-							{
-								//Open ParticipantMenu form
-								Participant.Show();
-								//not sure if this will close logon form or not
-								this.Close();
-
-							}
-							else
-							{
-								//Open EventAdmin form
-								EventAdmin.Show();
-							}
-
-							return didLoginWork();
-						}
-
-						else
-						{
-							if(userName = ""){
-								MessageBox.Show("Please enter username");
-								}
-							else if(password = ""){
-								MessageBox.Show("Please enter password");
-								}
-							else{
+                        else
+                        {
+                            if (userName == "")
+                            {
+                                MessageBox.Show("Please enter username");
+                            }
+                            else if (password == "")
+                            {
+                                MessageBox.Show("Please enter password");
+                            }
+                            else
+                            {
                                 didLoginWork = false;
-							    Console.WriteLine("There was an issue with your username or password.");
-							    return didLoginWork;
-								}
-						}
+                                Console.WriteLine("There was an issue with your username or password.");
+                                return didLoginWork;
+                            }
+
+                            string currentUser = userName;
+                        }
+
                     }
 
                 }
