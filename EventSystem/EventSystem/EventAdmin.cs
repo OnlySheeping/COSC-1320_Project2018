@@ -13,12 +13,14 @@ namespace EventSystem
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Age { get; set; }
+        public string UserAge { get; set; }
         public string EventName { get; set; }
         public string Status { get; set; }
         public string EventDescription { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public string EventNotes { get; set; }
         public string AgeRequirement { get; set; }
         public string CategoryID { get; set; }
@@ -30,7 +32,7 @@ namespace EventSystem
         SqlConnection connection = new SqlConnection();
 
         public void NewParticipant(string userName, string password,
-            string firstName, string lastName, int age, int roleID)
+            string firstName, string lastName, int userAge, int roleID)
         {
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
@@ -44,7 +46,7 @@ namespace EventSystem
             using (SqlCommand newparticipant = connection.CreateCommand())
             {
                 newparticipant.CommandText = "insert ";
-                newparticipant.CommandText += "into db_owner.Users";
+                newparticipant.CommandText += "into Project1.dbo.Users";
                 newparticipant.CommandText += "values ";
                 newparticipant.CommandText += "('";
                 newparticipant.CommandText += userName;
@@ -55,7 +57,7 @@ namespace EventSystem
                 newparticipant.CommandText += "','";
                 newparticipant.CommandText += lastName;
                 newparticipant.CommandText += "','";
-                newparticipant.CommandText += age;
+                newparticipant.CommandText += userAge;
                 newparticipant.CommandText += "','";
                 newparticipant.CommandText += roleID;
                 newparticipant.CommandText += "');";
@@ -70,7 +72,7 @@ namespace EventSystem
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
             connection.ConnectionString = 
-                "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+                "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
             Console.ReadKey();
@@ -99,7 +101,7 @@ namespace EventSystem
         }
 
         public void EditParticipant(string password, string firstName,
-            string lastName, int age, string userName)
+            string lastName, int userAge, string userName)
         {
             {
                 //Server=myServerAddress;Database=myDataBase;
@@ -116,8 +118,8 @@ namespace EventSystem
                     if (Password != null)
                     {
                         editparticipant.CommandText = "update ";
-                        editparticipant.CommandText += "db_owner.Users ";
-                        editparticipant.CommandText += "set (Password = '" + password;
+                        editparticipant.CommandText += "Project1.dbo.Users ";
+                        editparticipant.CommandText += "set (Passsword = '" + password;
                         editparticipant.CommandText += "');";
                         editparticipant.CommandText += "where Username = ";
                         editparticipant.CommandText += "'";
@@ -131,7 +133,7 @@ namespace EventSystem
                     if (FirstName != null)
                     {
                         editparticipant.CommandText = "update ";
-                        editparticipant.CommandText += "db_owner.Users ";
+                        editparticipant.CommandText += "Project1.dbo.Users ";
                         editparticipant.CommandText += "set (UserFirstName ='" + firstName;
                         editparticipant.CommandText += "');";
                         editparticipant.CommandText += "where Username = ";
@@ -147,7 +149,7 @@ namespace EventSystem
                     if (LastName != null)
                     {
                         editparticipant.CommandText = "update ";
-                        editparticipant.CommandText += "db_owner.Users ";
+                        editparticipant.CommandText += "Project1.dbo.Users ";
                         editparticipant.CommandText += "set (UserLastName ='" + lastName;
                         editparticipant.CommandText += "');";
                         editparticipant.CommandText += "where Username = ";
@@ -160,11 +162,11 @@ namespace EventSystem
 
                     }
 
-                    if (Age != null)
+                    if (UserAge != null)
                     {
                         editparticipant.CommandText = "update ";
-                        editparticipant.CommandText += "db_owner.Users ";
-                        editparticipant.CommandText += "set (UserLastName ='" + age;
+                        editparticipant.CommandText += "Project1.dbo.Users ";
+                        editparticipant.CommandText += "set (UserLastName ='" + userAge;
                         editparticipant.CommandText += "');";
                         editparticipant.CommandText += "where Username = ";
                         editparticipant.CommandText += "'";
@@ -195,7 +197,7 @@ namespace EventSystem
                 using (SqlCommand regparticipant = connection.CreateCommand())
                 {
                     regparticipant.CommandText = "insert ";
-                    regparticipant.CommandText += "into db_owner.Event_Users";
+                    regparticipant.CommandText += "into Project1.dbo.Event_Users";
                     regparticipant.CommandText += "values ";
                     regparticipant.CommandText += "('";
                     regparticipant.CommandText += eventID;
@@ -224,7 +226,7 @@ namespace EventSystem
             using (SqlCommand deleteevent = connection.CreateCommand())
             {
                 deleteevent.CommandText = "delete ";
-                deleteevent.CommandText += "from db_owner.Event ";
+                deleteevent.CommandText += "from Project1.dbo.Event ";
                 deleteevent.CommandText += "where ";
                 deleteevent.CommandText += "EventID = ";
                 deleteevent.CommandText += "'";
@@ -242,7 +244,7 @@ namespace EventSystem
         }
 
         public void EditEvent(string eventName, string status,
-            string eventDescription, double startDate, double endDate,
+            string eventDescription, string startDate, double endDate,
             string eventNotes, int ageRequirement, int categoryID,
             int privateVal, int closed, string location, 
             int maxAttendees, string eventID)
@@ -261,7 +263,7 @@ namespace EventSystem
                 if (EventName!= null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (EventName = '";
                     editevent.CommandText +=  eventName;
                     editevent.CommandText += "');";
@@ -277,7 +279,7 @@ namespace EventSystem
                 if (Status != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (Status = '";
                     editevent.CommandText +=  status;
                     editevent.CommandText += "');";
@@ -293,7 +295,7 @@ namespace EventSystem
                 if (EventDescription != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (EventDescription = '";
                     editevent.CommandText +=  eventDescription;
                     editevent.CommandText += "');";
@@ -309,7 +311,7 @@ namespace EventSystem
                 if (StartDate != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (StartDate = '";
                     editevent.CommandText += startDate;
                     editevent.CommandText += "');";
@@ -325,7 +327,7 @@ namespace EventSystem
                 if (EndDate != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (EndDate = '";
                     editevent.CommandText += endDate;
                     editevent.CommandText += "');";
@@ -341,7 +343,7 @@ namespace EventSystem
                 if (EventNotes != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (EventNotes = '";
                     editevent.CommandText += eventNotes;
                     editevent.CommandText += "');";
@@ -357,7 +359,7 @@ namespace EventSystem
                 if (AgeRequirement != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (AgeRequirement = '";
                     editevent.CommandText += ageRequirement;
                     editevent.CommandText += "');";
@@ -373,7 +375,7 @@ namespace EventSystem
                 if (CategoryID != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (CategoryID = '";
                     editevent.CommandText += categoryID;
                     editevent.CommandText += "');";
@@ -389,7 +391,7 @@ namespace EventSystem
                 if (CategoryID != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (CategoryID = '";
                     editevent.CommandText += categoryID;
                     editevent.CommandText += "');";
@@ -405,7 +407,7 @@ namespace EventSystem
                 if (Private != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (Private = '";
                     editevent.CommandText += privateVal;
                     editevent.CommandText += "');";
@@ -421,7 +423,7 @@ namespace EventSystem
                 if (Closed != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (Closed = '";
                     editevent.CommandText += closed;
                     editevent.CommandText += "');";
@@ -437,7 +439,7 @@ namespace EventSystem
                 if (Location != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (Location = '";
                     editevent.CommandText += location;
                     editevent.CommandText += "');";
@@ -453,7 +455,7 @@ namespace EventSystem
                 if (MaxAttendees != null)
                 {
                     editevent.CommandText = "update ";
-                    editevent.CommandText += "db_owner.Event ";
+                    editevent.CommandText += "Project1.dbo.Event ";
                     editevent.CommandText += "set (MaxAttendees = '";
                     editevent.CommandText += maxAttendees;
                     editevent.CommandText += "');";
@@ -470,7 +472,73 @@ namespace EventSystem
 
         }
 
-        public void ShowOwnedEvents()
+        public void AddEvent(string eventName, string status,
+            string eventDescription, string startDate, 
+            string endDate, string startTime, string endTime,
+            string eventNotes, int ageRequirement, 
+            int categoryID, int privateVal, string closed,
+            string location, int maxAttendees)
+        {
+            //Server=myServerAddress;Database=myDataBase;
+            // User Id=myUsername;Password = myPassword;
+            connection.ConnectionString =
+                "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            connection.Open();
+            Console.WriteLine(connection.ServerVersion);
+            Console.ReadKey();
+
+            // SQL INSERT Statement: 
+            using (SqlCommand newparticipant = connection.CreateCommand())
+            {
+                newparticipant.CommandText = "insert ";
+                newparticipant.CommandText += "into Project1.dbo.Users";
+                newparticipant.CommandText += "values ";
+                newparticipant.CommandText += "('";
+                newparticipant.CommandText += eventName;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += status;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += eventDescription;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += startDate;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += endDate;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += startTime;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += endTime;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += startDate;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += eventNotes;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += ageRequirement;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += categoryID;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += privateVal;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += closed;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += location;
+                newparticipant.CommandText += "','";
+                newparticipant.CommandText += maxAttendees;
+                newparticipant.CommandText += "');";
+                newparticipant.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public string GetFullView()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string PartialView()
+        {
+            throw new System.NotImplementedException();
+        }
+        public string GetListView()
         {
             throw new System.NotImplementedException();
         }
