@@ -43,5 +43,10 @@ namespace ProjectFinalExam1
             this.Hide();
 
         }
+
+        private void tbUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

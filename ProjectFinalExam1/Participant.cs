@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class ManageEvents : Form
+    public partial class Participant : Form
     {
-        //Test commit.
-        public ManageEvents()
+        public Participant()
         {
             InitializeComponent();
         }
@@ -23,21 +22,14 @@ namespace ProjectFinalExam1
 
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Participant_Load(object sender, EventArgs e)
         {
-            new LogOn().Show();
-            this.Hide();
-        }
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            new AddEvent().Show();
-            this.Hide();
         }
     }
 }

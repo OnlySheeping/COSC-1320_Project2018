@@ -42,10 +42,10 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(116, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
@@ -85,7 +85,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 60);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Exit";
+            this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Exit);
             this.button2.Leave += new System.EventHandler(this.Exit);
@@ -118,6 +118,7 @@
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(608, 24);
             this.tbUserName.TabIndex = 6;
+            this.tbUserName.TextChanged += new System.EventHandler(this.tbUserName_TextChanged);
             // 
             // tbPassword
             // 

@@ -39,7 +39,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(78, 239);
+            this.listBox1.Location = new System.Drawing.Point(80, 235);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(738, 173);
             this.listBox1.TabIndex = 0;
@@ -70,10 +70,10 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(79, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
