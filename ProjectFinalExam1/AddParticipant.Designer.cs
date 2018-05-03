@@ -113,7 +113,7 @@
             // 
             this.tbxUsersAge.Location = new System.Drawing.Point(76, 187);
             this.tbxUsersAge.Name = "tbxUsersAge";
-            this.tbxUsersAge.Size = new System.Drawing.Size(100, 20);
+            this.tbxUsersAge.Size = new System.Drawing.Size(43, 20);
             this.tbxUsersAge.TabIndex = 8;
             // 
             // btnAddUsers
