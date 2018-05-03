@@ -56,8 +56,12 @@ namespace ProjectFinalExam1
 
             using (SqlCommand readAllUsernameRecords = connection.CreateCommand())
             {
-                readAllUsernameRecords.CommandText = 
-                    "select RoleID from Project1.dbo.Users where RoleID = '1' or RoleID = '2'; ";
+				//changed this sql command to try tomorrow
+				readUsernameRecords.CommandText = "select RoleID ";
+                readUsernameRecords.CommandText += "from Project1.dbo.Users ";
+                readUsernameRecords.CommandText += "where Username = ";
+                readUsernameRecords.CommandText += "'";
+                readUsernameRecords.CommandText += userName;
 
                 using (SqlDataReader reader = readAllUsernameRecords.ExecuteReader())
                 {
@@ -73,24 +77,28 @@ namespace ProjectFinalExam1
                         {
                             //while loop is only reading role ID while in the while loop
                             // need to figure out the reader function
-                            roleID = reader.GetInt32(4);
-                            if (roleID == 1)
-                            {
-                                new ParticipantMenu().Show();
+							
+							//instantiated user again to see if assigning it to you.roleID would make a difference reading the role ID
+                            User you = new User();
+
+							
+                            you.roleID = reader.GetInt32["Role ID"];
                                 //this.Close();
                             }
                         }
 
-                            if (roleID == 1)
+                            if (you.roleID == 1)
                             {
                                 new ParticipantMenu().Show();
                                 //this.Close();
                             }
-                            //else if (roleID == 2)
-                            //{
-                             //   new AdminMenu().Show();
+
+                            else if (you.roleID == 2)
+                            {
+                                new AdminMenu().Show();
                                 //this.Close();
-                           // }
+                            }
+
                             else
                             {
                                 //error
