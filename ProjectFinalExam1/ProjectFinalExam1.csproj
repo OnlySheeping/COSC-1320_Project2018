@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteParticipant.Designer.cs">
+      <DependentUpon>DeleteParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditParticipant.Designer.cs">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventDetailView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +106,12 @@
     <Compile Include="MyEvents.Designer.cs">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddParticipant.Designer.cs">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParticipantMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +120,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteParticipant.resx">
+      <DependentUpon>DeleteParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditParticipant.resx">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventDetailView.resx">
       <DependentUpon>EventDetailView.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +150,9 @@
     <EmbeddedResource Include="MyEvents.resx">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddParticipant.resx">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParticipantMenu.resx">
       <DependentUpon>ParticipantMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +166,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
