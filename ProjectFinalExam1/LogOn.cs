@@ -7,14 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EventSystem;
-using System.Data.SqlClient;
 
 namespace ProjectFinalExam1
 {
     public partial class LogOn : Form
     {
-        SqlConnection connection = new SqlConnection();
         public LogOn()
         {
             InitializeComponent();
@@ -27,7 +24,7 @@ namespace ProjectFinalExam1
 
         private void Exit(object sender, EventArgs e)
         {
-            //this.Close();
+            this.Close();
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -53,22 +50,26 @@ namespace ProjectFinalExam1
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
 
-      
 
-            
+
+
 
             using (SqlCommand readAllUsernameRecords = connection.CreateCommand())
             {
-                readAllUsernameRecords.CommandText = 
-                    "select RoleID from Project1.dbo.Users where RoleID = '1' or RoleID = '2'; ";
+                //changed this sql command to try tomorrow
+                readUsernameRecords.CommandText = "select RoleID ";
+                readUsernameRecords.CommandText += "from Project1.dbo.Users ";
+                readUsernameRecords.CommandText += "where Username = ";
+                readUsernameRecords.CommandText += "'";
+                readUsernameRecords.CommandText += userName;
 
                 using (SqlDataReader reader = readAllUsernameRecords.ExecuteReader())
                 {
-                    
+
                     int roleID = 0;
                     string currentUser = username;
 
-                    if(reader.HasRows)
+                    if (reader.HasRows)
                     {
                         //Research this area, unable to pull proper RoleID, page only pulls up AdminMenu, not veryfing properly
                         //need to figure out the reader function
@@ -76,43 +77,50 @@ namespace ProjectFinalExam1
                         {
                             //while loop is only reading role ID while in the while loop
                             // need to figure out the reader function
-                            roleID = reader.GetInt32(4);
-                            if (roleID == 1)
-                            {
-                                new ParticipantMenu().Show();
-                                //this.Close();
-                            }
-                        }
 
-                            if (roleID == 1)
-                            {
-                                new ParticipantMenu().Show();
-                                //this.Close();
-                            }
-                            //else if (roleID == 2)
-                            //{
-                             //   new AdminMenu().Show();
-                                //this.Close();
-                           // }
-                            else
-                            {
-                                //error
-                            }
-                        
+                            //instantiated user again to see if assigning it to you.roleID would make a difference reading the role ID
+                            User you = new User();
+
+
+                            you.roleID = reader.GetInt32["Role ID"];
+                            //this.Close();
+                        }
                     }
+
+                    if (you.roleID == 1)
+                    {
+                        new ParticipantMenu().Show();
+                        //this.Close();
+                    }
+
+                    else if (you.roleID == 2)
+                    {
+                        new AdminMenu().Show();
+                        //this.Close();
+                    }
+
+                    else
+                    {
+                        //error
+                    }
+
                 }
             }
-            //using (SqlCommand readUsernameRecords = connection.CreateCommand())
-            //{
-            //    readUsernameRecords.CommandText = "select RoleID ";
-            //    readUsernameRecords.CommandText += "from Project1.dbo.Role ";
-            //    readUsernameRecords.CommandText += "where 'RoleID' =  '1' or '2'";
-
-            
-
-            }
-
         }
+        //using (SqlCommand readUsernameRecords = connection.CreateCommand())
+        //{
+        //    readUsernameRecords.CommandText = "select RoleID ";
+        //    readUsernameRecords.CommandText += "from Project1.dbo.Role ";
+        //    readUsernameRecords.CommandText += "where 'RoleID' =  '1' or '2'";
+
+
 
     }
 
+
+    private void tbUserName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+}
+}

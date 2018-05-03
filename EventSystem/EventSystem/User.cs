@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 using System.Data.SqlClient;
 using System.Data.Sql;
-using System.Windows.Forms;
-//using ProjectFinalExam1;
 
 namespace EventSystem
 {
-	// included EventAdmin, Participant for logon transitioning to each of those pages
-    public class User //: ParticipantMenu, AdminMenu
+    // included EventAdmin, Participant for logon transitioning to each of those pages
+    public abstract class User : EventAdmin, Participant
     {
         SqlConnection connection = new SqlConnection();
 
@@ -185,16 +183,15 @@ namespace EventSystem
 
                             string currentUser = userName;
                         }
+
                     }
 
                 }
             }
             return didLoginWork;
-
-        }
             //Console.ReadKey();
 
-        
+        }
 
         public void ShowRegisteredEvents()
         {
