@@ -12,6 +12,9 @@ namespace ProjectFinalExam1
 {
     static class Program
     {
+
+        public static List<test> student = new List<test>();                                        //change below where the database is
+        public static SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,9 +22,8 @@ namespace ProjectFinalExam1
         static void Main()
         {
             
-            List<test> student = new List<test>();                                        //change below where the database is
-            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
-            SqlCommand cmd = new SqlCommand("select * from Student", conn);
+            
+            SqlCommand cmd = new SqlCommand("select * from Project1.dbo.Users", conn);
             SqlDataReader dr;               //change above to * what your grabbing from the database
             try
             {
@@ -35,9 +37,7 @@ namespace ProjectFinalExam1
                         Username = dr.GetString(dr.GetOrdinal("Username")),
                         UserFirstName = dr.GetString(dr.GetOrdinal("UserFirstName")),  // The GetString, GetInt32, and GetDateTime are relevant to the types of information  you're getting.
                         UserLastName = dr.GetString(dr.GetOrdinal("UserLastName")),
-                        Age = dr.GetInt32(dr.GetOrdinal("Age")),
-
-                        
+                        Age = dr.GetInt32(dr.GetOrdinal("UserAge")),
                     });
 
                 }
@@ -46,15 +46,15 @@ namespace ProjectFinalExam1
             catch (Exception)
             {
 
-                throw;
+                //throw;
             }
             finally
             {
 
-                conn.Close(); // Closes the connection.
+                //conn.Close(); // Closes the connection.
                               }
                 Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+           // Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LogOn());
         }
     }

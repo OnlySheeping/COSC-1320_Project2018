@@ -16,7 +16,7 @@ namespace ProjectFinalExam1
 {
     public partial class LogOn : Form
     {
-        SqlConnection connection = new SqlConnection();
+        //SqlConnection connection = new SqlConnection();
         string userName;
         string password;
         string firstName;
@@ -49,77 +49,81 @@ namespace ProjectFinalExam1
 
         }
 
-        public class UserData
-        {
-            static SqlConnection conn = new System.Data.SqlClient.SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10");
-            SqlCommand cmd = new System.Data.SqlClient.SqlCommand("select * from Project1.dbo.Users", conn);
-            SqlDataReader dr;
+        //public class UserData
+        //{
+        //    //static SqlConnection conn = new System.Data.SqlClient.SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10");
+        //    //SqlConnection conn = Program.conn;
+        //    SqlCommand cmd = new System.Data.SqlClient.SqlCommand("select * from Project1.dbo.Users", Program.conn);
+
+        //    SqlDataReader dr;
             
 
 
 
-            //  if (userArray[5] == "1")
-            //   {
-            //       new AdminMenu().Show();
-            //   }
+        //    //  if (userArray[5] == "1")
+        //    //   {
+        //    //       new AdminMenu().Show();
+        //    //   }
 
-            // try
-            // {
+        //    // try
+        //    // {
 
-            //    connString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            //        pubConnection.ConnectionString = connString;
-            //            pubConnection.Open();
-            //            pubcommand = new SqlCommand();
-            //    pubcommand.Connection = pubConnection;
-            //            pubcommand.CommandText = new SqlCommand("Select * from Project1.dbo.Users", )
-            //            dr = pubcommand.ExecuteReader();
-
-
+        //    //    connString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+        //    //        pubConnection.ConnectionString = connString;
+        //    //            pubConnection.Open();
+        //    //            pubcommand = new SqlCommand();
+        //    //    pubcommand.Connection = pubConnection;
+        //    //            pubcommand.CommandText = new SqlCommand("Select * from Project1.dbo.Users", )
+        //    //            dr = pubcommand.ExecuteReader();
 
 
-            //            while (userDataReader.Read())
-            //            {
-            //                userArray.Add(userDataReader["Username{0}, Passsword, UserFirstName, UserLastName, UserAge, RoleID"]);
 
-            //                foreach ()
 
-            //            }
-            //userArg[0] = userArray[1][5];
-            //        return userArray;
-            //        }
-            //        catch (SqlException ex)
-            //        {
-            //   throw ex;
-            //}
-            //finally
-            //{
-            //   if (pubConnection != null)
-            //  {
-            //     pubConnection.Close();
-            //}
-            //  }
+        //    //            while (userDataReader.Read())
+        //    //            {
+        //    //                userArray.Add(userDataReader["Username{0}, Passsword, UserFirstName, UserLastName, UserAge, RoleID"]);
 
-        }
+        //    //                foreach ()
+
+        //    //            }
+        //    //userArg[0] = userArray[1][5];
+        //    //        return userArray;
+        //    //        }
+        //    //        catch (SqlException ex)
+        //    //        {
+        //    //   throw ex;
+        //    //}
+        //    //finally
+        //    //{
+        //    //   if (pubConnection != null)
+        //    //  {
+        //    //     pubConnection.Close();
+        //    //}
+        //    //  }
+
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //SqlCommand cmd = new System.Data.SqlClient.SqlCommand("select * from Project1.dbo.Users", Program.conn);
+
+            //SqlDataReader dr;
 
             string username = tbUserName.Text;
             string password = tbPassword.Text;
 
-            User currentUser1 = new User();
+           // User currentUser1 = new User();
 
             //currentUser1.Login(username, password);
 
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10";";
-            connection.Open();
-            Console.WriteLine(connection.ServerVersion);
+            //connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            //connection.Open();
+            //Console.WriteLine(connection.ServerVersion);
 
 
 
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM Project1.dbo.Users where Username =@username and Passsword = @password", connection))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username =@username and Passsword = @password", Program.conn))
             {
                 //
                 // Invoke ExecuteReader method.
@@ -135,6 +139,16 @@ namespace ProjectFinalExam1
 
                     // IF it has Rows so your Good to go and show your message 
                     MessageBox.Show("Logon Successful");
+                    if(Program.student[0].RoleID==1)
+                    {
+                        new ParticipantMenu().Show();
+                        
+                    }
+                    else if(Program.student[0].RoleID==2)
+                    {
+                        new AdminMenu().Show();
+                        
+                    }
                     
                    // MessageBox.Show("UserArg[4]= " + userArg[4]);
                     //MessageBox.Show("UserArg[5]= " + userArg[5]);
