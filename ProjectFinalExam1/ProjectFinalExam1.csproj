@@ -46,34 +46,124 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="DeleteParticipant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="DeleteParticipant.Designer.cs">
+      <DependentUpon>DeleteParticipant.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="EditEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="EditEvent.Designer.cs">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditParticipant.Designer.cs">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventDetailView.Designer.cs">
+      <DependentUpon>EventDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListAllEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAllEvents.Designer.cs">
+      <DependentUpon>ListAllEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogOn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOn.Designer.cs">
+      <DependentUpon>LogOn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageEvents.Designer.cs">
+      <DependentUpon>ManageEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageParticipants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageParticipants.Designer.cs">
+      <DependentUpon>ManageParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyEvents.Designer.cs">
+      <DependentUpon>MyEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddParticipant.Designer.cs">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParticipantMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParticipantMenu.Designer.cs">
+      <DependentUpon>ParticipantMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteParticipant.resx">
+      <DependentUpon>DeleteParticipant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="EditEvent.resx">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditParticipant.resx">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventDetailView.resx">
+      <DependentUpon>EventDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListAllEvents.resx">
+      <DependentUpon>ListAllEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOn.resx">
+      <DependentUpon>LogOn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEvents.resx">
+      <DependentUpon>ManageEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageParticipants.resx">
+      <DependentUpon>ManageParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyEvents.resx">
+      <DependentUpon>MyEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddParticipant.resx">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParticipantMenu.resx">
+      <DependentUpon>ParticipantMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +174,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +188,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventSystem\EventSystem\EventSystem.csproj">
+      <Project>{46474214-942e-4847-99b8-1158f4f89594}</Project>
+      <Name>EventSystem</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

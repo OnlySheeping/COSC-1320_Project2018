@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Form3 : Form
+    public partial class EditEvent : Form
     {
-        //Test commit.
-        public Form3()
+        public EditEvent()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
 
         }
     }
