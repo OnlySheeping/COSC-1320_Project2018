@@ -52,6 +52,24 @@
     <Compile Include="AddEvent.Designer.cs">
       <DependentUpon>AddEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteParticipant.Designer.cs">
+      <DependentUpon>DeleteParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEvent.Designer.cs">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditParticipant.Designer.cs">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventDetailView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +112,11 @@
     <Compile Include="MyEvents.Designer.cs">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Participant.cs">
+    <Compile Include="AddParticipant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Participant.Designer.cs">
-      <DependentUpon>Participant.cs</DependentUpon>
+    <Compile Include="AddParticipant.Designer.cs">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
     </Compile>
     <Compile Include="ParticipantMenu.cs">
       <SubType>Form</SubType>
@@ -111,6 +129,15 @@
     <Compile Include="test.cs" />
     <EmbeddedResource Include="AddEvent.resx">
       <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteParticipant.resx">
+      <DependentUpon>DeleteParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEvent.resx">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditParticipant.resx">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventDetailView.resx">
       <DependentUpon>EventDetailView.cs</DependentUpon>
@@ -133,8 +160,8 @@
     <EmbeddedResource Include="MyEvents.resx">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Participant.resx">
-      <DependentUpon>Participant.cs</DependentUpon>
+    <EmbeddedResource Include="AddParticipant.resx">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParticipantMenu.resx">
       <DependentUpon>ParticipantMenu.cs</DependentUpon>
@@ -162,6 +189,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventSystem\EventSystem\EventSystem.csproj">
+      <Project>{46474214-942e-4847-99b8-1158f4f89594}</Project>
+      <Name>EventSystem</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
