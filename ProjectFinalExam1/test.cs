@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjectFinalExam1
 {
-    public class test
+    public class test : LogOn
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public int RoleID { get; set; }
+        public string UserFirstName { get; set; }
+        public int Age { get; set; }
+        public string UserLastName { get; set; }
+        public string Username { get; set; }
+
+        
+
 
     }
 }

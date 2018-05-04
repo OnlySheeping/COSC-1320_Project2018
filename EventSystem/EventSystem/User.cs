@@ -113,7 +113,7 @@ namespace EventSystem
             {
             }
         }
-
+    }
         public class UserData
         {
            // List<UserData> userData = new List<UserData>();
@@ -159,74 +159,74 @@ namespace EventSystem
         //    }
             
         }
-        
-        
+
+
         // public bool Login(string userName, string password)
-       // {
-         //   return didLoginWork;
+        // {
+        //   return didLoginWork;
 
-            ////Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-            //connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            //connection.Open();
-            //Console.WriteLine(connection.ServerVersion);
-            ////Console.ReadKey();
+        ////Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+        //connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+        //connection.Open();
+        //Console.WriteLine(connection.ServerVersion);
+        ////Console.ReadKey();
 
-            //bool didLoginWork = false;
+        //bool didLoginWork = false;
 
-            //using (SqlCommand readAllUsernameRecords = connection.CreateCommand())
-            //{
-            //    readAllUsernameRecords.CommandText = "select  from Project1.dbo.Users where Username = 'userName';";
+        //using (SqlCommand readAllUsernameRecords = connection.CreateCommand())
+        //{
+        //    readAllUsernameRecords.CommandText = "select  from Project1.dbo.Users where Username = 'userName';";
 
-            //    using (SqlDataReader reader = readAllUsernameRecords.ExecuteReader())
-            //    {
-            //        int userCount = 0;
-
-
-            //        while (reader.HasRows && reader.Read())
-            //        {
+        //    using (SqlDataReader reader = readAllUsernameRecords.ExecuteReader())
+        //    {
+        //        int userCount = 0;
 
 
-            //            userCount++;
-
-            //            if (userCount > 1)
-            //            {
-            //                //BIG Error
-            //                didLoginWork = false;
-            //                Console.WriteLine("Contact network administrator");
-            //                return didLoginWork;
-            //            }
-            //            else if (userCount == 1)
-            //            {
-            //                // Put your success logic here.
-            //                didLoginWork = true;
-            //                MessageBox.Show("Logon Successful!");
-
-            //                // Login a success. Carry on.
-
-            //                //bool roleID = true;
-
-            //                //readUsernameRecords.CommandText = "select RoleID ";
-            //                //readUsernameRecords.CommandText += "from db_owner.Role ";
-            //                //readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
-            //                return didLoginWork;
-            //            }
-            //            else
-            //            {
-            //                    Console.WriteLine("There was an issue with your username or password.");
-            //                    return didLoginWork;
-            //            }
-
-            //        }
-
-            //    }
-            //}
-
-       // }
+        //        while (reader.HasRows && reader.Read())
+        //        {
 
 
-        public void ShowRegisteredEvents()
-        {
-            throw new System.NotImplementedException();
-        }
+        //            userCount++;
+
+        //            if (userCount > 1)
+        //            {
+        //                //BIG Error
+        //                didLoginWork = false;
+        //                Console.WriteLine("Contact network administrator");
+        //                return didLoginWork;
+        //            }
+        //            else if (userCount == 1)
+        //            {
+        //                // Put your success logic here.
+        //                didLoginWork = true;
+        //                MessageBox.Show("Logon Successful!");
+
+        //                // Login a success. Carry on.
+
+        //                //bool roleID = true;
+
+        //                //readUsernameRecords.CommandText = "select RoleID ";
+        //                //readUsernameRecords.CommandText += "from db_owner.Role ";
+        //                //readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
+        //                return didLoginWork;
+        //            }
+        //            else
+        //            {
+        //                    Console.WriteLine("There was an issue with your username or password.");
+        //                    return didLoginWork;
+        //            }
+
+        //        }
+
+        //    }
+        //}
+
+        // }
+
+
+
+        //public void ShowRegisteredEvents()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
-}
