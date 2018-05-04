@@ -34,7 +34,32 @@ namespace ProjectFinalExam1
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+
+
+
+        }
+
+     
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
         }
     }
 }
