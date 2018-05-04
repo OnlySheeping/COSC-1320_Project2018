@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmdetailView));
             this.lblDetailBanner = new System.Windows.Forms.Label();
-            this.txbEventDetail = new System.Windows.Forms.TextBox();
+            this.lvDetailView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblDetailBanner
@@ -48,13 +48,16 @@
             this.lblDetailBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDetailBanner.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txbEventDetail
+            // lvDetailView
             // 
-            this.txbEventDetail.Location = new System.Drawing.Point(57, 102);
-            this.txbEventDetail.Multiline = true;
-            this.txbEventDetail.Name = "txbEventDetail";
-            this.txbEventDetail.Size = new System.Drawing.Size(558, 433);
-            this.txbEventDetail.TabIndex = 14;
+            this.lvDetailView.GridLines = true;
+            this.lvDetailView.Location = new System.Drawing.Point(72, 100);
+            this.lvDetailView.MultiSelect = false;
+            this.lvDetailView.Name = "lvDetailView";
+            this.lvDetailView.Size = new System.Drawing.Size(539, 412);
+            this.lvDetailView.TabIndex = 14;
+            this.lvDetailView.UseCompatibleStateImageBehavior = false;
+            this.lvDetailView.View = System.Windows.Forms.View.Details;
             // 
             // fmdetailView
             // 
@@ -63,7 +66,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(694, 749);
-            this.Controls.Add(this.txbEventDetail);
+            this.Controls.Add(this.lvDetailView);
             this.Controls.Add(this.lblDetailBanner);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -72,12 +75,11 @@
             this.Text = "Event Detail View";
             this.Load += new System.EventHandler(this.EventDetailView_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label lblDetailBanner;
-        private System.Windows.Forms.TextBox txbEventDetail;
+        private System.Windows.Forms.ListView lvDetailView;
     }
 }
