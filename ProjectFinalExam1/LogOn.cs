@@ -132,11 +132,14 @@ namespace ProjectFinalExam1
                             MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
                             ParticipantMenu participant = new ParticipantMenu();
                             participant.Show();
+                            Visible = false;
                         }
                         else if (roleID == 2)
                         {
                             MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                            new AdminMenu().Show();
+                            AdminMenu admin = new AdminMenu();
+                            admin.Show();
+                            Visible = false;
                         }
                         else
                         {
