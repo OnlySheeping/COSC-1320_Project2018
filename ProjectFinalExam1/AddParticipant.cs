@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class Participant : Form
+    public partial class frmAddUsers : Form
     {
-        public Participant()
+        public frmAddUsers()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace ProjectFinalExam1
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Participant_Load(object sender, EventArgs e)
         {
 
         }
