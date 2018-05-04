@@ -18,8 +18,9 @@ namespace ProjectFinalExam1
         [STAThread]
         static void Main()
         {
+            
             List<test> student = new List<test>();                                        //change below where the database is
-            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Prac\TestAssembly\ForumsProjectCSharp\App_Data\Studetnt.mdf;Integrated Security=True;User Instance=True");
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             SqlCommand cmd = new SqlCommand("select * from Student", conn);
             SqlDataReader dr;               //change above to * what your grabbing from the database
             try
@@ -30,9 +31,13 @@ namespace ProjectFinalExam1
                 {
                     student.Add(new test() // This would reference the class where you have your Array.
                     {
-                        ID = dr.GetInt32(dr.GetOrdinal("ID")),  // GetOrdinal grabs information in the columns that are specified in quotes.
-                        Name = dr.GetString(dr.GetOrdinal("Name")),  // The GetString, GetInt32, and GetDateTime are relevant to the types of information  you're getting.
-                        DateOfBirth = dr.GetDateTime(dr.GetOrdinal("DateOfBirth"))
+                        RoleID = dr.GetInt32(dr.GetOrdinal("RoleID")),  // GetOrdinal grabs information in the columns that are specified in quotes.
+                        Username = dr.GetString(dr.GetOrdinal("Username")),
+                        UserFirstName = dr.GetString(dr.GetOrdinal("UserFirstName")),  // The GetString, GetInt32, and GetDateTime are relevant to the types of information  you're getting.
+                        UserLastName = dr.GetString(dr.GetOrdinal("UserLastName")),
+                        Age = dr.GetInt32(dr.GetOrdinal("Age")),
+
+                        
                     });
 
                 }

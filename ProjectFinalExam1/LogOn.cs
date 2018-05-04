@@ -103,8 +103,8 @@ namespace ProjectFinalExam1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            
+
             string username = tbUserName.Text;
             string password = tbPassword.Text;
 
@@ -112,7 +112,7 @@ namespace ProjectFinalExam1
 
             //currentUser1.Login(username, password);
 
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10";";
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
 
@@ -135,6 +135,7 @@ namespace ProjectFinalExam1
 
                     // IF it has Rows so your Good to go and show your message 
                     MessageBox.Show("Logon Successful");
+                    
                    // MessageBox.Show("UserArg[4]= " + userArg[4]);
                     //MessageBox.Show("UserArg[5]= " + userArg[5]);
 
