@@ -122,12 +122,13 @@
             // 
             // btnAddUsers
             // 
-            this.btnAddUsers.Location = new System.Drawing.Point(351, 446);
+            this.btnAddUsers.Location = new System.Drawing.Point(301, 464);
             this.btnAddUsers.Name = "btnAddUsers";
             this.btnAddUsers.Size = new System.Drawing.Size(75, 23);
             this.btnAddUsers.TabIndex = 9;
             this.btnAddUsers.Text = "Add";
             this.btnAddUsers.UseVisualStyleBackColor = true;
+            this.btnAddUsers.Click += new System.EventHandler(this.btnAddUsers_Click);
             // 
             // pictureBox1
             // 

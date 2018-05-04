@@ -31,10 +31,10 @@ namespace ProjectFinalExam1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //if(lbxParticipantManagerList.SelectedItem !null)
-                {
-                MessageBox.Show(lbxParticipantManagerList.SelectedItem.ToString());
-                }
+           ////if(lbxParticipantManagerList.SelectedItem !null)
+           //     {
+           //     MessageBox.Show(lbxParticipantManagerList.SelectedItem.ToString());
+           //     }
         }
     }
 }
