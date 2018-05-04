@@ -39,5 +39,11 @@ namespace ProjectFinalExam1
             new AddEvent().Show();
             this.Hide();
         }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            new EditEvent().Show();
+            this.Hide();
+        }
     }
 }

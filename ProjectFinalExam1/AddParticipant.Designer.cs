@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class Participant
+    partial class frmAddUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -113,7 +113,7 @@
             // 
             this.tbxUsersAge.Location = new System.Drawing.Point(76, 187);
             this.tbxUsersAge.Name = "tbxUsersAge";
-            this.tbxUsersAge.Size = new System.Drawing.Size(100, 20);
+            this.tbxUsersAge.Size = new System.Drawing.Size(43, 20);
             this.tbxUsersAge.TabIndex = 8;
             // 
             // btnAddUsers
@@ -125,7 +125,7 @@
             this.btnAddUsers.Text = "Add";
             this.btnAddUsers.UseVisualStyleBackColor = true;
             // 
-            // Participant
+            // frmAddUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,8 +140,8 @@
             this.Controls.Add(this.tbxUsersPassword);
             this.Controls.Add(this.lblUsersPassword);
             this.Controls.Add(this.label1);
-            this.Name = "Participant";
-            this.Text = "Participant";
+            this.Name = "frmAddUsers";
+            this.Text = "Add Participant Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
