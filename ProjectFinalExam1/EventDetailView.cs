@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class EventDetailView : Form
+    public partial class fmdetailView : Form
     {
-        public EventDetailView()
+        public fmdetailView()
         {
             InitializeComponent();
         }
