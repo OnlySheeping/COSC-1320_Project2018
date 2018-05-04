@@ -31,5 +31,15 @@ namespace ProjectFinalExam1
         {
 
         }
+
+        private void btnAddUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
