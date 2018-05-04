@@ -18,6 +18,7 @@ namespace ProjectFinalExam1
     {
         public LogOn()
         {
+
             InitializeComponent();
             tbPassword.PasswordChar = '*';
         }
@@ -29,7 +30,12 @@ namespace ProjectFinalExam1
 
         private void Exit(object sender, EventArgs e)
         {
-            this.Close();
+            if(MessageBox.Show("Are you sure you want to leave?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+
         }
 
         private void Form3_Load(object sender, EventArgs e)
