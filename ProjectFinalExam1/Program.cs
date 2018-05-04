@@ -10,15 +10,17 @@ using System.Data.SqlClient;
 
 namespace ProjectFinalExam1
 {
-    static class Program
+    //string user = LogOn.
+    static class Program 
     {
+        
 
         public static List<test> student = new List<test>();                                        //change below where the database is
         public static SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        
         static void Main()
         {
             
@@ -27,6 +29,7 @@ namespace ProjectFinalExam1
             SqlDataReader dr;               //change above to * what your grabbing from the database
             try
             {
+                
                 conn.Open(); // Opening a connection to the database.
                 dr = cmd.ExecuteReader();  // Gives dr the ability to store the information from the commands.
                 while (dr.Read()) // Creates a loop to keep reading as long as there's information in the database.
@@ -53,8 +56,8 @@ namespace ProjectFinalExam1
 
                 //conn.Close(); // Closes the connection.
                               }
-                Application.EnableVisualStyles();
-           // Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LogOn());
         }
     }

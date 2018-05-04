@@ -105,23 +105,6 @@ namespace ProjectFinalExam1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //SqlCommand cmd = new System.Data.SqlClient.SqlCommand("select * from Project1.dbo.Users", Program.conn);
-
-            //SqlDataReader dr;
-
-            string username = tbUserName.Text;
-            string password = tbPassword.Text;
-
-           // User currentUser1 = new User();
-
-            //currentUser1.Login(username, password);
-
-            //connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            //connection.Open();
-            //Console.WriteLine(connection.ServerVersion);
-
-
-
 
             using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username =@username and Passsword = @password", Program.conn))
             {
@@ -136,25 +119,32 @@ namespace ProjectFinalExam1
                 if (reader.HasRows)
                 {
                     //UserData();
-
-                    // IF it has Rows so your Good to go and show your message 
-                    MessageBox.Show("Logon Successful");
-                    if(Program.student[0].RoleID==1)
+                    while(reader.Read())
                     {
-                        new ParticipantMenu().Show();
-                        
-                    }
-                    else if(Program.student[0].RoleID==2)
-                    {
-                        new AdminMenu().Show();
-                        
-                    }
-                    
-                   // MessageBox.Show("UserArg[4]= " + userArg[4]);
-                    //MessageBox.Show("UserArg[5]= " + userArg[5]);
+                        string userName = reader.GetString(reader.GetOrdinal("Username"));
+                        string firstName = reader.GetString(reader.GetOrdinal("UserFirstName"));
+                        string lastName = reader.GetString(reader.GetOrdinal("UserLastName"));
+                        int userAge = reader.GetInt32(reader.GetOrdinal("UserAge"));
+                        int roleID = reader.GetInt32(reader.GetOrdinal("RoleID"));
 
+                        if (roleID == 1)
+                        {
+                            MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
+                            ParticipantMenu participant = new ParticipantMenu();
+                            participant.Show();
+                        }
+                        else if (roleID == 2)
+                        {
+                            MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
+                            new AdminMenu().Show();
+                        }
+                        else
+                        {
+                            
+                            MessageBox.Show("Please enter correct Username and Password");
+                        }
+                    }
 
-                    //if()
 
                 }
                 else
@@ -166,11 +156,3 @@ namespace ProjectFinalExam1
         }
     }
 }
-//error field            catch () { }
-           // finally { }
-        //}
-
-
-
-    //}
-    //}
