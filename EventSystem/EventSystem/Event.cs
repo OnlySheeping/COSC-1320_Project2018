@@ -153,7 +153,9 @@ namespace EventSystem
 
         public void ShowEventsForTeaserView()
         {
-            throw new System.NotImplementedException();
+            //SELECT CategoryDescription, EventName
+            //    FROM Project1.dbo.Categories, Project1.dbo.Events
+            //    Order By CategoryDescription, EventName ASC;
         }
 
         public void ShowEventsForListView()
@@ -163,7 +165,23 @@ namespace EventSystem
 
         public void ShowEventDetail()
         {
-            throw new System.NotImplementedException();
-        }
+      //      SELECT TOP 1[EventID]
+      //,[EventName]
+      //,[Status]
+      //,[EventDescription]
+      //,[StartDate]
+      //,[EndDate]
+      //,[StartTime]
+      //,[EndTime]
+      //,[EventNotes]
+      //,[AgeRequirement]
+      //, CategoryID replace with CategoryDescription - table 
+      //,[Private]
+      //,[Closed]
+      //,[Location]
+      //,[MaxAttendees]
+      //  FROM[Project1].[dbo].[Events]
+    }
+
     }
 }
