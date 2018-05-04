@@ -69,7 +69,7 @@
             this.btnListAllEvents.Name = "btnListAllEvents";
             this.btnListAllEvents.Size = new System.Drawing.Size(103, 60);
             this.btnListAllEvents.TabIndex = 21;
-            this.btnListAllEvents.Text = "List All Events";
+            this.btnListAllEvents.Text = "View All Events";
             this.btnListAllEvents.UseVisualStyleBackColor = true;
             this.btnListAllEvents.Click += new System.EventHandler(this.btnListAllEvents_Click);
             // 
