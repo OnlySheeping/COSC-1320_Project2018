@@ -112,7 +112,7 @@ namespace ProjectFinalExam1
 
             //currentUser1.Login(username, password);
 
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10";";
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
 

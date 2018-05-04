@@ -225,9 +225,8 @@ namespace EventSystem
 
 
 
-        public void ShowRegisteredEvents()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public void ShowRegisteredEvents()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
-}
