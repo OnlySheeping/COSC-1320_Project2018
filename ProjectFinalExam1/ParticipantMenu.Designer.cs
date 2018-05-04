@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParticipantMenu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnListAllEvents = new System.Windows.Forms.Button();
             this.btnMyEvents = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,22 +62,9 @@
             this.label4.Text = "Participants Menu";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(406, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Menu";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // btnListAllEvents
             // 
-            this.btnListAllEvents.Location = new System.Drawing.Point(460, 286);
+            this.btnListAllEvents.Location = new System.Drawing.Point(523, 286);
             this.btnListAllEvents.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnListAllEvents.Name = "btnListAllEvents";
             this.btnListAllEvents.Size = new System.Drawing.Size(103, 60);
@@ -89,7 +75,7 @@
             // 
             // btnMyEvents
             // 
-            this.btnMyEvents.Location = new System.Drawing.Point(287, 286);
+            this.btnMyEvents.Location = new System.Drawing.Point(272, 286);
             this.btnMyEvents.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnMyEvents.Name = "btnMyEvents";
             this.btnMyEvents.Size = new System.Drawing.Size(105, 60);
@@ -109,19 +95,16 @@
             this.Controls.Add(this.btnMyEvents);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
             this.Name = "ParticipantMenu";
             this.Text = "ParticipantMenu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnListAllEvents;
         private System.Windows.Forms.Button btnMyEvents;
     }
