@@ -1,17 +1,29 @@
-﻿using System;
+﻿using EventSystem;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProjectFinalExam1
 {
     public partial class LogOn : Form
     {
+        SqlConnection connection = new SqlConnection();
+        string userName;
+        string password;
+        string firstName;
+        string lastName;
+        int userAge;
+        int roleID;
+
         public LogOn()
         {
             InitializeComponent();
@@ -37,14 +49,68 @@ namespace ProjectFinalExam1
 
         }
 
+        public class UserData
+        {
+            static SqlConnection conn = new System.Data.SqlClient.SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10");
+            SqlCommand cmd = new System.Data.SqlClient.SqlCommand("select * from Project1.dbo.Users", conn);
+            SqlDataReader dr;
+            
+
+
+
+            //  if (userArray[5] == "1")
+            //   {
+            //       new AdminMenu().Show();
+            //   }
+
+            // try
+            // {
+
+            //    connString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            //        pubConnection.ConnectionString = connString;
+            //            pubConnection.Open();
+            //            pubcommand = new SqlCommand();
+            //    pubcommand.Connection = pubConnection;
+            //            pubcommand.CommandText = new SqlCommand("Select * from Project1.dbo.Users", )
+            //            dr = pubcommand.ExecuteReader();
+
+
+
+
+            //            while (userDataReader.Read())
+            //            {
+            //                userArray.Add(userDataReader["Username{0}, Passsword, UserFirstName, UserLastName, UserAge, RoleID"]);
+
+            //                foreach ()
+
+            //            }
+            //userArg[0] = userArray[1][5];
+            //        return userArray;
+            //        }
+            //        catch (SqlException ex)
+            //        {
+            //   throw ex;
+            //}
+            //finally
+            //{
+            //   if (pubConnection != null)
+            //  {
+            //     pubConnection.Close();
+            //}
+            //  }
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            //try
+            //{
             string username = tbUserName.Text;
             string password = tbPassword.Text;
 
             User currentUser1 = new User();
 
-            currentUser1.Login(username, password);
+            //currentUser1.Login(username, password);
 
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
@@ -53,74 +119,43 @@ namespace ProjectFinalExam1
 
 
 
-
-            using (SqlCommand readAllUsernameRecords = connection.CreateCommand())
+            using (SqlCommand command = new SqlCommand("SELECT * FROM Project1.dbo.Users where Username =@username and Passsword = @password", connection))
             {
-                //changed this sql command to try tomorrow
-                readUsernameRecords.CommandText = "select RoleID ";
-                readUsernameRecords.CommandText += "from Project1.dbo.Users ";
-                readUsernameRecords.CommandText += "where Username = ";
-                readUsernameRecords.CommandText += "'";
-                readUsernameRecords.CommandText += userName;
+                //
+                // Invoke ExecuteReader method.
+                //
+                command.Parameters.AddWithValue("@username", tbUserName.Text);
+                command.Parameters.AddWithValue("@password", tbPassword.Text);
 
-                using (SqlDataReader reader = readAllUsernameRecords.ExecuteReader())
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
                 {
+                    //UserData();
 
-                    int roleID = 0;
-                    string currentUser = username;
-
-                    if (reader.HasRows)
-                    {
-                        //Research this area, unable to pull proper RoleID, page only pulls up AdminMenu, not veryfing properly
-                        //need to figure out the reader function
-                        while (reader.Read())
-                        {
-                            //while loop is only reading role ID while in the while loop
-                            // need to figure out the reader function
-
-                            //instantiated user again to see if assigning it to you.roleID would make a difference reading the role ID
-                            User you = new User();
+                    // IF it has Rows so your Good to go and show your message 
+                    MessageBox.Show("Logon Successful");
+                   // MessageBox.Show("UserArg[4]= " + userArg[4]);
+                    //MessageBox.Show("UserArg[5]= " + userArg[5]);
 
 
-                            you.roleID = reader.GetInt32["Role ID"];
-                            //this.Close();
-                        }
-                    }
-
-                    if (you.roleID == 1)
-                    {
-                        new ParticipantMenu().Show();
-                        //this.Close();
-                    }
-
-                    else if (you.roleID == 2)
-                    {
-                        new AdminMenu().Show();
-                        //this.Close();
-                    }
-
-                    else
-                    {
-                        //error
-                    }
+                    //if()
 
                 }
+                else
+                {
+                    MessageBox.Show("Contact Administrator");
+                }
+
             }
         }
-        //using (SqlCommand readUsernameRecords = connection.CreateCommand())
-        //{
-        //    readUsernameRecords.CommandText = "select RoleID ";
-        //    readUsernameRecords.CommandText += "from Project1.dbo.Role ";
-        //    readUsernameRecords.CommandText += "where 'RoleID' =  '1' or '2'";
-
-
-
-    }
-
-
-    private void tbUserName_TextChanged(object sender, EventArgs e)
-    {
-
     }
 }
-}
+//error field            catch () { }
+           // finally { }
+        //}
+
+
+
+    //}
+    //}
