@@ -528,19 +528,5 @@ namespace EventSystem
                 connection.Close();
             }
         }
-
-        public string GetFullView()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string PartialView()
-        {
-            throw new System.NotImplementedException();
-        }
-        public string GetListView()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

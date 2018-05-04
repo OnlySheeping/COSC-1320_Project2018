@@ -21,5 +21,17 @@ namespace ProjectFinalExam1
         {
 
         }
+
+        private void lviListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGetDetailView_Click(object sender, EventArgs e)
+        {
+           //fmDetailView fdv2 new = fmDetailView ();
+
+           // fdv2.ShowDialog();
+        }
     }
 }
