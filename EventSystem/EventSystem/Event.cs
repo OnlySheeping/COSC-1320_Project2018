@@ -163,7 +163,9 @@ namespace EventSystem
             using (SqlCommand command =
                 new SqlCommand
                 ("SELECT CategoryDescription, EventName " +
-                "FROM dbo.Categories.CategoryID = dbo.Events.CategoryID " +
+                "FROM dbo.Categories.CategoryID " +
+                "INNER JOIN dbo.Events " + 
+                "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
                 "ORDER BY CategoryDescription ASC, EventName ASC;", Program.conn))
             {
                 //

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventSystem;
 
 namespace ProjectFinalExam1
 {
@@ -34,7 +35,9 @@ namespace ProjectFinalExam1
 
         private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // Diana Bell added the following statement 5/4/2018
+            Event teaserView = new Event();
+            teaserView.ShowEventsForTeaserView();
         }
     }
 }
