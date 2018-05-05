@@ -191,6 +191,7 @@ namespace EventSystem
                     }
                 }
             }
+            connection.Close();
         }
 
         public void ShowEventsForListView()
