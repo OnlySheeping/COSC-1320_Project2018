@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Data.SqlClient;
+using System.Data.Sql;
+
 namespace EventSystem
 {
     public class Event
     {
+        SqlConnection connection = new SqlConnection();
         private string title
         {
             get
@@ -151,10 +155,31 @@ namespace EventSystem
             }
         }
 
+        public string CategoryDescription { get; set; }
+        public string EventName { get; set; }
+        public string Status { get; set; }
+        public string EventDescription { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public string EventNotes { get; set; }
+        public string AgeRequirement { get; set; }
+        public string CategoryID { get; set; }
+        public string Private { get; set; }
+        public string Closed { get; set; }
+        public string Location { get; set; }
+        public string MaxAttendees { get; set; }
+
         public void ShowEventsForTeaserView()
         {
-            throw new System.NotImplementedException();
+            // Julian Please call me 4331821
+            // This is setup and able to call this method from EventDetailView Form
+            // Method is located in EventDetailView.cs under 
+            //  private void btnPopulate_Click(object sender, EventArgs e)
+
         }
+
 
         public void ShowEventsForListView()
         {
@@ -163,7 +188,23 @@ namespace EventSystem
 
         public void ShowEventDetail()
         {
-            throw new System.NotImplementedException();
-        }
+      //      SELECT TOP 1[EventID]
+      //,[EventName]
+      //,[Status]
+      //,[EventDescription]
+      //,[StartDate]
+      //,[EndDate]
+      //,[StartTime]
+      //,[EndTime]
+      //,[EventNotes]
+      //,[AgeRequirement]
+      //, CategoryID replace with CategoryDescription - table 
+      //,[Private]
+      //,[Closed]
+      //,[Location]
+      //,[MaxAttendees]
+      //  FROM[Project1].[dbo].[Events]
+    }
+
     }
 }

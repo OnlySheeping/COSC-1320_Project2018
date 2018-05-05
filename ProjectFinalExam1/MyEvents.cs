@@ -16,5 +16,11 @@ namespace ProjectFinalExam1
         {
             InitializeComponent();
         }
+
+        private void btnEventDetailView_Click(object sender, EventArgs e)
+        {
+            new fmdetailView().Show();
+            this.Hide();
+        }
     }
 }

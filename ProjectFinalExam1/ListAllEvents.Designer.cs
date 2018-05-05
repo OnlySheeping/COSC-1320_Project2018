@@ -29,57 +29,113 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListAllEvents));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblListBanner = new System.Windows.Forms.Label();
+            this.btnGetDetailView = new System.Windows.Forms.Button();
+            this.btnAscending = new System.Windows.Forms.Button();
+            this.btnDescending = new System.Windows.Forms.Button();
+            this.lvTeaser = new System.Windows.Forms.ListView();
+            this.chCatId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeaserVw = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // lblListBanner
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 71);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(738, 119);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.lblListBanner.BackColor = System.Drawing.Color.Transparent;
+            this.lblListBanner.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblListBanner.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListBanner.ForeColor = System.Drawing.Color.Black;
+            this.lblListBanner.Location = new System.Drawing.Point(84, 10);
+            this.lblListBanner.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblListBanner.Name = "lblListBanner";
+            this.lblListBanner.Size = new System.Drawing.Size(577, 94);
+            this.lblListBanner.TabIndex = 13;
+            this.lblListBanner.Text = "List of All Our Events";
+            this.lblListBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // btnGetDetailView
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(5, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(738, 57);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "List All Events";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGetDetailView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetDetailView.Location = new System.Drawing.Point(125, 619);
+            this.btnGetDetailView.Name = "btnGetDetailView";
+            this.btnGetDetailView.Size = new System.Drawing.Size(97, 39);
+            this.btnGetDetailView.TabIndex = 16;
+            this.btnGetDetailView.Text = "Details";
+            this.btnGetDetailView.UseVisualStyleBackColor = true;
+            this.btnGetDetailView.Click += new System.EventHandler(this.btnGetDetailView_Click);
+            // 
+            // btnAscending
+            // 
+            this.btnAscending.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAscending.Location = new System.Drawing.Point(288, 620);
+            this.btnAscending.Name = "btnAscending";
+            this.btnAscending.Size = new System.Drawing.Size(121, 39);
+            this.btnAscending.TabIndex = 17;
+            this.btnAscending.Text = "Sort Ascending";
+            this.btnAscending.UseVisualStyleBackColor = true;
+            // 
+            // btnDescending
+            // 
+            this.btnDescending.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescending.Location = new System.Drawing.Point(477, 619);
+            this.btnDescending.Name = "btnDescending";
+            this.btnDescending.Size = new System.Drawing.Size(129, 39);
+            this.btnDescending.TabIndex = 18;
+            this.btnDescending.Text = "Sort Descending";
+            this.btnDescending.UseVisualStyleBackColor = true;
+            // 
+            // lvTeaser
+            // 
+            this.lvTeaser.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chCatId,
+            this.chTeaserVw});
+            this.lvTeaser.GridLines = true;
+            this.lvTeaser.Location = new System.Drawing.Point(57, 144);
+            this.lvTeaser.MultiSelect = false;
+            this.lvTeaser.Name = "lvTeaser";
+            this.lvTeaser.Size = new System.Drawing.Size(662, 423);
+            this.lvTeaser.TabIndex = 0;
+            this.lvTeaser.UseCompatibleStateImageBehavior = false;
+            this.lvTeaser.View = System.Windows.Forms.View.Details;
+            // 
+            // chCatId
+            // 
+            this.chCatId.Text = "Category Name";
+            this.chCatId.Width = 137;
+            // 
+            // chTeaserVw
+            // 
+            this.chTeaserVw.Text = "Category Description";
+            this.chTeaserVw.Width = 557;
             // 
             // ListAllEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(746, 604);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(822, 672);
+            this.Controls.Add(this.lvTeaser);
+            this.Controls.Add(this.btnDescending);
+            this.Controls.Add(this.btnAscending);
+            this.Controls.Add(this.btnGetDetailView);
+            this.Controls.Add(this.lblListBanner);
+            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListAllEvents";
-            this.Text = "ListAllEvents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "List Of Events";
             this.Load += new System.EventHandler(this.ListAllEvents_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblListBanner;
+        private System.Windows.Forms.Button btnGetDetailView;
+        private System.Windows.Forms.Button btnAscending;
+        private System.Windows.Forms.Button btnDescending;
+        private System.Windows.Forms.ListView lvTeaser;
+        private System.Windows.Forms.ColumnHeader chCatId;
+        private System.Windows.Forms.ColumnHeader chTeaserVw;
     }
 }
