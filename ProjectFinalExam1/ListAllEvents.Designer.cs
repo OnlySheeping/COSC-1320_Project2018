@@ -47,7 +47,7 @@
             this.lblListBanner.Location = new System.Drawing.Point(84, 10);
             this.lblListBanner.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblListBanner.Name = "lblListBanner";
-            this.lblListBanner.Size = new System.Drawing.Size(577, 61);
+            this.lblListBanner.Size = new System.Drawing.Size(577, 94);
             this.lblListBanner.TabIndex = 13;
             this.lblListBanner.Text = "List of All Our Events";
             this.lblListBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -55,9 +55,9 @@
             // btnGetDetailView
             // 
             this.btnGetDetailView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetDetailView.Location = new System.Drawing.Point(147, 619);
+            this.btnGetDetailView.Location = new System.Drawing.Point(125, 619);
             this.btnGetDetailView.Name = "btnGetDetailView";
-            this.btnGetDetailView.Size = new System.Drawing.Size(75, 39);
+            this.btnGetDetailView.Size = new System.Drawing.Size(97, 39);
             this.btnGetDetailView.TabIndex = 16;
             this.btnGetDetailView.Text = "Details";
             this.btnGetDetailView.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             this.chCatId,
             this.chTeaserVw});
             this.lvTeaser.GridLines = true;
-            this.lvTeaser.Location = new System.Drawing.Point(38, 91);
+            this.lvTeaser.Location = new System.Drawing.Point(57, 144);
             this.lvTeaser.MultiSelect = false;
             this.lvTeaser.Name = "lvTeaser";
             this.lvTeaser.Size = new System.Drawing.Size(662, 423);
@@ -109,7 +109,7 @@
             // 
             // ListAllEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
