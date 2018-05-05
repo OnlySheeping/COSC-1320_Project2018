@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Windows.Forms;
 using System.Collections;
+using System.Windows.Input;
 
 namespace EventSystem
 {
@@ -114,119 +115,57 @@ namespace EventSystem
             }
         }
     }
-        public class UserData
-        {
-           // List<UserData> userData = new List<UserData>();
-          //  SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10");
-          //  SqlCommand cmd = new SqlCommand("select * from Project1.dbo.Users", conn);
-          //  SqlDataReader dr;
+    //public class UserData
+    //{
+    //    public void GetLogin(string userName, string password)
+    //    { 
+    //    //Invoke ExecuteReader method.
+    //        using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username =@username and Passsword = @password", Program.conn))
+    //        {
+    //            command.Parameters.AddWithValue("@username", userName);
+    //            command.Parameters.AddWithValue("@password", password);
+    //        }
+    //        SqlDataReader reader = command.ExecuteReader();
 
-                 
-        //SqlConnection pubConnection = new SqlConnection();
-        //    string connString;
-        //    SqlCommand pubcommand;
-        //    ArrayList userArray;
-        //    SqlDataReader employeeDataReader;
+    //        if (reader.HasRows)
+    //        {
+    //            //UserData();
+    //            while (reader.Read())
+    //            {
+    //                string userName1 = reader.GetString(reader.GetOrdinal("Username"));
+    //                string firstName = reader.GetString(reader.GetOrdinal("UserFirstName"));
+    //                string lastName = reader.GetString(reader.GetOrdinal("UserLastName"));
+    //                int userAge = reader.GetInt32(reader.GetOrdinal("UserAge"));
+    //                int roleID = reader.GetInt32(reader.GetOrdinal("RoleID"));
 
-        //    try
-        //    {
-        //        connString = "Data Source=drcsrv01;" +
-        //            "Initial Catalog=pubs;Integrated Security=True";
-        //        pubConnection.ConnectionString = connString;
-        //        pubConnection.Open();
-        //        pubcommand = new SqlCommand();
-        //        pubcommand.Connection = pubConnection;
-        //        pubcommand.CommandText =
-        //            "Select * from Project1.dbo.Users";
-        //        employeeDataReader = pubcommand.ExecuteReader();
-        //        userArray = new ArrayList();
-        //        while (employeeDataReader.Read())
-        //        {
-        //            userArray.Add(employeeDataReader["*"]);
-        //        }
-        //        return userArray;
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        if(pubConnection != null)
-        //        {
-        //            pubConnection.Close();
-        //        }
-        //    }
-            
+    //                if (roleID == 1)
+    //                {
+    //                    MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
+    //                    ProjectFinalExam1.ParticipantMenu participant = new ParticipantMenu();
+    //                    participant.Show();
+    //                    Visible = false;
+    //                }
+    //                else if (roleID == 2)
+    //                {
+    //                    MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
+    //                    AdminMenu admin = new AdminMenu();
+    //                    admin.Show();
+    //                    Visible = false;
+    //                }
+    //                else
+    //                {
+
+    //                    MessageBox.Show("Please enter correct Username and Password");
+    //                }
+    //            }
+    //        }
+    //        else
+    //        {
+    //            MessageBox.Show("Contact Administrator");
+    //        }
+
         }
+//    }
+//}
 
-
-        // public bool Login(string userName, string password)
-        // {
-        //   return didLoginWork;
-
-        ////Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-        //connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-        //connection.Open();
-        //Console.WriteLine(connection.ServerVersion);
-        ////Console.ReadKey();
-
-        //bool didLoginWork = false;
-
-        //using (SqlCommand readAllUsernameRecords = connection.CreateCommand())
-        //{
-        //    readAllUsernameRecords.CommandText = "select  from Project1.dbo.Users where Username = 'userName';";
-
-        //    using (SqlDataReader reader = readAllUsernameRecords.ExecuteReader())
-        //    {
-        //        int userCount = 0;
-
-
-        //        while (reader.HasRows && reader.Read())
-        //        {
-
-
-        //            userCount++;
-
-        //            if (userCount > 1)
-        //            {
-        //                //BIG Error
-        //                didLoginWork = false;
-        //                Console.WriteLine("Contact network administrator");
-        //                return didLoginWork;
-        //            }
-        //            else if (userCount == 1)
-        //            {
-        //                // Put your success logic here.
-        //                didLoginWork = true;
-        //                MessageBox.Show("Logon Successful!");
-
-        //                // Login a success. Carry on.
-
-        //                //bool roleID = true;
-
-        //                //readUsernameRecords.CommandText = "select RoleID ";
-        //                //readUsernameRecords.CommandText += "from db_owner.Role ";
-        //                //readUsernameRecords.CommandText += "where 'RoleID' =  '1'";
-        //                return didLoginWork;
-        //            }
-        //            else
-        //            {
-        //                    Console.WriteLine("There was an issue with your username or password.");
-        //                    return didLoginWork;
-        //            }
-
-        //        }
-
-        //    }
-        //}
-
-        // }
-
-
-
-        //public void ShowRegisteredEvents()
-        //{
-        //    throw new System.NotImplementedException();
-        //}
-    }
+//    }

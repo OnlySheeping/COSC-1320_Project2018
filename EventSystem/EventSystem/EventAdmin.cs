@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Diana Bell
+// COSC 1320 002
+// 5/3/2018
+// Final Project
+// SQL Methods
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,7 +43,7 @@ namespace EventSystem
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
             connection.ConnectionString =
-                "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+                (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
             Console.ReadKey();
@@ -71,8 +77,8 @@ namespace EventSystem
         {
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
-            connection.ConnectionString = 
-                "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            connection.ConnectionString =
+                (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
             Console.ReadKey();
@@ -107,7 +113,7 @@ namespace EventSystem
                 //Server=myServerAddress;Database=myDataBase;
                 // User Id=myUsername;Password = myPassword;
                 connection.ConnectionString =
-                    "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+                    (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
                 connection.Open();
                 Console.WriteLine(connection.ServerVersion);
                 Console.ReadKey();
@@ -188,7 +194,7 @@ namespace EventSystem
                 //Server=myServerAddress;Database=myDataBase;
                 // User Id=myUsername;Password = myPassword;
                 connection.ConnectionString =
-                    "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+                    (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
                 connection.Open();
                 Console.WriteLine(connection.ServerVersion);
                 Console.ReadKey();
@@ -216,8 +222,8 @@ namespace EventSystem
         {
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
-            connection.ConnectionString = 
-                "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            connection.ConnectionString =
+                (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
             Console.ReadKey();
@@ -251,8 +257,10 @@ namespace EventSystem
         {
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
-            connection.ConnectionString = 
-                "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            // connection.ConnectionString = 
+            //     "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+            connection.ConnectionString =
+                (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
             Console.ReadKey();
@@ -482,7 +490,7 @@ namespace EventSystem
             //Server=myServerAddress;Database=myDataBase;
             // User Id=myUsername;Password = myPassword;
             connection.ConnectionString =
-                "Server=cis1.actx.edu;Database=db_owner;User Id=db1;Password = db10;";
+                (@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             connection.Open();
             Console.WriteLine(connection.ServerVersion);
             Console.ReadKey();

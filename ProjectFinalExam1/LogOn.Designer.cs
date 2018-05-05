@@ -70,6 +70,7 @@
             this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "USER NAME";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 

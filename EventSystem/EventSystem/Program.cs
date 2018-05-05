@@ -1,10 +1,10 @@
-﻿using ProjectFinalExam1;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Relegate;
 
 namespace EventSystem
 {
@@ -12,7 +12,7 @@ namespace EventSystem
     {
 
 
-        public static List<test> student = new List<test>();                                        //change below where the database is
+        public static List<test1> student = new List<test1>();                                        //change below where the database is
         public static SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
         /// <summary>
         /// The main entry point for the application.
@@ -31,7 +31,7 @@ namespace EventSystem
                 dr = cmd.ExecuteReader();  // Gives dr the ability to store the information from the commands.
                 while (dr.Read()) // Creates a loop to keep reading as long as there's information in the database.
                 {
-                    student.Add(new test() // This would reference the class where you have your Array.
+                    student.Add(new test1() // This would reference the class where you have your Array.
                     {
                         RoleID = dr.GetInt32(dr.GetOrdinal("RoleID")),  // GetOrdinal grabs information in the columns that are specified in quotes.
                         Username = dr.GetString(dr.GetOrdinal("Username")),

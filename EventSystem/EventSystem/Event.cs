@@ -155,6 +155,22 @@ namespace EventSystem
             }
         }
 
+        public string CategoryDescription { get; set; }
+        public string EventName { get; set; }
+        public string Status { get; set; }
+        public string EventDescription { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public string EventNotes { get; set; }
+        public string AgeRequirement { get; set; }
+        public string CategoryID { get; set; }
+        public string Private { get; set; }
+        public string Closed { get; set; }
+        public string Location { get; set; }
+        public string MaxAttendees { get; set; }
+
         public void ShowEventsForTeaserView()
         {
             // Julian Please call me 4331821
@@ -162,37 +178,22 @@ namespace EventSystem
             //SELECT CategoryDescription, EventName
             //    FROM Project1.dbo.Categories, Project1.dbo.Events
             //    Order By CategoryDescription, EventName ASC;
-            using (SqlCommand command =
-                new SqlCommand
-                ("SELECT CategoryDescription, EventName " +
-                "FROM dbo.Categories.CategoryID " +
-                "INNER JOIN dbo.Events " + 
-                "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
-                "ORDER BY CategoryDescription ASC, EventName ASC;", Program.conn))
-            {
-                //
-                // Invoke ExecuteReader method.
-                //
-                //command.Parameters.AddWithValue("@username", tbUserName.Text);
-                //command.Parameters.AddWithValue("@password", tbPassword.Text);
+            //using (SqlCommand command =
+            //    new SqlCommand
+            //    ("SELECT CategoryDescription, EventName " +
+            //    "FROM dbo.Categories.CategoryID " +
+            //    "INNER JOIN dbo.Events " + 
+            //    "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
+            //    "ORDER BY CategoryDescription ASC, EventName ASC;", Program.conn))
 
+            //
+            // Invoke ExecuteReader method.
+            //
+            //command.Parameters.AddWithValue("@username", tbUserName.Text);
+            //command.Parameters.AddWithValue("@password", tbPassword.Text);
 
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    //UserData();
-                    while (reader.Read())
-                    {
-                        string categoryDescription =
-                            reader.GetString(reader.GetOrdinal("CategoryDescription"));
-                        string eventName =
-                            reader.GetString(reader.GetOrdinal("EventName"));
-
-                    }
-                }
-            }
-            connection.Close();
         }
+
 
         public void ShowEventsForListView()
         {
