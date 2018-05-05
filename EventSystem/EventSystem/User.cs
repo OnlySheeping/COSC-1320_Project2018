@@ -12,7 +12,7 @@ using System.Collections;
 namespace EventSystem
 {
     // included EventAdmin, Participant for logon transitioning to each of those pages
-    public class User //: //EventAdmin, Participant
+    public abstract class User //: //EventAdmin, Participant
     {
         SqlConnection connection = new SqlConnection();
         string[] user = new string[4];
