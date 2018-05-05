@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class frmAddUsers : Form
+    public partial class frmAllParticipants : Form
     {
-        public frmAddUsers()
+        public frmAllParticipants()
         {
             InitializeComponent();
         }
@@ -28,6 +28,11 @@ namespace ProjectFinalExam1
         }
 
         private void Participant_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmAddUsers_Load(object sender, EventArgs e)
         {
 
         }

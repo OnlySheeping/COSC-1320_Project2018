@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class frmAddUsers
+    partial class frmAllParticipants
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAllParticipantsList = new System.Windows.Forms.Label();
             this.lblUsersPassword = new System.Windows.Forms.Label();
             this.tbxUsersPassword = new System.Windows.Forms.TextBox();
             this.lblUsersFirstName = new System.Windows.Forms.Label();
@@ -40,14 +40,14 @@
             this.btnAddUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblAllParticipantsList
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add Participant Form ";
+            this.lblAllParticipantsList.AutoSize = true;
+            this.lblAllParticipantsList.Location = new System.Drawing.Point(105, 22);
+            this.lblAllParticipantsList.Name = "lblAllParticipantsList";
+            this.lblAllParticipantsList.Size = new System.Drawing.Size(95, 13);
+            this.lblAllParticipantsList.TabIndex = 0;
+            this.lblAllParticipantsList.Text = "All Participants List";
             // 
             // lblUsersPassword
             // 
@@ -125,7 +125,7 @@
             this.btnAddUsers.Text = "Add";
             this.btnAddUsers.UseVisualStyleBackColor = true;
             // 
-            // frmAddUsers
+            // frmAllParticipants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,9 +139,10 @@
             this.Controls.Add(this.lblUsersFirstName);
             this.Controls.Add(this.tbxUsersPassword);
             this.Controls.Add(this.lblUsersPassword);
-            this.Controls.Add(this.label1);
-            this.Name = "frmAddUsers";
-            this.Text = "Add Participant Form";
+            this.Controls.Add(this.lblAllParticipantsList);
+            this.Name = "frmAllParticipants";
+            this.Text = "All Participants";
+            this.Load += new System.EventHandler(this.frmAddUsers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +150,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAllParticipantsList;
         private System.Windows.Forms.Label lblUsersPassword;
         private System.Windows.Forms.TextBox tbxUsersPassword;
         private System.Windows.Forms.Label lblUsersFirstName;
