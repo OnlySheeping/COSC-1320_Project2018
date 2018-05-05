@@ -55,7 +55,7 @@
             this.lvDetailView.Location = new System.Drawing.Point(72, 100);
             this.lvDetailView.MultiSelect = false;
             this.lvDetailView.Name = "lvDetailView";
-            this.lvDetailView.Size = new System.Drawing.Size(539, 412);
+            this.lvDetailView.Size = new System.Drawing.Size(539, 492);
             this.lvDetailView.TabIndex = 14;
             this.lvDetailView.UseCompatibleStateImageBehavior = false;
             this.lvDetailView.View = System.Windows.Forms.View.Details;
@@ -63,7 +63,7 @@
             // 
             // btnPopulate
             // 
-            this.btnPopulate.Location = new System.Drawing.Point(268, 592);
+            this.btnPopulate.Location = new System.Drawing.Point(268, 632);
             this.btnPopulate.Name = "btnPopulate";
             this.btnPopulate.Size = new System.Drawing.Size(111, 42);
             this.btnPopulate.TabIndex = 15;
