@@ -42,11 +42,12 @@
             // lblEditUsers
             // 
             this.lblEditUsers.AutoSize = true;
-            this.lblEditUsers.Location = new System.Drawing.Point(85, 22);
+            this.lblEditUsers.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditUsers.Location = new System.Drawing.Point(39, 9);
             this.lblEditUsers.Name = "lblEditUsers";
-            this.lblEditUsers.Size = new System.Drawing.Size(107, 14);
+            this.lblEditUsers.Size = new System.Drawing.Size(197, 29);
             this.lblEditUsers.TabIndex = 0;
-            this.lblEditUsers.Text = "Edit Participant Form";
+            this.lblEditUsers.Text = "Edit Participant";
             // 
             // lblEditUsersFirstName
             // 

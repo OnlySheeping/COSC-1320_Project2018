@@ -42,11 +42,12 @@
             // lblDeleteUsersForm
             // 
             this.lblDeleteUsersForm.AutoSize = true;
-            this.lblDeleteUsersForm.Location = new System.Drawing.Point(76, 30);
+            this.lblDeleteUsersForm.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeleteUsersForm.Location = new System.Drawing.Point(32, 19);
             this.lblDeleteUsersForm.Name = "lblDeleteUsersForm";
-            this.lblDeleteUsersForm.Size = new System.Drawing.Size(113, 14);
+            this.lblDeleteUsersForm.Size = new System.Drawing.Size(226, 29);
             this.lblDeleteUsersForm.TabIndex = 0;
-            this.lblDeleteUsersForm.Text = "Delete Participant Form";
+            this.lblDeleteUsersForm.Text = "Delete Participant ";
             // 
             // lblDeleteUsersFirstName
             // 

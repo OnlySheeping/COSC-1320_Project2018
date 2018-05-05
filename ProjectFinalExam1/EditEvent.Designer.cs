@@ -49,16 +49,16 @@
             // lblEditEvent
             // 
             this.lblEditEvent.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditEvent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEditEvent.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditEvent.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditEvent.ForeColor = System.Drawing.Color.Black;
-            this.lblEditEvent.Location = new System.Drawing.Point(23, 8);
+            this.lblEditEvent.Location = new System.Drawing.Point(73, 20);
             this.lblEditEvent.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblEditEvent.Name = "lblEditEvent";
-            this.lblEditEvent.Size = new System.Drawing.Size(302, 62);
+            this.lblEditEvent.Size = new System.Drawing.Size(178, 47);
             this.lblEditEvent.TabIndex = 15;
-            this.lblEditEvent.Text = "Add Event";
+            this.lblEditEvent.Text = "Edit Event";
             this.lblEditEvent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEditEvent.Click += new System.EventHandler(this.lblEditEvent_Click);
             // 
             // lblEventName
             // 
@@ -159,7 +159,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(234, 322);
+            this.btnClear.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(235, 320);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 25);
             this.btnClear.TabIndex = 29;
@@ -169,18 +170,18 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(23, 322);
+            this.btnAdd.Location = new System.Drawing.Point(28, 322);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 25);
             this.btnAdd.TabIndex = 28;
-            this.btnAdd.Text = "ADD";
+            this.btnAdd.Text = "SUBMIT";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // EditEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 369);
+            this.ClientSize = new System.Drawing.Size(339, 372);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.textBox2);
@@ -198,7 +199,7 @@
             this.Controls.Add(this.lblEditEvent);
             this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Event";
