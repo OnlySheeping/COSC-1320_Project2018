@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Diana Bell
+// COSC 1320 002
+// 5/3/2018
+// Final Project
+// SQL Methods
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
