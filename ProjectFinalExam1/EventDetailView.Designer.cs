@@ -58,10 +58,11 @@
             this.lvDetailView.TabIndex = 14;
             this.lvDetailView.UseCompatibleStateImageBehavior = false;
             this.lvDetailView.View = System.Windows.Forms.View.Details;
+            this.lvDetailView.SelectedIndexChanged += new System.EventHandler(this.lvDetailView_SelectedIndexChanged);
             // 
             // fmdetailView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -69,7 +70,7 @@
             this.Controls.Add(this.lvDetailView);
             this.Controls.Add(this.lblDetailBanner);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmdetailView";
             this.ShowIcon = false;
             this.Text = "Event Detail View";

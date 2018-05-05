@@ -31,5 +31,10 @@ namespace ProjectFinalExam1
         {
 
         }
+
+        private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

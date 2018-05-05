@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Data.SqlClient;
+using System.Data.Sql;
+
 namespace EventSystem
 {
     public class Event
     {
+        SqlConnection connection = new SqlConnection();
         private string title
         {
             get
@@ -156,6 +160,33 @@ namespace EventSystem
             //SELECT CategoryDescription, EventName
             //    FROM Project1.dbo.Categories, Project1.dbo.Events
             //    Order By CategoryDescription, EventName ASC;
+            using (SqlCommand command =
+                new SqlCommand
+                ("SELECT CategoryDescription, EventName " +
+                "FROM dbo.Categories.CategoryID = dbo.Events.CategoryID " +
+                "ORDER BY CategoryDescription ASC, EventName ASC;", Program.conn))
+            {
+                //
+                // Invoke ExecuteReader method.
+                //
+                //command.Parameters.AddWithValue("@username", tbUserName.Text);
+                //command.Parameters.AddWithValue("@password", tbPassword.Text);
+
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    //UserData();
+                    while (reader.Read())
+                    {
+                        string categoryDescription =
+                            reader.GetString(reader.GetOrdinal("CategoryDescription"));
+                        string eventName =
+                            reader.GetString(reader.GetOrdinal("EventName"));
+
+                    }
+                }
+            }
         }
 
         public void ShowEventsForListView()
