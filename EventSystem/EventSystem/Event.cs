@@ -157,6 +157,8 @@ namespace EventSystem
 
         public void ShowEventsForTeaserView()
         {
+            // Julian Please call me 4331821
+            // This is setup and able to call this method from EventDetailView Form
             //SELECT CategoryDescription, EventName
             //    FROM Project1.dbo.Categories, Project1.dbo.Events
             //    Order By CategoryDescription, EventName ASC;
