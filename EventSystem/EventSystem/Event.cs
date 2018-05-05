@@ -185,14 +185,14 @@ namespace EventSystem
             //    "INNER JOIN dbo.Events " + 
             //    "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
             //    "ORDER BY CategoryDescription ASC, EventName ASC;", Program.conn))
-       
-                //
-                // Invoke ExecuteReader method.
-                //
-                //command.Parameters.AddWithValue("@username", tbUserName.Text);
-                //command.Parameters.AddWithValue("@password", tbPassword.Text);
 
+            //
+            // Invoke ExecuteReader method.
+            //
+            //command.Parameters.AddWithValue("@username", tbUserName.Text);
+            //command.Parameters.AddWithValue("@password", tbPassword.Text);
 
+        }
 
 
         public void ShowEventsForListView()
