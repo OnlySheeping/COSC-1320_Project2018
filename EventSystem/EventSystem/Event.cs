@@ -190,6 +190,7 @@ namespace EventSystem
 
                     }
                 }
+                reader.Close();
             }
             connection.Close();
         }
