@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectFinalExam1
 {
-    public class test
+    public class test1
     {
         public int RoleID { get; set; }
         public string UserFirstName { get; set; }

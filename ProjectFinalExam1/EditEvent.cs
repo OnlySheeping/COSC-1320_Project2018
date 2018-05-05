@@ -27,5 +27,10 @@ namespace ProjectFinalExam1
             textBox6.Text = "";
 
         }
+
+        private void lblEditEvent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

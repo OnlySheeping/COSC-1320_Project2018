@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyEvents));
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEventDetailView = new System.Windows.Forms.Button();
@@ -40,32 +39,21 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(79, 223);
+            this.listBox1.ItemHeight = 14;
+            this.listBox1.Location = new System.Drawing.Point(38, 213);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(738, 173);
+            this.listBox1.Size = new System.Drawing.Size(738, 242);
             this.listBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(321, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "List of My Events";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 78);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(738, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(738, 128);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -73,21 +61,22 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(79, 9);
+            this.label2.Location = new System.Drawing.Point(235, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(738, 57);
+            this.label2.Size = new System.Drawing.Size(362, 61);
             this.label2.TabIndex = 13;
-            this.label2.Text = "My Events";
+            this.label2.Text = "List of My Events";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnEventDetailView
             // 
-            this.btnEventDetailView.Location = new System.Drawing.Point(356, 447);
+            this.btnEventDetailView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventDetailView.Location = new System.Drawing.Point(317, 483);
             this.btnEventDetailView.Name = "btnEventDetailView";
-            this.btnEventDetailView.Size = new System.Drawing.Size(158, 30);
+            this.btnEventDetailView.Size = new System.Drawing.Size(158, 32);
             this.btnEventDetailView.TabIndex = 15;
             this.btnEventDetailView.Text = "Detail View";
             this.btnEventDetailView.UseVisualStyleBackColor = true;
@@ -95,28 +84,28 @@
             // 
             // MyEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(892, 525);
+            this.ClientSize = new System.Drawing.Size(821, 565);
             this.Controls.Add(this.btnEventDetailView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
+            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MyEvents";
-            this.Text = "MyEvents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "My Events";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEventDetailView;
