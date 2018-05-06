@@ -53,8 +53,6 @@
             this.txbLocation = new System.Windows.Forms.TextBox();
             this.lblStartTime = new System.Windows.Forms.Label();
             this.lblEndTime = new System.Windows.Forms.Label();
-            this.txbStartTime = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.lblCat = new System.Windows.Forms.Label();
             this.txbCategory = new System.Windows.Forms.TextBox();
             this.lblNote = new System.Windows.Forms.Label();
@@ -63,6 +61,8 @@
             this.btnAddPart = new System.Windows.Forms.Button();
             this.chbClosed = new System.Windows.Forms.CheckBox();
             this.chbPrivate = new System.Windows.Forms.CheckBox();
+            this.cbxStartTime = new System.Windows.Forms.ComboBox();
+            this.cbxEndTime = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -311,20 +311,6 @@
             this.lblEndTime.TabIndex = 25;
             this.lblEndTime.Text = "End Time";
             // 
-            // txbStartTime
-            // 
-            this.txbStartTime.Location = new System.Drawing.Point(677, 266);
-            this.txbStartTime.Name = "txbStartTime";
-            this.txbStartTime.Size = new System.Drawing.Size(146, 25);
-            this.txbStartTime.TabIndex = 26;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(677, 346);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(146, 25);
-            this.textBox9.TabIndex = 27;
-            // 
             // lblCat
             // 
             this.lblCat.AutoSize = true;
@@ -398,6 +384,22 @@
             this.chbPrivate.Text = "Private";
             this.chbPrivate.UseVisualStyleBackColor = true;
             // 
+            // cbxStartTime
+            // 
+            this.cbxStartTime.FormattingEnabled = true;
+            this.cbxStartTime.Location = new System.Drawing.Point(680, 265);
+            this.cbxStartTime.Name = "cbxStartTime";
+            this.cbxStartTime.Size = new System.Drawing.Size(121, 26);
+            this.cbxStartTime.TabIndex = 38;
+            // 
+            // cbxEndTime
+            // 
+            this.cbxEndTime.FormattingEnabled = true;
+            this.cbxEndTime.Location = new System.Drawing.Point(680, 346);
+            this.cbxEndTime.Name = "cbxEndTime";
+            this.cbxEndTime.Size = new System.Drawing.Size(121, 26);
+            this.cbxEndTime.TabIndex = 39;
+            // 
             // frmCreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -406,6 +408,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(849, 749);
+            this.Controls.Add(this.cbxEndTime);
+            this.Controls.Add(this.cbxStartTime);
             this.Controls.Add(this.chbPrivate);
             this.Controls.Add(this.chbClosed);
             this.Controls.Add(this.btnAddPart);
@@ -414,8 +418,6 @@
             this.Controls.Add(this.lblNote);
             this.Controls.Add(this.txbCategory);
             this.Controls.Add(this.lblCat);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.txbStartTime);
             this.Controls.Add(this.lblEndTime);
             this.Controls.Add(this.lblStartTime);
             this.Controls.Add(this.txbLocation);
@@ -479,8 +481,6 @@
         private System.Windows.Forms.TextBox txbLocation;
         private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.Label lblEndTime;
-        private System.Windows.Forms.TextBox txbStartTime;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label lblCat;
         private System.Windows.Forms.TextBox txbCategory;
         private System.Windows.Forms.Label lblNote;
@@ -489,5 +489,7 @@
         private System.Windows.Forms.Button btnAddPart;
         private System.Windows.Forms.CheckBox chbClosed;
         private System.Windows.Forms.CheckBox chbPrivate;
+        private System.Windows.Forms.ComboBox cbxStartTime;
+        private System.Windows.Forms.ComboBox cbxEndTime;
     }
 }
