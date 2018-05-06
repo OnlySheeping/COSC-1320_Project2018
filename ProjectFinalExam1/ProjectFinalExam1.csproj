@@ -52,6 +52,18 @@
     <Compile Include="AddEvent.Designer.cs">
       <DependentUpon>AddEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddParticipantToEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddParticipantToEvents.Designer.cs">
+      <DependentUpon>AddParticipantToEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewParticipant.Designer.cs">
+      <DependentUpon>CreateNewParticipant.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteParticipant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,18 @@
     </Compile>
     <Compile Include="EventDetailView.Designer.cs">
       <DependentUpon>EventDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventListView.Designer.cs">
+      <DependentUpon>EventListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventTeaserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventTeaserView.Designer.cs">
+      <DependentUpon>EventTeaserView.cs</DependentUpon>
     </Compile>
     <Compile Include="ListAllEvents.cs">
       <SubType>Form</SubType>
@@ -112,11 +136,17 @@
     <Compile Include="MyEvents.Designer.cs">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddParticipant.cs">
+    <Compile Include="AllParticipants.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddParticipant.Designer.cs">
-      <DependentUpon>AddParticipant.cs</DependentUpon>
+    <Compile Include="AllParticipants.Designer.cs">
+      <DependentUpon>AllParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParticipantFullView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParticipantFullView.Designer.cs">
+      <DependentUpon>ParticipantFullView.cs</DependentUpon>
     </Compile>
     <Compile Include="ParticipantMenu.cs">
       <SubType>Form</SubType>
@@ -130,6 +160,12 @@
     <EmbeddedResource Include="AddEvent.resx">
       <DependentUpon>AddEvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddParticipantToEvents.resx">
+      <DependentUpon>AddParticipantToEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewParticipant.resx">
+      <DependentUpon>CreateNewParticipant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteParticipant.resx">
       <DependentUpon>DeleteParticipant.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +177,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventDetailView.resx">
       <DependentUpon>EventDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventListView.resx">
+      <DependentUpon>EventListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventTeaserView.resx">
+      <DependentUpon>EventTeaserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListAllEvents.resx">
       <DependentUpon>ListAllEvents.cs</DependentUpon>
@@ -160,8 +202,11 @@
     <EmbeddedResource Include="MyEvents.resx">
       <DependentUpon>MyEvents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddParticipant.resx">
-      <DependentUpon>AddParticipant.cs</DependentUpon>
+    <EmbeddedResource Include="AllParticipants.resx">
+      <DependentUpon>AllParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParticipantFullView.resx">
+      <DependentUpon>ParticipantFullView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParticipantMenu.resx">
       <DependentUpon>ParticipantMenu.cs</DependentUpon>
