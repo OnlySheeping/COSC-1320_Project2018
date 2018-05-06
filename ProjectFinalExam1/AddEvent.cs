@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class AddEvent : Form
+    public partial class frmCreateEvent : Form
     {
-        public AddEvent()
+        public frmCreateEvent()
         {
             InitializeComponent();
         }
@@ -34,12 +34,12 @@ namespace ProjectFinalExam1
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
+            txbEventName.Text = "";
+            txbDescription.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
+            txbAge.Text = "";
+            txbAttendees.Text = "";
 
 
 
@@ -54,12 +54,12 @@ namespace ProjectFinalExam1
 
         private void btnClear_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
+            txbEventName.Text = "";
+            txbDescription.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
+            txbAge.Text = "";
+            txbAttendees.Text = "";
         }
     }
 }
