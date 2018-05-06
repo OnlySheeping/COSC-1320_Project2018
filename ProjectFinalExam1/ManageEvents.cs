@@ -36,7 +36,7 @@ namespace ProjectFinalExam1
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            new AddEvent().Show();
+            new frmCreateEvent().Show();
             this.Hide();
         }
 

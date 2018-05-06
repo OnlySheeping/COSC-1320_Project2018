@@ -55,7 +55,7 @@
             this.lvDetailView.Location = new System.Drawing.Point(72, 100);
             this.lvDetailView.MultiSelect = false;
             this.lvDetailView.Name = "lvDetailView";
-            this.lvDetailView.Size = new System.Drawing.Size(539, 412);
+            this.lvDetailView.Size = new System.Drawing.Size(539, 492);
             this.lvDetailView.TabIndex = 14;
             this.lvDetailView.UseCompatibleStateImageBehavior = false;
             this.lvDetailView.View = System.Windows.Forms.View.Details;
@@ -63,7 +63,7 @@
             // 
             // btnPopulate
             // 
-            this.btnPopulate.Location = new System.Drawing.Point(268, 592);
+            this.btnPopulate.Location = new System.Drawing.Point(268, 632);
             this.btnPopulate.Name = "btnPopulate";
             this.btnPopulate.Size = new System.Drawing.Size(111, 42);
             this.btnPopulate.TabIndex = 15;
@@ -73,7 +73,7 @@
             // 
             // fmdetailView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -85,6 +85,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmdetailView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event Detail View";
             this.Load += new System.EventHandler(this.EventDetailView_Load);
             this.ResumeLayout(false);
