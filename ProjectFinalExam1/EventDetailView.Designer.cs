@@ -45,7 +45,7 @@
             this.lblDetailBanner.Name = "lblDetailBanner";
             this.lblDetailBanner.Size = new System.Drawing.Size(397, 68);
             this.lblDetailBanner.TabIndex = 13;
-            this.lblDetailBanner.Text = " Event Details";
+            this.lblDetailBanner.Text = " Event Full View";
             this.lblDetailBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDetailBanner.Click += new System.EventHandler(this.label1_Click);
             // 
