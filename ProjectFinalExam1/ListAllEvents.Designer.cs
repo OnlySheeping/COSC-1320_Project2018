@@ -36,7 +36,6 @@
             this.lvTeaser = new System.Windows.Forms.ListView();
             this.chCatId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chTeaserVw = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnPopulate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblListBanner
@@ -45,10 +44,10 @@
             this.lblListBanner.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblListBanner.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListBanner.ForeColor = System.Drawing.Color.Black;
-            this.lblListBanner.Location = new System.Drawing.Point(131, 19);
+            this.lblListBanner.Location = new System.Drawing.Point(84, 10);
             this.lblListBanner.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblListBanner.Name = "lblListBanner";
-            this.lblListBanner.Size = new System.Drawing.Size(577, 61);
+            this.lblListBanner.Size = new System.Drawing.Size(577, 94);
             this.lblListBanner.TabIndex = 13;
             this.lblListBanner.Text = "List of All Our Events";
             this.lblListBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,9 +55,9 @@
             // btnGetDetailView
             // 
             this.btnGetDetailView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetDetailView.Location = new System.Drawing.Point(266, 562);
+            this.btnGetDetailView.Location = new System.Drawing.Point(125, 619);
             this.btnGetDetailView.Name = "btnGetDetailView";
-            this.btnGetDetailView.Size = new System.Drawing.Size(104, 39);
+            this.btnGetDetailView.Size = new System.Drawing.Size(97, 39);
             this.btnGetDetailView.TabIndex = 16;
             this.btnGetDetailView.Text = "Details";
             this.btnGetDetailView.UseVisualStyleBackColor = true;
@@ -67,7 +66,7 @@
             // btnAscending
             // 
             this.btnAscending.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAscending.Location = new System.Drawing.Point(419, 562);
+            this.btnAscending.Location = new System.Drawing.Point(288, 620);
             this.btnAscending.Name = "btnAscending";
             this.btnAscending.Size = new System.Drawing.Size(121, 39);
             this.btnAscending.TabIndex = 17;
@@ -77,7 +76,7 @@
             // btnDescending
             // 
             this.btnDescending.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescending.Location = new System.Drawing.Point(579, 562);
+            this.btnDescending.Location = new System.Drawing.Point(477, 619);
             this.btnDescending.Name = "btnDescending";
             this.btnDescending.Size = new System.Drawing.Size(129, 39);
             this.btnDescending.TabIndex = 18;
@@ -90,7 +89,7 @@
             this.chCatId,
             this.chTeaserVw});
             this.lvTeaser.GridLines = true;
-            this.lvTeaser.Location = new System.Drawing.Point(84, 104);
+            this.lvTeaser.Location = new System.Drawing.Point(57, 144);
             this.lvTeaser.MultiSelect = false;
             this.lvTeaser.Name = "lvTeaser";
             this.lvTeaser.Size = new System.Drawing.Size(662, 423);
@@ -108,24 +107,13 @@
             this.chTeaserVw.Text = "Category Description";
             this.chTeaserVw.Width = 557;
             // 
-            // btnPopulate
-            // 
-            this.btnPopulate.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPopulate.Location = new System.Drawing.Point(116, 562);
-            this.btnPopulate.Name = "btnPopulate";
-            this.btnPopulate.Size = new System.Drawing.Size(102, 39);
-            this.btnPopulate.TabIndex = 19;
-            this.btnPopulate.Text = "Populate";
-            this.btnPopulate.UseVisualStyleBackColor = true;
-            // 
             // ListAllEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(822, 672);
-            this.Controls.Add(this.btnPopulate);
             this.Controls.Add(this.lvTeaser);
             this.Controls.Add(this.btnDescending);
             this.Controls.Add(this.btnAscending);
@@ -149,6 +137,5 @@
         private System.Windows.Forms.ListView lvTeaser;
         private System.Windows.Forms.ColumnHeader chCatId;
         private System.Windows.Forms.ColumnHeader chTeaserVw;
-        private System.Windows.Forms.Button btnPopulate;
     }
 }
