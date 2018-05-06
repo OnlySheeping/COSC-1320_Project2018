@@ -14,9 +14,9 @@ using EventSystem;
 
 namespace ProjectFinalExam1
 {
-    public partial class fmdetailView : Form
+    public partial class frmEventFullView : Form
     {
-        public fmdetailView()
+        public frmEventFullView()
         {
             InitializeComponent();
         }
