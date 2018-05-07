@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace ProjectFinalExam1
 {
     public partial class LogOn : Form
@@ -50,53 +49,31 @@ namespace ProjectFinalExam1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            EventSystem.CurrentUser currentUser = new EventSystem.CurrentUser();
+            int roleID = currentUser.VerifyUserNamePassword(tbUserName.Text, tbPassword.Text);
+            string firstName = currentUser.VerifyFirstName(tbUserName.Text);
+            string lastName = currentUser.VerifyLastName(tbUserName.Text);
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username =@username and Passsword = @password", Program.conn))
+            if (roleID == 1)
             {
-                // Invoke ExecuteReader method.
-
-                command.Parameters.AddWithValue("@username", tbUserName.Text);
-                command.Parameters.AddWithValue("@password", tbPassword.Text);
-
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    //UserData();
-                    while(reader.Read())
-                    {
-                        string userName = reader.GetString(reader.GetOrdinal("Username"));
-                        string firstName = reader.GetString(reader.GetOrdinal("UserFirstName"));
-                        string lastName = reader.GetString(reader.GetOrdinal("UserLastName"));
-                        int userAge = reader.GetInt32(reader.GetOrdinal("UserAge"));
-                        int roleID = reader.GetInt32(reader.GetOrdinal("RoleID"));
-
-                        if (roleID == 1)
-                        {
-                            MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                            ParticipantMenu participant = new ParticipantMenu();
-                            participant.Show();
-                            Visible = false;
-                        }
-                        else if (roleID == 2)
-                        {
-                            MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                            AdminMenu admin = new AdminMenu();
-                            admin.Show();
-                            Visible = false;
-                        }
-                        else
-                        {
-                            
-                            MessageBox.Show("Please enter correct Username and Password");
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Contact Administrator");
-                }
-
+                MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
+                ParticipantMenu participant = new ParticipantMenu();
+                participant.Show();
+                Visible = false;
             }
+            else if (roleID == 2)
+            {
+                MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
+                AdminMenu admin = new AdminMenu();
+                admin.Show();
+                Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Please enter correct Username and Password");
+            }
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace ProjectFinalExam1
 
         private void btnEventDetailView_Click(object sender, EventArgs e)
         {
-            new fmdetailView().Show();
+            new frmEventFullView().Show();
             this.Hide();
         }
     }

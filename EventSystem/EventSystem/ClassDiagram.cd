@@ -3,21 +3,21 @@
   <Class Name="EventSystem.Event">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAQBAAAgQAAKAAAAICAAAAACAgAAIAEAACAAAAAAIAA=</HashCode>
+      <HashCode>QAQBAAAmQAAqAAAAICIBAAAiMoAgIAEAACABAMCCIgA=</HashCode>
       <FileName>Event.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EventSystem.User">
     <Position X="5.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAQAIIAAIAAAEAAAAAAAAAAAAQCkAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABCQAIIAAIBAAEAAAAAAAAAAAAACgAAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EventSystem.EventAdmin">
     <Position X="3.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAIAAAgAAAAAAAAAAAAAAAgAAAQAAAABBA=</HashCode>
+      <HashCode>AAAAgEAGAAAoAABgAAIBAEAgMIAgAAACAAARAMCABhg=</HashCode>
       <FileName>EventAdmin.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -26,6 +26,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Participant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventSystem.CurrentUser">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABCQAAAAAAgAAEAEAAAAAAAAAAACAAAABA=</HashCode>
+      <FileName>CurrentUser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

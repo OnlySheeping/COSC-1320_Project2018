@@ -40,10 +40,10 @@ namespace ProjectFinalExam1
             this.Hide();
         }
 
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            new EditEvent().Show();
-            this.Hide();
-        }
+      //  private void btn3_Click(object sender, EventArgs e)
+      //  {
+       //     new EditEvent().Show();
+      //      this.Hide();
+      //  }
     }
 }

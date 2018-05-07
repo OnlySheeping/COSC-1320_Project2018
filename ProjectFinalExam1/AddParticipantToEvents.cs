@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    public partial class AddParticipantToEvents : Form
+    public partial class frmAddParticipantToEvents : Form
     {
-        public AddParticipantToEvents()
+        public frmAddParticipantToEvents()
         {
             InitializeComponent();
         }

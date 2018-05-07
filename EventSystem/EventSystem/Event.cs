@@ -220,25 +220,92 @@ namespace EventSystem
             throw new System.NotImplementedException();
         }
 
-        public void ShowEventDetail()
+        public static string[] ShowEventDetail(string theEvent)
         {
-      //      SELECT TOP 1[EventID]
-      //,[EventName]
-      //,[Status]
-      //,[EventDescription]
-      //,[StartDate]
-      //,[EndDate]
-      //,[StartTime]
-      //,[EndTime]
-      //,[EventNotes]
-      //,[AgeRequirement]
-      //, CategoryID replace with CategoryDescription - table 
-      //,[Private]
-      //,[Closed]
-      //,[Location]
-      //,[MaxAttendees]
-      //  FROM[Project1].[dbo].[Events]
-    }
+            throw new System.NotImplementedException();
+            //      SELECT TOP 1[EventID]
+            //,[EventName]
+            //,[Status]
+            //,[EventDescription]
+            //,[StartDate]
+            //,[EndDate]
+            //,[StartTime]
+            //,[EndTime]
+            //,[EventNotes]
+            //,[AgeRequirement]
+            //, CategoryID replace with CategoryDescription - table 
+            //,[Private]
+            //,[Closed]
+            //,[Location]
+            //,[MaxAttendees]
+            //  FROM[Project1].[dbo].[Events]
+
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID,  EventName = @eventname, Status = @status EventDescription = @eventdescription, StartDate = @startdate, EndDate = @endDate, StartTime = @starttime, EndDate = @endDate, StartTime = @starttime, EndTime = @endtime, EventNotes = @eventnotes, AgeRequirements =@agerequirements, Private = @private, Closed =@closed, Location =@location and MaxAttendees =@maxattendees ", Program.conn))
+            {
+                // Invoke ExecuteReader method.
+
+                command.Parameters.AddWithValue("@eventname", theEvent);
+
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    //UserData();
+                    while (reader.Read())
+                    {
+                        int rawEventID = reader.GetInt32(reader.GetOrdinal("EventID"));
+                        string eventname = reader.GetString(reader.GetOrdinal("EventName"));
+                        string status = reader.GetString(reader.GetOrdinal("UserStatus"));
+                        string eventDesciption = reader.GetString(reader.GetOrdinal("EventDesciption"));
+                        DateTime rawStartDate = reader.GetDateTime(reader.GetOrdinal("StartDate"));
+                        DateTime rawEndDate = reader.GetDateTime(reader.GetOrdinal("EndDate"));
+                        DateTime rawStartTime = reader.GetDateTime(reader.GetOrdinal("StartTime"));
+                        DateTime rawEndTime = reader.GetDateTime(reader.GetOrdinal("EndTime"));
+                        string eventNotes = reader.GetString(reader.GetOrdinal("EventNotes"));
+                        int rawAgeRequirement = reader.GetInt32(reader.GetOrdinal("AgeRequirements"));
+                        int rawClosed = reader.GetInt32(reader.GetOrdinal("Closed"));
+                        string location = reader.GetString(reader.GetOrdinal("Location"));
+                        int rawMaxAttendee = reader.GetInt32(reader.GetOrdinal("MaxAttendees"));
+                        int rawPrivateID = reader.GetInt32(reader.GetOrdinal("Private"));
+
+
+
+                        string[] eventInfo = new string[13];
+                        string eventID = rawEventID.ToString();
+                        string startDate = rawEventID.ToString();
+                        string endDate = rawEventID.ToString();
+                        string startTime = rawEventID.ToString();
+                        string endTime = rawEventID.ToString();
+                        string ageRequirement = rawAgeRequirement.ToString();
+                        string closed = rawClosed.ToString();
+                        string maxAttendee = rawMaxAttendee.ToString();
+                        string privateID = rawPrivateID.ToString();
+                        eventID = eventInfo[0];
+                        eventname = eventInfo[1];
+                        status = eventInfo[2];
+                        eventDesciption = eventInfo[3];
+                        startDate = eventInfo[4];
+                        endDate = eventInfo[5];
+                        startTime = eventInfo[6];
+                        endTime = eventInfo[7];
+                        eventNotes = eventInfo[8];
+                        ageRequirement = eventInfo[9];
+                        privateID = eventInfo[10];
+                        closed = eventInfo[11];
+                        location = eventInfo[12];
+                        maxAttendee = eventInfo[13];
+
+                        return eventInfo;
+                    }
+
+
+                }
+            }
+        }
+
+
+                
+
 
     }
 }
