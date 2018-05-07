@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class AddEvent
+    partial class frmCreateEvent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,78 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEvent));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateEvent));
+            this.txbEventName = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txbAge = new System.Windows.Forms.TextBox();
+            this.txbAttendees = new System.Windows.Forms.TextBox();
             this.lblEventName = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblAttendees = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAddEvent = new System.Windows.Forms.Label();
+            this.rdbCancelled = new System.Windows.Forms.RadioButton();
+            this.rdbPending = new System.Windows.Forms.RadioButton();
+            this.rdbActive = new System.Windows.Forms.RadioButton();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.txbDescription = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.txbLocation = new System.Windows.Forms.TextBox();
+            this.lblStartTime = new System.Windows.Forms.Label();
+            this.lblEndTime = new System.Windows.Forms.Label();
+            this.lblCat = new System.Windows.Forms.Label();
+            this.txbCategory = new System.Windows.Forms.TextBox();
+            this.lblNote = new System.Windows.Forms.Label();
+            this.txbNotes = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnAddPart = new System.Windows.Forms.Button();
+            this.chbClosed = new System.Windows.Forms.CheckBox();
+            this.chbPrivate = new System.Windows.Forms.CheckBox();
+            this.cbxStartTime = new System.Windows.Forms.ComboBox();
+            this.cbxEndTime = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txbEventName
             // 
-            this.textBox1.Location = new System.Drawing.Point(348, 302);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 25);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(348, 342);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 25);
-            this.textBox2.TabIndex = 1;
+            this.txbEventName.Location = new System.Drawing.Point(185, 257);
+            this.txbEventName.Margin = new System.Windows.Forms.Padding(4);
+            this.txbEventName.Multiline = true;
+            this.txbEventName.Name = "txbEventName";
+            this.txbEventName.Size = new System.Drawing.Size(443, 50);
+            this.txbEventName.TabIndex = 0;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(348, 389);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(13, 266);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(148, 25);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(348, 435);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(13, 337);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(148, 25);
             this.textBox4.TabIndex = 3;
             // 
-            // textBox5
+            // txbAge
             // 
-            this.textBox5.Location = new System.Drawing.Point(348, 496);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 25);
-            this.textBox5.TabIndex = 4;
+            this.txbAge.Location = new System.Drawing.Point(348, 496);
+            this.txbAge.Margin = new System.Windows.Forms.Padding(4);
+            this.txbAge.Name = "txbAge";
+            this.txbAge.Size = new System.Drawing.Size(148, 25);
+            this.txbAge.TabIndex = 4;
             // 
-            // textBox6
+            // txbAttendees
             // 
-            this.textBox6.Location = new System.Drawing.Point(348, 546);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(148, 25);
-            this.textBox6.TabIndex = 5;
+            this.txbAttendees.Location = new System.Drawing.Point(348, 546);
+            this.txbAttendees.Margin = new System.Windows.Forms.Padding(4);
+            this.txbAttendees.Name = "txbAttendees";
+            this.txbAttendees.Size = new System.Drawing.Size(148, 25);
+            this.txbAttendees.TabIndex = 5;
             // 
             // lblEventName
             // 
             this.lblEventName.AutoSize = true;
-            this.lblEventName.Location = new System.Drawing.Point(100, 309);
+            this.lblEventName.BackColor = System.Drawing.Color.Transparent;
+            this.lblEventName.Location = new System.Drawing.Point(182, 235);
             this.lblEventName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventName.Name = "lblEventName";
             this.lblEventName.Size = new System.Drawing.Size(87, 18);
@@ -110,7 +122,8 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(100, 349);
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Location = new System.Drawing.Point(718, 408);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(47, 18);
@@ -120,7 +133,8 @@
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(100, 396);
+            this.lblStartDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblStartDate.Location = new System.Drawing.Point(35, 244);
             this.lblStartDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(74, 18);
@@ -130,7 +144,8 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(100, 442);
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
+            this.lblAge.Location = new System.Drawing.Point(208, 499);
             this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(119, 18);
@@ -140,7 +155,8 @@
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
-            this.lblLocation.Location = new System.Drawing.Point(100, 503);
+            this.lblLocation.BackColor = System.Drawing.Color.Transparent;
+            this.lblLocation.Location = new System.Drawing.Point(231, 593);
             this.lblLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(65, 18);
@@ -150,27 +166,28 @@
             // lblAttendees
             // 
             this.lblAttendees.AutoSize = true;
-            this.lblAttendees.Location = new System.Drawing.Point(100, 566);
+            this.lblAttendees.BackColor = System.Drawing.Color.Transparent;
+            this.lblAttendees.Location = new System.Drawing.Point(208, 546);
             this.lblAttendees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAttendees.Name = "lblAttendees";
             this.lblAttendees.Size = new System.Drawing.Size(104, 18);
             this.lblAttendees.TabIndex = 11;
             this.lblAttendees.Text = "Max Attendees";
             // 
-            // btnAdd
+            // btnCreate
             // 
-            this.btnAdd.Location = new System.Drawing.Point(148, 678);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(112, 32);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnCreate.Location = new System.Drawing.Point(98, 685);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(112, 32);
+            this.btnCreate.TabIndex = 12;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(503, 678);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(435, 685);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(112, 32);
             this.btnClear.TabIndex = 13;
@@ -201,37 +218,234 @@
             this.lblAddEvent.Name = "lblAddEvent";
             this.lblAddEvent.Size = new System.Drawing.Size(443, 64);
             this.lblAddEvent.TabIndex = 15;
-            this.lblAddEvent.Text = "Add  Event";
+            this.lblAddEvent.Text = "Create  Event";
             this.lblAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAddEvent.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // AddEvent
+            // rdbCancelled
+            // 
+            this.rdbCancelled.AutoSize = true;
+            this.rdbCancelled.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.rdbCancelled.Location = new System.Drawing.Point(714, 510);
+            this.rdbCancelled.Name = "rdbCancelled";
+            this.rdbCancelled.Size = new System.Drawing.Size(87, 22);
+            this.rdbCancelled.TabIndex = 17;
+            this.rdbCancelled.TabStop = true;
+            this.rdbCancelled.Text = "Cancelled";
+            this.rdbCancelled.UseVisualStyleBackColor = false;
+            // 
+            // rdbPending
+            // 
+            this.rdbPending.AutoSize = true;
+            this.rdbPending.Location = new System.Drawing.Point(714, 470);
+            this.rdbPending.Name = "rdbPending";
+            this.rdbPending.Size = new System.Drawing.Size(80, 22);
+            this.rdbPending.TabIndex = 18;
+            this.rdbPending.TabStop = true;
+            this.rdbPending.Text = "Pending";
+            this.rdbPending.UseVisualStyleBackColor = true;
+            // 
+            // rdbActive
+            // 
+            this.rdbActive.AutoSize = true;
+            this.rdbActive.Location = new System.Drawing.Point(714, 429);
+            this.rdbActive.Name = "rdbActive";
+            this.rdbActive.Size = new System.Drawing.Size(66, 22);
+            this.rdbActive.TabIndex = 19;
+            this.rdbActive.TabStop = true;
+            this.rdbActive.Text = "Active";
+            this.rdbActive.UseVisualStyleBackColor = true;
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblEndDate.Location = new System.Drawing.Point(38, 315);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(71, 18);
+            this.lblEndDate.TabIndex = 20;
+            this.lblEndDate.Text = "End Date";
+            // 
+            // txbDescription
+            // 
+            this.txbDescription.Location = new System.Drawing.Point(185, 346);
+            this.txbDescription.Multiline = true;
+            this.txbDescription.Name = "txbDescription";
+            this.txbDescription.Size = new System.Drawing.Size(443, 80);
+            this.txbDescription.TabIndex = 21;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescription.Location = new System.Drawing.Point(182, 325);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(83, 18);
+            this.lblDescription.TabIndex = 22;
+            this.lblDescription.Text = "Description";
+            // 
+            // txbLocation
+            // 
+            this.txbLocation.Location = new System.Drawing.Point(348, 590);
+            this.txbLocation.Name = "txbLocation";
+            this.txbLocation.Size = new System.Drawing.Size(148, 25);
+            this.txbLocation.TabIndex = 23;
+            // 
+            // lblStartTime
+            // 
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblStartTime.Location = new System.Drawing.Point(706, 245);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(77, 18);
+            this.lblStartTime.TabIndex = 24;
+            this.lblStartTime.Text = "Start Time";
+            // 
+            // lblEndTime
+            // 
+            this.lblEndTime.AutoSize = true;
+            this.lblEndTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblEndTime.Location = new System.Drawing.Point(706, 325);
+            this.lblEndTime.Name = "lblEndTime";
+            this.lblEndTime.Size = new System.Drawing.Size(74, 18);
+            this.lblEndTime.TabIndex = 25;
+            this.lblEndTime.Text = "End Time";
+            // 
+            // lblCat
+            // 
+            this.lblCat.AutoSize = true;
+            this.lblCat.BackColor = System.Drawing.Color.Transparent;
+            this.lblCat.Location = new System.Drawing.Point(234, 460);
+            this.lblCat.Name = "lblCat";
+            this.lblCat.Size = new System.Drawing.Size(62, 18);
+            this.lblCat.TabIndex = 28;
+            this.lblCat.Text = "Category";
+            // 
+            // txbCategory
+            // 
+            this.txbCategory.Location = new System.Drawing.Point(348, 460);
+            this.txbCategory.Name = "txbCategory";
+            this.txbCategory.Size = new System.Drawing.Size(148, 25);
+            this.txbCategory.TabIndex = 29;
+            // 
+            // lblNote
+            // 
+            this.lblNote.AutoSize = true;
+            this.lblNote.BackColor = System.Drawing.Color.Transparent;
+            this.lblNote.Location = new System.Drawing.Point(35, 522);
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Size = new System.Drawing.Size(43, 18);
+            this.lblNote.TabIndex = 32;
+            this.lblNote.Text = "Notes";
+            // 
+            // txbNotes
+            // 
+            this.txbNotes.Location = new System.Drawing.Point(24, 543);
+            this.txbNotes.Multiline = true;
+            this.txbNotes.Name = "txbNotes";
+            this.txbNotes.Size = new System.Drawing.Size(163, 116);
+            this.txbNotes.TabIndex = 33;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(265, 685);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(102, 32);
+            this.btnBack.TabIndex = 34;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
+            // btnAddPart
+            // 
+            this.btnAddPart.Location = new System.Drawing.Point(597, 685);
+            this.btnAddPart.Name = "btnAddPart";
+            this.btnAddPart.Size = new System.Drawing.Size(129, 32);
+            this.btnAddPart.TabIndex = 35;
+            this.btnAddPart.Text = "Add Participants";
+            this.btnAddPart.UseVisualStyleBackColor = true;
+            // 
+            // chbClosed
+            // 
+            this.chbClosed.AutoSize = true;
+            this.chbClosed.Location = new System.Drawing.Point(41, 408);
+            this.chbClosed.Name = "chbClosed";
+            this.chbClosed.Size = new System.Drawing.Size(68, 22);
+            this.chbClosed.TabIndex = 36;
+            this.chbClosed.Text = "Closed";
+            this.chbClosed.UseVisualStyleBackColor = true;
+            // 
+            // chbPrivate
+            // 
+            this.chbPrivate.AutoSize = true;
+            this.chbPrivate.Location = new System.Drawing.Point(41, 437);
+            this.chbPrivate.Name = "chbPrivate";
+            this.chbPrivate.Size = new System.Drawing.Size(73, 22);
+            this.chbPrivate.TabIndex = 37;
+            this.chbPrivate.Text = "Private";
+            this.chbPrivate.UseVisualStyleBackColor = true;
+            // 
+            // cbxStartTime
+            // 
+            this.cbxStartTime.FormattingEnabled = true;
+            this.cbxStartTime.Location = new System.Drawing.Point(680, 265);
+            this.cbxStartTime.Name = "cbxStartTime";
+            this.cbxStartTime.Size = new System.Drawing.Size(121, 26);
+            this.cbxStartTime.TabIndex = 38;
+            // 
+            // cbxEndTime
+            // 
+            this.cbxEndTime.FormattingEnabled = true;
+            this.cbxEndTime.Location = new System.Drawing.Point(680, 346);
+            this.cbxEndTime.Name = "cbxEndTime";
+            this.cbxEndTime.Size = new System.Drawing.Size(121, 26);
+            this.cbxEndTime.TabIndex = 39;
+            // 
+            // frmCreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(849, 749);
+            this.Controls.Add(this.cbxEndTime);
+            this.Controls.Add(this.cbxStartTime);
+            this.Controls.Add(this.chbPrivate);
+            this.Controls.Add(this.chbClosed);
+            this.Controls.Add(this.btnAddPart);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.txbNotes);
+            this.Controls.Add(this.lblNote);
+            this.Controls.Add(this.txbCategory);
+            this.Controls.Add(this.lblCat);
+            this.Controls.Add(this.lblEndTime);
+            this.Controls.Add(this.lblStartTime);
+            this.Controls.Add(this.txbLocation);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.txbDescription);
+            this.Controls.Add(this.lblEndDate);
+            this.Controls.Add(this.rdbActive);
+            this.Controls.Add(this.rdbPending);
+            this.Controls.Add(this.rdbCancelled);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAddEvent);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblAttendees);
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblEventName);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txbAttendees);
+            this.Controls.Add(this.txbAge);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbEventName);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "AddEvent";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmCreateEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Event";
             this.Load += new System.EventHandler(this.AddEvent_Load);
@@ -243,21 +457,39 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbEventName;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbAge;
+        private System.Windows.Forms.TextBox txbAttendees;
         private System.Windows.Forms.Label lblEventName;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.Label lblAttendees;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblAddEvent;
+        private System.Windows.Forms.RadioButton rdbCancelled;
+        private System.Windows.Forms.RadioButton rdbPending;
+        private System.Windows.Forms.RadioButton rdbActive;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.TextBox txbDescription;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.TextBox txbLocation;
+        private System.Windows.Forms.Label lblStartTime;
+        private System.Windows.Forms.Label lblEndTime;
+        private System.Windows.Forms.Label lblCat;
+        private System.Windows.Forms.TextBox txbCategory;
+        private System.Windows.Forms.Label lblNote;
+        private System.Windows.Forms.TextBox txbNotes;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnAddPart;
+        private System.Windows.Forms.CheckBox chbClosed;
+        private System.Windows.Forms.CheckBox chbPrivate;
+        private System.Windows.Forms.ComboBox cbxStartTime;
+        private System.Windows.Forms.ComboBox cbxEndTime;
     }
 }

@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectFinalExam1
+namespace ProjectFinalExam1     // CREATED BY CHRISTINA 5.6.18
+
 {
-    public partial class MyEvents : Form
+    public partial class frmAddEventsToParticipants : Form
     {
-        public MyEvents()
+        public frmAddEventsToParticipants()
         {
             InitializeComponent();
         }
 
-        private void btnEventDetailView_Click(object sender, EventArgs e)
+        private void frmAddEventsToParticipants_Load(object sender, EventArgs e)
         {
-            new frmEventFullView().Show();
-            this.Hide();
+
         }
     }
 }

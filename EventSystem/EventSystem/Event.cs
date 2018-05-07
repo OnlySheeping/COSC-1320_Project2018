@@ -173,26 +173,46 @@ namespace EventSystem
 
         public void ShowEventsForTeaserView()
         {
-            // Julian Please call me 4331821
             // This is setup and able to call this method from EventDetailView Form
-            //SELECT CategoryDescription, EventName
-            //    FROM Project1.dbo.Categories, Project1.dbo.Events
-            //    Order By CategoryDescription, EventName ASC;
-            //using (SqlCommand command =
-            //    new SqlCommand
-            //    ("SELECT CategoryDescription, EventName " +
-            //    "FROM dbo.Categories.CategoryID " +
-            //    "INNER JOIN dbo.Events " + 
-            //    "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
-            //    "ORDER BY CategoryDescription ASC, EventName ASC;", Program.conn))
+            // Method is located in EventDetailView.cs under 
+            //Event teaserView = new Event();
+            //teaserView.ShowEventsForTeaserView();
+            List<Event> partList = new List<Event>();
+            SqlConnection connection = 
+                new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
 
-            //
-            // Invoke ExecuteReader method.
-            //
-            //command.Parameters.AddWithValue("@username", tbUserName.Text);
-            //command.Parameters.AddWithValue("@password", tbPassword.Text);
+            SqlCommand command = 
+                new SqlCommand ("SELECT CategoryDescription, EventName " +
+                "FROM dbo.Categories.CategoryID " +
+                "INNER JOIN dbo.Events " +
+                "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
+                "ORDER BY CategoryDescription ASC, EventName ASC;", connection);
 
+            SqlDataReader reader;
+            try
+            {
+                connection.Open();
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    partList.Add(new Event()
+                    {
+                        CategoryDescription = reader.GetString(reader.GetOrdinal("CategoryDescription")),
+                        EventName = reader.GetString(reader.GetOrdinal("EventName"))
+                    });
+
+                }
+                //}
+                reader.Close();
+                command.Dispose();
+                connection.Close();
+            }
+            catch (Exception exp)
+            {
+                throw;
+            }
         }
+
 
 
         public void ShowEventsForListView()

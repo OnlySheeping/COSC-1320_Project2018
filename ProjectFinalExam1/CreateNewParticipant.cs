@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectFinalExam1
+namespace EventSystem
 {
-    public partial class MyEvents : Form
+    public partial class CreateNewParticipant : Form
     {
-        public MyEvents()
+        public CreateNewParticipant()
         {
             InitializeComponent();
-        }
-
-        private void btnEventDetailView_Click(object sender, EventArgs e)
-        {
-            new frmEventFullView().Show();
-            this.Hide();
         }
     }
 }
