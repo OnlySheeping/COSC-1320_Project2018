@@ -57,6 +57,7 @@ namespace EventSystem
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
+            //
             using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where UserFirstName = @username", conn))
             {
                 // Invoke ExecuteReader method.
