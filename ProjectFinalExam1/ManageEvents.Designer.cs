@@ -67,7 +67,7 @@
             // btn1
             // 
             this.btn1.Location = new System.Drawing.Point(95, 300);
-            this.btn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn1.Margin = new System.Windows.Forms.Padding(4);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(213, 51);
             this.btn1.TabIndex = 15;
@@ -78,7 +78,7 @@
             // btn2
             // 
             this.btn2.Location = new System.Drawing.Point(95, 453);
-            this.btn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn2.Margin = new System.Windows.Forms.Padding(4);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(213, 53);
             this.btn2.TabIndex = 16;
@@ -88,27 +88,27 @@
             // btn3
             // 
             this.btn3.Location = new System.Drawing.Point(95, 380);
-            this.btn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn3.Margin = new System.Windows.Forms.Padding(4);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(213, 53);
             this.btn3.TabIndex = 17;
             this.btn3.Text = "EDIT";
             this.btn3.UseVisualStyleBackColor = true;
-         
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
+            this.listBox1.ItemHeight = 22;
             this.listBox1.Location = new System.Drawing.Point(336, 255);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(408, 472);
+            this.listBox1.Size = new System.Drawing.Size(408, 466);
             this.listBox1.TabIndex = 18;
             // 
             // ManageEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -121,7 +121,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageEvents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event Manager";

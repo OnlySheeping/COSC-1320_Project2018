@@ -27,5 +27,10 @@ namespace ProjectFinalExam1     // CREATED BY CHRISTINA 5.6.18
         {
 
         }
+
+        private void btnWaitList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
