@@ -41,7 +41,7 @@
             this.btnManageParticipants.Location = new System.Drawing.Point(182, 230);
             this.btnManageParticipants.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.btnManageParticipants.Name = "btnManageParticipants";
-            this.btnManageParticipants.Size = new System.Drawing.Size(154, 37);
+            this.btnManageParticipants.Size = new System.Drawing.Size(154, 61);
             this.btnManageParticipants.TabIndex = 16;
             this.btnManageParticipants.Text = "Manage Participants";
             this.btnManageParticipants.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@
             this.btnManageEvents.Location = new System.Drawing.Point(27, 230);
             this.btnManageEvents.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.btnManageEvents.Name = "btnManageEvents";
-            this.btnManageEvents.Size = new System.Drawing.Size(127, 37);
+            this.btnManageEvents.Size = new System.Drawing.Size(127, 61);
             this.btnManageEvents.TabIndex = 15;
             this.btnManageEvents.Text = "Manage Events";
             this.btnManageEvents.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // 
             // AdminMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -95,8 +95,8 @@
             this.Controls.Add(this.btnManageEvents);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administration Menu";
