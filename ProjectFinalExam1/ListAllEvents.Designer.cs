@@ -103,10 +103,10 @@
             // 
             // tbpListView
             // 
-            this.tbpListView.Location = new System.Drawing.Point(4, 23);
+            this.tbpListView.Location = new System.Drawing.Point(4, 25);
             this.tbpListView.Name = "tbpListView";
             this.tbpListView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpListView.Size = new System.Drawing.Size(718, 423);
+            this.tbpListView.Size = new System.Drawing.Size(718, 421);
             this.tbpListView.TabIndex = 0;
             this.tbpListView.Text = "List View";
             this.tbpListView.UseVisualStyleBackColor = true;
@@ -114,10 +114,10 @@
             // tbpTeaserView
             // 
             this.tbpTeaserView.Controls.Add(this.lvTeaser);
-            this.tbpTeaserView.Location = new System.Drawing.Point(4, 23);
+            this.tbpTeaserView.Location = new System.Drawing.Point(4, 25);
             this.tbpTeaserView.Name = "tbpTeaserView";
             this.tbpTeaserView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpTeaserView.Size = new System.Drawing.Size(718, 423);
+            this.tbpTeaserView.Size = new System.Drawing.Size(718, 421);
             this.tbpTeaserView.TabIndex = 1;
             this.tbpTeaserView.Text = "Teaser View";
             this.tbpTeaserView.UseVisualStyleBackColor = true;
@@ -131,10 +131,11 @@
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmEventListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

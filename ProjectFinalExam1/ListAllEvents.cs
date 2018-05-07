@@ -33,5 +33,11 @@ namespace ProjectFinalExam1
 
            // fdv2.ShowDialog();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new ParticipantMenu().Show();
+        }
     }
 }
