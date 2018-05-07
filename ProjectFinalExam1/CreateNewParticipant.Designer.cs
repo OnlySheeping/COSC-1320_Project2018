@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateNewParticipant));
             this.lstbxCreateNewParticipant = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -35,7 +36,7 @@
             // lstbxCreateNewParticipant
             // 
             this.lstbxCreateNewParticipant.FormattingEnabled = true;
-            this.lstbxCreateNewParticipant.Location = new System.Drawing.Point(12, 97);
+            this.lstbxCreateNewParticipant.Location = new System.Drawing.Point(12, 177);
             this.lstbxCreateNewParticipant.Name = "lstbxCreateNewParticipant";
             this.lstbxCreateNewParticipant.Size = new System.Drawing.Size(717, 264);
             this.lstbxCreateNewParticipant.TabIndex = 0;
@@ -54,7 +55,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 391);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(741, 471);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstbxCreateNewParticipant);
             this.Name = "frmCreateNewParticipant";
