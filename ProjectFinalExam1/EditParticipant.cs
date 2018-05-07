@@ -21,5 +21,12 @@ namespace ProjectFinalExam1
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            new ManageParticipants().Show();
+            this.Hide();
+
+        }
     }
 }
