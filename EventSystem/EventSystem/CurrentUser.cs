@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    
+
     public class CurrentUser
     {
         string username;
@@ -48,7 +48,7 @@ namespace EventSystem
                     MessageBox.Show("Contact Administrator");
                 }
                 return roleID;
-              
+
             }
         }
 
@@ -57,6 +57,7 @@ namespace EventSystem
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
+            //
             using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where UserFirstName = @username", conn))
             {
                 // Invoke ExecuteReader method.
