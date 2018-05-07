@@ -36,16 +36,18 @@
             this.txbSearchEvents = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnFullView = new System.Windows.Forms.Button();
+            this.btnTeaser = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbMyEvents
             // 
             this.lbMyEvents.FormattingEnabled = true;
-            this.lbMyEvents.ItemHeight = 14;
+            this.lbMyEvents.ItemHeight = 16;
             this.lbMyEvents.Location = new System.Drawing.Point(38, 263);
             this.lbMyEvents.Name = "lbMyEvents";
-            this.lbMyEvents.Size = new System.Drawing.Size(738, 214);
+            this.lbMyEvents.Size = new System.Drawing.Size(738, 212);
             this.lbMyEvents.TabIndex = 0;
             // 
             // pictureBox1
@@ -89,7 +91,7 @@
             // 
             this.txbSearchEvents.Location = new System.Drawing.Point(235, 213);
             this.txbSearchEvents.Name = "txbSearchEvents";
-            this.txbSearchEvents.Size = new System.Drawing.Size(362, 19);
+            this.txbSearchEvents.Size = new System.Drawing.Size(362, 22);
             this.txbSearchEvents.TabIndex = 16;
             // 
             // lblSearch
@@ -98,7 +100,7 @@
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Location = new System.Drawing.Point(144, 218);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(72, 14);
+            this.lblSearch.Size = new System.Drawing.Size(91, 16);
             this.lblSearch.TabIndex = 17;
             this.lblSearch.Text = "Search Events ";
             // 
@@ -113,13 +115,35 @@
             this.btnFullView.UseVisualStyleBackColor = true;
             this.btnFullView.Click += new System.EventHandler(this.btnFullView_Click);
             // 
+            // btnTeaser
+            // 
+            this.btnTeaser.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeaser.Location = new System.Drawing.Point(221, 512);
+            this.btnTeaser.Name = "btnTeaser";
+            this.btnTeaser.Size = new System.Drawing.Size(158, 32);
+            this.btnTeaser.TabIndex = 22;
+            this.btnTeaser.Text = "Teaser View";
+            this.btnTeaser.UseVisualStyleBackColor = true;
+            // 
+            // btnList
+            // 
+            this.btnList.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Location = new System.Drawing.Point(419, 512);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(158, 32);
+            this.btnList.TabIndex = 23;
+            this.btnList.Text = "List View";
+            this.btnList.UseVisualStyleBackColor = true;
+            // 
             // MyEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 579);
+            this.Controls.Add(this.btnList);
+            this.Controls.Add(this.btnTeaser);
             this.Controls.Add(this.btnFullView);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txbSearchEvents);
@@ -147,5 +171,7 @@
         private System.Windows.Forms.TextBox txbSearchEvents;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Button btnFullView;
+        private System.Windows.Forms.Button btnTeaser;
+        private System.Windows.Forms.Button btnList;
     }
 }
