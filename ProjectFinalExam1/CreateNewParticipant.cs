@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    public partial class CreateNewParticipant : Form
+    public partial class frmCreateNewParticipant : Form
     {
-        public CreateNewParticipant()
+        public frmCreateNewParticipant()
         {
             InitializeComponent();
+        }
+
+        private void lstbxCreateNewParticipant_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

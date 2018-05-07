@@ -36,14 +36,15 @@
             // cklstbxAddEventsToParticipants
             // 
             this.cklstbxAddEventsToParticipants.FormattingEnabled = true;
-            this.cklstbxAddEventsToParticipants.Location = new System.Drawing.Point(447, 23);
+            this.cklstbxAddEventsToParticipants.Location = new System.Drawing.Point(12, 68);
             this.cklstbxAddEventsToParticipants.Name = "cklstbxAddEventsToParticipants";
-            this.cklstbxAddEventsToParticipants.Size = new System.Drawing.Size(260, 349);
+            this.cklstbxAddEventsToParticipants.Size = new System.Drawing.Size(608, 304);
             this.cklstbxAddEventsToParticipants.TabIndex = 0;
+            this.cklstbxAddEventsToParticipants.SelectedIndexChanged += new System.EventHandler(this.cklstbxAddEventsToParticipants_SelectedIndexChanged);
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(53, 44);
+            this.btnConfirm.Location = new System.Drawing.Point(211, 39);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 1;
@@ -52,7 +53,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(53, 98);
+            this.btnBack.Location = new System.Drawing.Point(130, 39);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 2;

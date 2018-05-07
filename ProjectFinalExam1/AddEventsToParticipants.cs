@@ -22,5 +22,10 @@ namespace ProjectFinalExam1     // CREATED BY CHRISTINA 5.6.18
         {
 
         }
+
+        private void cklstbxAddEventsToParticipants_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
