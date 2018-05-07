@@ -32,6 +32,7 @@
             this.lblDetailBanner = new System.Windows.Forms.Label();
             this.lvDetailView = new System.Windows.Forms.ListView();
             this.btnback = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDetailBanner
@@ -47,7 +48,6 @@
             this.lblDetailBanner.TabIndex = 13;
             this.lblDetailBanner.Text = " Event Full View";
             this.lblDetailBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDetailBanner.Click += new System.EventHandler(this.label1_Click);
             // 
             // lvDetailView
             // 
@@ -59,7 +59,6 @@
             this.lvDetailView.TabIndex = 14;
             this.lvDetailView.UseCompatibleStateImageBehavior = false;
             this.lvDetailView.View = System.Windows.Forms.View.Details;
-            this.lvDetailView.SelectedIndexChanged += new System.EventHandler(this.lvDetailView_SelectedIndexChanged);
             // 
             // btnback
             // 
@@ -69,7 +68,15 @@
             this.btnback.TabIndex = 15;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
-            this.btnback.Click += new System.EventHandler(this.btnPopulate_Click);
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(561, 640);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 16;
+            this.btnTest.Text = "test";
+            this.btnTest.UseVisualStyleBackColor = true;
             // 
             // frmEventFullView
             // 
@@ -78,6 +85,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 749);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.lvDetailView);
             this.Controls.Add(this.lblDetailBanner);
@@ -87,7 +95,6 @@
             this.Name = "frmEventFullView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event Full View";
-            this.Load += new System.EventHandler(this.EventDetailView_Load);
             this.ResumeLayout(false);
 
         }
@@ -96,5 +103,6 @@
         private System.Windows.Forms.Label lblDetailBanner;
         private System.Windows.Forms.ListView lvDetailView;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.Button btnTest;
     }
 }

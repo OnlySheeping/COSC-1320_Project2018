@@ -26,6 +26,8 @@ namespace EventSystem
             conn.Open();
 
             using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username =@username and Passsword = @password", conn))
+
+
             {
                 // Invoke ExecuteReader method.
                 command.Parameters.AddWithValue("@username", theUserName);

@@ -36,8 +36,6 @@
             this.txbSearchEvents = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnFullView = new System.Windows.Forms.Button();
-            this.btnTeaserView = new System.Windows.Forms.Button();
-            this.btnListView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,26 +111,7 @@
             this.btnFullView.TabIndex = 21;
             this.btnFullView.Text = "Full View";
             this.btnFullView.UseVisualStyleBackColor = true;
-            // 
-            // btnTeaserView
-            // 
-            this.btnTeaserView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeaserView.Location = new System.Drawing.Point(235, 512);
-            this.btnTeaserView.Name = "btnTeaserView";
-            this.btnTeaserView.Size = new System.Drawing.Size(158, 32);
-            this.btnTeaserView.TabIndex = 22;
-            this.btnTeaserView.Text = "Teaser View";
-            this.btnTeaserView.UseVisualStyleBackColor = true;
-            // 
-            // btnListView
-            // 
-            this.btnListView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListView.Location = new System.Drawing.Point(427, 512);
-            this.btnListView.Name = "btnListView";
-            this.btnListView.Size = new System.Drawing.Size(158, 32);
-            this.btnListView.TabIndex = 23;
-            this.btnListView.Text = "List View";
-            this.btnListView.UseVisualStyleBackColor = true;
+            this.btnFullView.Click += new System.EventHandler(this.btnFullView_Click);
             // 
             // MyEvents
             // 
@@ -141,8 +120,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 579);
-            this.Controls.Add(this.btnListView);
-            this.Controls.Add(this.btnTeaserView);
             this.Controls.Add(this.btnFullView);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txbSearchEvents);
@@ -170,7 +147,5 @@
         private System.Windows.Forms.TextBox txbSearchEvents;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Button btnFullView;
-        private System.Windows.Forms.Button btnTeaserView;
-        private System.Windows.Forms.Button btnListView;
     }
 }

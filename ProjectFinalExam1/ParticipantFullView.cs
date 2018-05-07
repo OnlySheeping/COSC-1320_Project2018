@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    public partial class ParticipantFullView : Form
+    public partial class frmParticipantFullView : Form
     {
-        public ParticipantFullView()
+        public frmParticipantFullView()
         {
             InitializeComponent();
         }

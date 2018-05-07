@@ -10,7 +10,7 @@ namespace EventSystem
 {
     public class Event
     {
-        SqlConnection connection = new SqlConnection();
+        
         private string title
         {
             get
@@ -173,6 +173,7 @@ namespace EventSystem
 
         public void ShowEventsForTeaserView()
         {
+            
             // This is setup and able to call this method from EventDetailView Form
             // Method is located in EventDetailView.cs under 
             //Event teaserView = new Event();
@@ -207,7 +208,7 @@ namespace EventSystem
                 command.Dispose();
                 connection.Close();
             }
-            catch (Exception exp)
+            catch (Exception)
             {
                 throw;
             }
@@ -220,9 +221,12 @@ namespace EventSystem
             throw new System.NotImplementedException();
         }
 
-        public static string[] ShowEventDetail(string theEvent)
+        public static string[] ShowEventDetail(string theEventID)
         {
-            throw new System.NotImplementedException();
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
+
+            //throw new System.NotImplementedException();
             //      SELECT TOP 1[EventID]
             //,[EventName]
             //,[Status]
@@ -240,12 +244,11 @@ namespace EventSystem
             //,[MaxAttendees]
             //  FROM[Project1].[dbo].[Events]
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID,  EventName = @eventname, Status = @status EventDescription = @eventdescription, StartDate = @startdate, EndDate = @endDate, StartTime = @starttime, EndDate = @endDate, StartTime = @starttime, EndTime = @endtime, EventNotes = @eventnotes, AgeRequirements =@agerequirements, Private = @private, Closed =@closed, Location =@location and MaxAttendees =@maxattendees ", Program.conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID", conn))
             {
+                string[] eventInfo = new string[13];
                 // Invoke ExecuteReader method.
-
-                command.Parameters.AddWithValue("@eventname", theEvent);
-
+                command.Parameters.AddWithValue("@eventID", theEventID);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -270,7 +273,7 @@ namespace EventSystem
 
 
 
-                        string[] eventInfo = new string[13];
+                        
                         string eventID = rawEventID.ToString();
                         string startDate = rawEventID.ToString();
                         string endDate = rawEventID.ToString();
@@ -295,11 +298,14 @@ namespace EventSystem
                         location = eventInfo[12];
                         maxAttendee = eventInfo[13];
 
-                        return eventInfo;
+                        
+
                     }
 
-
+                    
                 }
+                return eventInfo;
+
             }
         }
 
