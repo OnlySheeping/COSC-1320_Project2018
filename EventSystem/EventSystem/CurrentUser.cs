@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    
+
     public class CurrentUser
     {
         string username;
@@ -48,7 +48,7 @@ namespace EventSystem
                     MessageBox.Show("Contact Administrator");
                 }
                 return roleID;
-              
+
             }
         }
 
