@@ -36,14 +36,14 @@ namespace ProjectFinalExam1
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            new AddEvent().Show();
+            new frmCreateEvent().Show();
             this.Hide();
         }
 
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            new EditEvent().Show();
-            this.Hide();
-        }
+      //  private void btn3_Click(object sender, EventArgs e)
+      //  {
+       //     new EditEvent().Show();
+      //      this.Hide();
+      //  }
     }
 }

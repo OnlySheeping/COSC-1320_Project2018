@@ -29,43 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyEvents));
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbMyEvents = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnEventDetailView = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.txbSearchEvents = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.btnFullView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lbMyEvents
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(79, 223);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(738, 173);
-            this.listBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(321, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "List of My Events";
+            this.lbMyEvents.FormattingEnabled = true;
+            this.lbMyEvents.ItemHeight = 14;
+            this.lbMyEvents.Location = new System.Drawing.Point(38, 263);
+            this.lbMyEvents.Name = "lbMyEvents";
+            this.lbMyEvents.Size = new System.Drawing.Size(738, 214);
+            this.lbMyEvents.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 78);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(738, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(738, 128);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -73,40 +64,74 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(79, 9);
+            this.label2.Location = new System.Drawing.Point(235, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(738, 57);
+            this.label2.Size = new System.Drawing.Size(362, 61);
             this.label2.TabIndex = 13;
-            this.label2.Text = "My Events";
+            this.label2.Text = "List of My Events";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEventDetailView
+            // btnBack
             // 
-            this.btnEventDetailView.Location = new System.Drawing.Point(356, 447);
-            this.btnEventDetailView.Name = "btnEventDetailView";
-            this.btnEventDetailView.Size = new System.Drawing.Size(158, 30);
-            this.btnEventDetailView.TabIndex = 15;
-            this.btnEventDetailView.Text = "Detail View";
-            this.btnEventDetailView.UseVisualStyleBackColor = true;
-            this.btnEventDetailView.Click += new System.EventHandler(this.btnEventDetailView_Click);
+            this.btnBack.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(618, 512);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(158, 32);
+            this.btnBack.TabIndex = 15;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnEventDetailView_Click);
+            // 
+            // txbSearchEvents
+            // 
+            this.txbSearchEvents.Location = new System.Drawing.Point(235, 213);
+            this.txbSearchEvents.Name = "txbSearchEvents";
+            this.txbSearchEvents.Size = new System.Drawing.Size(362, 19);
+            this.txbSearchEvents.TabIndex = 16;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.Color.Transparent;
+            this.lblSearch.Location = new System.Drawing.Point(144, 218);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(72, 14);
+            this.lblSearch.TabIndex = 17;
+            this.lblSearch.Text = "Search Events ";
+            // 
+            // btnFullView
+            // 
+            this.btnFullView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFullView.Location = new System.Drawing.Point(38, 512);
+            this.btnFullView.Name = "btnFullView";
+            this.btnFullView.Size = new System.Drawing.Size(158, 32);
+            this.btnFullView.TabIndex = 21;
+            this.btnFullView.Text = "Full View";
+            this.btnFullView.UseVisualStyleBackColor = true;
+            this.btnFullView.Click += new System.EventHandler(this.btnFullView_Click);
             // 
             // MyEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(892, 525);
-            this.Controls.Add(this.btnEventDetailView);
+            this.ClientSize = new System.Drawing.Size(821, 579);
+            this.Controls.Add(this.btnFullView);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.txbSearchEvents);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbMyEvents);
+            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MyEvents";
-            this.Text = "MyEvents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "My Events";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,10 +140,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lbMyEvents;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnEventDetailView;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox txbSearchEvents;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Button btnFullView;
     }
 }

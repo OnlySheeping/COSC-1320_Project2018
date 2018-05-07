@@ -67,9 +67,10 @@
             this.label2.Location = new System.Drawing.Point(14, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "USER NAME";
+            this.label2.Text = "Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -79,9 +80,9 @@
             this.label3.Location = new System.Drawing.Point(16, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 16);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "PASSWORD";
+            this.label3.Text = "Password";
             // 
             // tbUserName
             // 
@@ -114,6 +115,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "LogOn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log On";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

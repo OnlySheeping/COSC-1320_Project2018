@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    public partial class Form1 : Form
+    public partial class frmAllEvents : Form
     {
-        public Form1()
+        public frmAllEvents()
         {
             InitializeComponent();
         }
