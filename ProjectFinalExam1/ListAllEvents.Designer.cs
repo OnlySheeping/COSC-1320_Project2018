@@ -58,7 +58,7 @@
             // 
             // btnGetDetailView
             // 
-            this.btnGetDetailView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetDetailView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetDetailView.Location = new System.Drawing.Point(251, 621);
             this.btnGetDetailView.Name = "btnGetDetailView";
             this.btnGetDetailView.Size = new System.Drawing.Size(106, 39);
@@ -103,10 +103,10 @@
             // 
             // tbpListView
             // 
-            this.tbpListView.Location = new System.Drawing.Point(4, 25);
+            this.tbpListView.Location = new System.Drawing.Point(4, 22);
             this.tbpListView.Name = "tbpListView";
             this.tbpListView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpListView.Size = new System.Drawing.Size(718, 421);
+            this.tbpListView.Size = new System.Drawing.Size(718, 424);
             this.tbpListView.TabIndex = 0;
             this.tbpListView.Text = "List View";
             this.tbpListView.UseVisualStyleBackColor = true;
@@ -114,28 +114,27 @@
             // tbpTeaserView
             // 
             this.tbpTeaserView.Controls.Add(this.lvTeaser);
-            this.tbpTeaserView.Location = new System.Drawing.Point(4, 25);
+            this.tbpTeaserView.Location = new System.Drawing.Point(4, 22);
             this.tbpTeaserView.Name = "tbpTeaserView";
             this.tbpTeaserView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpTeaserView.Size = new System.Drawing.Size(718, 421);
+            this.tbpTeaserView.Size = new System.Drawing.Size(718, 424);
             this.tbpTeaserView.TabIndex = 1;
             this.tbpTeaserView.Text = "Teaser View";
             this.tbpTeaserView.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(391, 621);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(106, 39);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmEventListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -144,7 +143,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnGetDetailView);
             this.Controls.Add(this.lblListBanner);
-            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEventListView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
