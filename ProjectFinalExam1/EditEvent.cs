@@ -19,12 +19,7 @@ namespace ProjectFinalExam1
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            txbEventEditStartDate.Text = "";
-            txbEventEditEndDate.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
+          
 
         }
 

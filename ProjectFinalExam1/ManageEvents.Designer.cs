@@ -94,7 +94,7 @@
             this.btn3.TabIndex = 17;
             this.btn3.Text = "EDIT";
             this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.btn3_Click);
+         
             // 
             // listBox1
             // 

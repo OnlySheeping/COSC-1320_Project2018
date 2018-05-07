@@ -220,7 +220,7 @@ namespace EventSystem
             throw new System.NotImplementedException();
         }
 
-        public List<string> ShowEventDetail(string theEvent)
+        public static string[] ShowEventDetail(string theEvent)
         {
             throw new System.NotImplementedException();
             //      SELECT TOP 1[EventID]
@@ -245,7 +245,7 @@ namespace EventSystem
                 // Invoke ExecuteReader method.
 
                 command.Parameters.AddWithValue("@eventname", theEvent);
-                
+
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -253,7 +253,7 @@ namespace EventSystem
                     //UserData();
                     while (reader.Read())
                     {
-                        int rawEventID = reader.GetInt32(reader.GetOrdinal("EventID")).ToString;
+                        int rawEventID = reader.GetInt32(reader.GetOrdinal("EventID"));
                         string eventname = reader.GetString(reader.GetOrdinal("EventName"));
                         string status = reader.GetString(reader.GetOrdinal("UserStatus"));
                         string eventDesciption = reader.GetString(reader.GetOrdinal("EventDesciption"));
@@ -295,14 +295,16 @@ namespace EventSystem
                         location = eventInfo[12];
                         maxAttendee = eventInfo[13];
 
-
+                        return eventInfo;
                     }
 
 
+                }
+            }
+        }
 
 
-
-
+                
 
 
     }
