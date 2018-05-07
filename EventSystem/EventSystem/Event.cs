@@ -10,7 +10,7 @@ namespace EventSystem
 {
     public class Event
     {
-        SqlConnection connection = new SqlConnection();
+        
         private string title
         {
             get
@@ -173,6 +173,7 @@ namespace EventSystem
 
         public void ShowEventsForTeaserView()
         {
+            
             // This is setup and able to call this method from EventDetailView Form
             // Method is located in EventDetailView.cs under 
             //Event teaserView = new Event();
@@ -207,7 +208,7 @@ namespace EventSystem
                 command.Dispose();
                 connection.Close();
             }
-            catch (Exception exp)
+            catch (Exception)
             {
                 throw;
             }
@@ -220,9 +221,12 @@ namespace EventSystem
             throw new System.NotImplementedException();
         }
 
-        public static string[] ShowEventDetail(string theEvent)
+        public static List<string> ShowEventDetail(int theEventID)
         {
-            throw new System.NotImplementedException();
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
+
+            //throw new System.NotImplementedException();
             //      SELECT TOP 1[EventID]
             //,[EventName]
             //,[Status]
@@ -240,12 +244,11 @@ namespace EventSystem
             //,[MaxAttendees]
             //  FROM[Project1].[dbo].[Events]
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID,  EventName = @eventname, Status = @status EventDescription = @eventdescription, StartDate = @startdate, EndDate = @endDate, StartTime = @starttime, EndDate = @endDate, StartTime = @starttime, EndTime = @endtime, EventNotes = @eventnotes, AgeRequirements =@agerequirements, Private = @private, Closed =@closed, Location =@location and MaxAttendees =@maxattendees ", Program.conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID", conn))
             {
+                List<string> eventInfo = new List<string>();
                 // Invoke ExecuteReader method.
-
-                command.Parameters.AddWithValue("@eventname", theEvent);
-
+                command.Parameters.AddWithValue("@eventID", theEventID);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -253,53 +256,74 @@ namespace EventSystem
                     //UserData();
                     while (reader.Read())
                     {
-                        int rawEventID = reader.GetInt32(reader.GetOrdinal("EventID"));
-                        string eventname = reader.GetString(reader.GetOrdinal("EventName"));
-                        string status = reader.GetString(reader.GetOrdinal("UserStatus"));
-                        string eventDesciption = reader.GetString(reader.GetOrdinal("EventDesciption"));
+                        string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                        string status = reader.GetString(reader.GetOrdinal("Status"));
+                        string eventDesciption = reader.GetString(reader.GetOrdinal("EventDescription"));
                         DateTime rawStartDate = reader.GetDateTime(reader.GetOrdinal("StartDate"));
                         DateTime rawEndDate = reader.GetDateTime(reader.GetOrdinal("EndDate"));
-                        DateTime rawStartTime = reader.GetDateTime(reader.GetOrdinal("StartTime"));
-                        DateTime rawEndTime = reader.GetDateTime(reader.GetOrdinal("EndTime"));
+                        TimeSpan rawStartTime = reader.GetTimeSpan(reader.GetOrdinal("StartTime"));
+                        TimeSpan rawEndTime = reader.GetTimeSpan(reader.GetOrdinal("EndTime"));
                         string eventNotes = reader.GetString(reader.GetOrdinal("EventNotes"));
-                        int rawAgeRequirement = reader.GetInt32(reader.GetOrdinal("AgeRequirements"));
-                        int rawClosed = reader.GetInt32(reader.GetOrdinal("Closed"));
+                        int rawAgeRequirement = reader.GetInt32(reader.GetOrdinal("AgeRequirement"));
+                        int rawCategoryID = reader.GetInt32(reader.GetOrdinal("CategoryID"));
+                        short rawPrivateID = reader.GetByte(reader.GetOrdinal("Private"));
+                        short rawClosed = reader.GetByte(reader.GetOrdinal("Closed"));
                         string location = reader.GetString(reader.GetOrdinal("Location"));
                         int rawMaxAttendee = reader.GetInt32(reader.GetOrdinal("MaxAttendees"));
-                        int rawPrivateID = reader.GetInt32(reader.GetOrdinal("Private"));
 
 
 
-                        string[] eventInfo = new string[13];
-                        string eventID = rawEventID.ToString();
-                        string startDate = rawEventID.ToString();
-                        string endDate = rawEventID.ToString();
-                        string startTime = rawEventID.ToString();
-                        string endTime = rawEventID.ToString();
+
+
+
+                        string startDate = rawStartDate.ToString();
+                        string endDate = rawEndDate.ToString();
+                        string startTime = rawStartTime.ToString();
+                        string endTime = rawEndTime.ToString();
                         string ageRequirement = rawAgeRequirement.ToString();
                         string closed = rawClosed.ToString();
                         string maxAttendee = rawMaxAttendee.ToString();
                         string privateID = rawPrivateID.ToString();
-                        eventID = eventInfo[0];
-                        eventname = eventInfo[1];
-                        status = eventInfo[2];
-                        eventDesciption = eventInfo[3];
-                        startDate = eventInfo[4];
-                        endDate = eventInfo[5];
-                        startTime = eventInfo[6];
-                        endTime = eventInfo[7];
-                        eventNotes = eventInfo[8];
-                        ageRequirement = eventInfo[9];
-                        privateID = eventInfo[10];
-                        closed = eventInfo[11];
-                        location = eventInfo[12];
-                        maxAttendee = eventInfo[13];
+                        string catergoryID = rawCategoryID.ToString();
 
-                        return eventInfo;
+                        eventInfo.Add(eventName);
+                        eventInfo.Add(status);
+                        eventInfo.Add(eventDesciption);
+                        eventInfo.Add(startDate);
+                        eventInfo.Add(endDate);
+                        eventInfo.Add(startTime);
+                        eventInfo.Add(endTime);
+                        eventInfo.Add(eventNotes);
+                        eventInfo.Add(ageRequirement);
+                        eventInfo.Add(catergoryID);
+                        eventInfo.Add(privateID);
+                        eventInfo.Add(closed);
+                        eventInfo.Add(location);
+                        eventInfo.Add(maxAttendee);
+
+                        //eventName = eventInfo[0];
+                        //status = eventInfo[1];
+                        //eventDesciption = eventInfo[2];
+                        //startDate = eventInfo[3];
+                        //endDate = eventInfo[4];
+                        //startTime = eventInfo[5];
+                        //endTime = eventInfo[6];
+                        //eventNotes = eventInfo[7];
+                        //ageRequirement = eventInfo[8];
+                        //catergoryID = eventInfo[9];
+                        //privateID = eventInfo[10];
+                        //closed = eventInfo[11];
+                        //location = eventInfo[12];
+                        //maxAttendee = eventInfo[13];
+
+
+                        
                     }
 
-
+                    
                 }
+                return eventInfo;
+
             }
         }
 

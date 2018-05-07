@@ -19,8 +19,14 @@ namespace ProjectFinalExam1
 
         private void btnEventDetailView_Click(object sender, EventArgs e)
         {
+            this.Close();
+            new ParticipantMenu().Show();
+        }
+
+        private void btnFullView_Click(object sender, EventArgs e)
+        {
             new frmEventFullView().Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
