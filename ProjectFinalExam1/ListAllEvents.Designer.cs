@@ -20,7 +20,6 @@
             base.Dispose(disposing);
         }
 
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -32,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventListView));
             this.lblListBanner = new System.Windows.Forms.Label();
             this.btnGetDetailView = new System.Windows.Forms.Button();
+            this.lvTeaser = new System.Windows.Forms.ListView();
+            this.chCatId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeaserVw = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbcEentListView = new System.Windows.Forms.TabControl();
             this.tbpListView = new System.Windows.Forms.TabPage();
             this.tbpTeaserView = new System.Windows.Forms.TabPage();
             this.btnBack = new System.Windows.Forms.Button();
-            this.listbxTeaserView = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tbcEentListView.SuspendLayout();
             this.tbpTeaserView.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +58,7 @@
             // 
             // btnGetDetailView
             // 
-            this.btnGetDetailView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetDetailView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetDetailView.Location = new System.Drawing.Point(251, 621);
             this.btnGetDetailView.Name = "btnGetDetailView";
             this.btnGetDetailView.Size = new System.Drawing.Size(106, 39);
@@ -68,6 +66,30 @@
             this.btnGetDetailView.Text = "Details";
             this.btnGetDetailView.UseVisualStyleBackColor = true;
             this.btnGetDetailView.Click += new System.EventHandler(this.btnGetDetailView_Click);
+            // 
+            // lvTeaser
+            // 
+            this.lvTeaser.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chCatId,
+            this.chTeaserVw});
+            this.lvTeaser.GridLines = true;
+            this.lvTeaser.Location = new System.Drawing.Point(-4, 0);
+            this.lvTeaser.MultiSelect = false;
+            this.lvTeaser.Name = "lvTeaser";
+            this.lvTeaser.Size = new System.Drawing.Size(722, 425);
+            this.lvTeaser.TabIndex = 0;
+            this.lvTeaser.UseCompatibleStateImageBehavior = false;
+            this.lvTeaser.View = System.Windows.Forms.View.Details;
+            // 
+            // chCatId
+            // 
+            this.chCatId.Text = "Category Name";
+            this.chCatId.Width = 137;
+            // 
+            // chTeaserVw
+            // 
+            this.chTeaserVw.Text = "Category Description";
+            this.chTeaserVw.Width = 557;
             // 
             // tbcEentListView
             // 
@@ -81,31 +103,28 @@
             // 
             // tbpListView
             // 
-            this.tbpListView.Location = new System.Drawing.Point(4, 23);
+            this.tbpListView.Location = new System.Drawing.Point(4, 22);
             this.tbpListView.Name = "tbpListView";
             this.tbpListView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpListView.Size = new System.Drawing.Size(718, 423);
+            this.tbpListView.Size = new System.Drawing.Size(718, 424);
             this.tbpListView.TabIndex = 0;
             this.tbpListView.Text = "List View";
             this.tbpListView.UseVisualStyleBackColor = true;
             // 
             // tbpTeaserView
             // 
-            this.tbpTeaserView.Controls.Add(this.comboBox3);
-            this.tbpTeaserView.Controls.Add(this.comboBox2);
-            this.tbpTeaserView.Controls.Add(this.comboBox1);
-            this.tbpTeaserView.Controls.Add(this.listbxTeaserView);
-            this.tbpTeaserView.Location = new System.Drawing.Point(4, 23);
+            this.tbpTeaserView.Controls.Add(this.lvTeaser);
+            this.tbpTeaserView.Location = new System.Drawing.Point(4, 22);
             this.tbpTeaserView.Name = "tbpTeaserView";
             this.tbpTeaserView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpTeaserView.Size = new System.Drawing.Size(718, 423);
+            this.tbpTeaserView.Size = new System.Drawing.Size(718, 424);
             this.tbpTeaserView.TabIndex = 1;
             this.tbpTeaserView.Text = "Teaser View";
             this.tbpTeaserView.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(391, 621);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(106, 39);
@@ -113,43 +132,9 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // listbxTeaserView
-            // 
-            this.listbxTeaserView.FormattingEnabled = true;
-            this.listbxTeaserView.ItemHeight = 14;
-            this.listbxTeaserView.Location = new System.Drawing.Point(0, 98);
-            this.listbxTeaserView.Name = "listbxTeaserView";
-            this.listbxTeaserView.Size = new System.Drawing.Size(718, 326);
-            this.listbxTeaserView.TabIndex = 0;
-            this.listbxTeaserView.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(591, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 22);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(591, 34);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 22);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(591, 62);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 22);
-            this.comboBox3.TabIndex = 3;
-            // 
             // frmEventListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -158,7 +143,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnGetDetailView);
             this.Controls.Add(this.lblListBanner);
-            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEventListView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -173,13 +158,12 @@
         #endregion
         private System.Windows.Forms.Label lblListBanner;
         private System.Windows.Forms.Button btnGetDetailView;
+        private System.Windows.Forms.ListView lvTeaser;
+        private System.Windows.Forms.ColumnHeader chCatId;
+        private System.Windows.Forms.ColumnHeader chTeaserVw;
         private System.Windows.Forms.TabControl tbcEentListView;
         private System.Windows.Forms.TabPage tbpListView;
         private System.Windows.Forms.TabPage tbpTeaserView;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listbxTeaserView;
     }
 }

@@ -53,15 +53,5 @@ namespace ProjectFinalExam1
             //lbxDetailView.Items.Add("Event Name: " + eventInfo[0]);
             //lbxDetailView.Items.Add("Category: " + eventInfo[9]);
         }
-
-        private void lblListBanner_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

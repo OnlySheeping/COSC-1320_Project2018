@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class EventManager : Form
+    public partial class ManageEvents : Form
     {
         //Test commit.
-        public EventManager()
+        public ManageEvents()
         {
             InitializeComponent();
         }
@@ -44,11 +44,6 @@ namespace ProjectFinalExam1
         {
             new frmEventEdit().Show();
             this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         //  private void btn3_Click(object sender, EventArgs e)

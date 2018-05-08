@@ -1,28 +1,24 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace EventSystem
+﻿namespace EventSystem
 {
-    partial class EventTeaserView
+    partial class frmEventTeaserView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        //private System.ComponentModel.IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing && (components != null))
-        //    {
-        //        components.Dispose();
-        //    }
-        //    base.Dispose(disposing);
-        //}
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         #region Windows Form Designer generated code
 
@@ -60,22 +56,17 @@ namespace EventSystem
             // 
             // frmEventTeaserView
             // 
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.ClientSize = new System.Drawing.Size(780, 542);
-            //this.Controls.Add(this.panel3);
-            //this.Controls.Add(this.panel2);
-            //this.Controls.Add(this.panel1);
-            //this.Name = "frmEventTeaserView";
-            //this.Text = "Event Teaser View";
-            //this.Load += new System.EventHandler(this.Form1_Load);
-            //this.ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(780, 542);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "frmEventTeaserView";
+            this.Text = "Event Teaser View";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
 
-        }
-
-        private void SuspendLayout()
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
@@ -83,12 +74,6 @@ namespace EventSystem
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-
-        public SizeF AutoScaleDimensions { get; private set; }
-        public AutoScaleMode AutoScaleMode { get; private set; }
-        public Size ClientSize { get; private set; }
-        public object Controls { get; private set; }
-        public string Name { get; private set; }
     }
 }
 
