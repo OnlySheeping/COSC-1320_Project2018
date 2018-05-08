@@ -47,7 +47,7 @@ namespace EventSystem
             }
         }
 
-        private DateTime startDate
+        private string startDate
         {
             get
             {
@@ -59,7 +59,7 @@ namespace EventSystem
             }
         }
 
-        private DateTime endDate
+        private string endDate
         {
             get
             {
@@ -171,7 +171,7 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
-        public List<string> ShowEventsForTeaserView()
+        public List<string> ShowEventsForTeaserView(int theEventID)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
@@ -194,26 +194,36 @@ namespace EventSystem
             //,[MaxAttendees]
             //  FROM[Project1].[dbo].[Events]
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY Status", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID ASC", conn)) //cg
             {
-                List<string> partlist = new List<string>();
+                //List<string> partlist = new List<string>();
+                // Invoke ExecuteReader method.
+               // command.Parameters.AddWithValue("@eventID", theEventID);
 
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                SqlDataReader reader = command.ExecuteReader(); // cg
+                //if (reader.HasRows)
+
+                while (reader.Read())// cg
                 {
                     //UserData();
-                    while (reader.Read())
+                    while (reader.Read()) //cg
                     {
-                        string eventName = reader.GetString(reader.GetOrdinal("EventName"));
-                        string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
-                        string startDate = reader.GetString(reader.GetOrdinal("Start Date"));
-                        string status = reader.GetString(reader.GetOrdinal("Status"));
+                        ListViewitem item = new ListViewItem(reader["EventName"].ToString());
+                        item.SubItems.Add(reader["EventDescription"].ToString());
+                        item.SubItems.Add(reader["StartDate"].ToString());
+                        item.SubItems.Add(reader["Status"].ToString());
 
-                        partlist.Add(eventName);
-                        partlist.Add(status);
-                        partlist.Add(eventDescription);
-                        partlist.Add(startDate);
-                        
+                        ListViewitem.item.Add(item);
+
+                        //string eventName = reader.GetString(reader.GetOrdinal("EventName"));                          ---- commented out for trial cg
+                        //string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
+                        //string startDate = reader.GetString(reader.GetOrdinal("Start Date"));
+                        //string status = reader.GetString(reader.GetOrdinal("Status"));
+
+                        //partlist.Add(eventName);
+                        //partlist.Add(status);
+                        //partlist.Add(eventDescription);
+                        //partlist.Add(startDate);                        ----- commented out for trial cg
 
                         //eventName = eventInfo[0];
                         //status = eventInfo[1];
@@ -229,18 +239,15 @@ namespace EventSystem
                         //closed = eventInfo[11];
                         //location = eventInfo[12];
                         //maxAttendee = eventInfo[13];
-
-
-
                     }
-
-
                 }
-                return partlist;
+                //return partlist;    ---commented out by cg for trial
+                
+                
+                   
+                
             }
         }
-
-
 
         public void ShowEventsForListView()
         {
