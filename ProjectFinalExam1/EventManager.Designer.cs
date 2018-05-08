@@ -86,6 +86,7 @@
             this.btn2.TabIndex = 16;
             this.btn2.Text = "DELETE";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn3
             // 
@@ -128,6 +129,7 @@
             this.button2.TabIndex = 20;
             this.button2.Text = "All Events";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EventManager
             // 
