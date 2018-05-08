@@ -39,5 +39,15 @@ namespace ProjectFinalExam1
             this.Close();
             new ParticipantMenu().Show();
         }
+
+        private void lblListBanner_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

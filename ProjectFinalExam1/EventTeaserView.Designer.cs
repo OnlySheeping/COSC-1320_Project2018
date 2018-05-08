@@ -11,13 +11,13 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+            //base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // panel1
             // 
@@ -56,16 +56,16 @@
             // 
             // frmEventTeaserView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 542);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "frmEventTeaserView";
-            this.Text = "Event Teaser View";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.ClientSize = new System.Drawing.Size(780, 542);
+            //this.Controls.Add(this.panel3);
+            //this.Controls.Add(this.panel2);
+            //this.Controls.Add(this.panel1);
+            //this.Name = "frmEventTeaserView";
+            //this.Text = "Event Teaser View";
+            //this.Load += new System.EventHandler(this.Form1_Load);
+            //this.ResumeLayout(false);
 
         }
 

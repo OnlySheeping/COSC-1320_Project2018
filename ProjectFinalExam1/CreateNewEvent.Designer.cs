@@ -218,7 +218,7 @@
             this.lblAddEvent.Name = "lblAddEvent";
             this.lblAddEvent.Size = new System.Drawing.Size(443, 64);
             this.lblAddEvent.TabIndex = 15;
-            this.lblAddEvent.Text = "Create  Event";
+            this.lblAddEvent.Text = "Create New Event";
             this.lblAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAddEvent.Click += new System.EventHandler(this.label1_Click_1);
             // 
@@ -363,6 +363,7 @@
             this.btnAddPart.TabIndex = 35;
             this.btnAddPart.Text = "Add Participants";
             this.btnAddPart.UseVisualStyleBackColor = true;
+            this.btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
             // 
             // chbClosed
             // 
@@ -447,7 +448,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCreateEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Event";
+            this.Text = "Create New Event";
             this.Load += new System.EventHandler(this.AddEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

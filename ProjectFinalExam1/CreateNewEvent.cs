@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventSystem;
 
 namespace ProjectFinalExam1
 {
@@ -61,5 +62,11 @@ namespace ProjectFinalExam1
             txbAge.Text = "";
             txbAttendees.Text = "";
         }
+
+        private void btnAddPart_Click(object sender, EventArgs e)
+        {
+            new frmAddParticipantToEvents().Show();
+            Visible = true;
+    }
     }
 }
