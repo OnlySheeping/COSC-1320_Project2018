@@ -59,7 +59,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(738, 57);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Participant Menu";
+            this.label4.Text = "Participants Menu";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnListAllEvents
@@ -98,7 +98,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Name = "ParticipantMenu";
-            this.Text = "Participant Menu";
+            this.Text = "ParticipantMenu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

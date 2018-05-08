@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class EventAdminMenu : Form
+    public partial class AdminMenu : Form
     {
-        public EventAdminMenu()
+        public AdminMenu()
         {
             InitializeComponent();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new EventManager().Show();
+            new ManageEvents().Show();
             this.Hide();
 
         }

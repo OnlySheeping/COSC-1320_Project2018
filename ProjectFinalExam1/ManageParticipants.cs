@@ -19,7 +19,7 @@ namespace ProjectFinalExam1
 
         private void button1_Click(object sender, EventArgs e)
         {
-         //   new CreateNewParticipant().Show();
+           // new Participant().Show();
             this.Hide();
         }
 

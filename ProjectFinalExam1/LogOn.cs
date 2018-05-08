@@ -64,7 +64,7 @@ namespace ProjectFinalExam1
             else if (roleID == 2)
             {
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                EventAdminMenu admin = new EventAdminMenu();
+                AdminMenu admin = new AdminMenu();
                 admin.Show();
                 Visible = false;
             }

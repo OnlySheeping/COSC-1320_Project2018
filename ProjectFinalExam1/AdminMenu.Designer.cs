@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class EventAdminMenu
+    partial class AdminMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventAdminMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
             this.btnManageParticipants = new System.Windows.Forms.Button();
             this.btnManageEvents = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,7 +42,7 @@
             this.btnManageParticipants.Name = "btnManageParticipants";
             this.btnManageParticipants.Size = new System.Drawing.Size(69, 43);
             this.btnManageParticipants.TabIndex = 16;
-            this.btnManageParticipants.Text = "Manage User";
+            this.btnManageParticipants.Text = "Manage Participants";
             this.btnManageParticipants.UseVisualStyleBackColor = true;
             this.btnManageParticipants.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -77,10 +77,10 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(492, 62);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Event Admin Menu";
+            this.label1.Text = "Administrative Menu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EventAdminMenu
+            // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,10 +92,10 @@
             this.Controls.Add(this.btnManageEvents);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "EventAdminMenu";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Event Admin Menu";
+            this.Text = "Administration Menu";
             this.Load += new System.EventHandler(this.AdminMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
