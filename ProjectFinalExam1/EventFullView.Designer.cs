@@ -78,7 +78,7 @@
             // 
             // btnback
             // 
-            this.btnback.Location = new System.Drawing.Point(350, 640);
+            this.btnback.Location = new System.Drawing.Point(467, 640);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(111, 42);
             this.btnback.TabIndex = 15;
@@ -87,11 +87,11 @@
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(561, 640);
+            this.btnTest.Location = new System.Drawing.Point(233, 640);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.Size = new System.Drawing.Size(111, 42);
             this.btnTest.TabIndex = 16;
-            this.btnTest.Text = "test";
+            this.btnTest.Text = "Load Event";
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
