@@ -16,5 +16,10 @@ namespace EventSystem
         {
             InitializeComponent();
         }
+
+        private void frmAllEvents_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
