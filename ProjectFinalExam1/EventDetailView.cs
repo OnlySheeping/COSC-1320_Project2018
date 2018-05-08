@@ -54,6 +54,11 @@ namespace ProjectFinalExam1
 
         }
 
+        private void frmEventFullView_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         // private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)

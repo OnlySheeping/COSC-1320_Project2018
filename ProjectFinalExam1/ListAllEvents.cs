@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventSystem;
 
 
 namespace ProjectFinalExam1
@@ -44,7 +45,13 @@ namespace ProjectFinalExam1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listbxTeaserView.Items.Add(String.Format(eventviewDetails, "Event Name", "Status", "", "Start Date", "Start Time"));
+            EventSystem.Event events = new EventSystem.Event();
+            events.ShowEventsForTeaserView();
+            listbxTeaserView.Items.Add(String.Format(eventviewDetails, "Event Name", "Category"));
+            
+            // EventSystem.Event event = new EventSystem.Event();
+            //lbxDetailView.Items.Add("Event Name: " + eventInfo[0]);
+            //lbxDetailView.Items.Add("Category: " + eventInfo[9]);
         }
     }
 }

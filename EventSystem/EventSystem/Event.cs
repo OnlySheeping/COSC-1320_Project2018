@@ -171,46 +171,72 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
-        public void ShowEventsForTeaserView()
+        public List<string> ShowEventsForTeaserView()
         {
-            
-            // This is setup and able to call this method from EventDetailView Form
-            // Method is located in EventDetailView.cs under 
-            //Event teaserView = new Event();
-            //teaserView.ShowEventsForTeaserView();
-            List<Event> partList = new List<Event>();
-            SqlConnection connection = 
-                new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
 
-            SqlCommand command = 
-                new SqlCommand ("SELECT CategoryDescription, EventName " +
-                "FROM dbo.Categories.CategoryID " +
-                "INNER JOIN dbo.Events " +
-                "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
-                "ORDER BY CategoryDescription ASC, EventName ASC;", connection);
+            //throw new System.NotImplementedException();
+            //      SELECT TOP 1[EventID]
+            //,[EventName]
+            //,[Status]
+            //,[EventDescription]
+            //,[StartDate]
+            //,[EndDate]
+            //,[StartTime]
+            //,[EndTime]
+            //,[EventNotes]
+            //,[AgeRequirement]
+            //, CategoryID replace with CategoryDescription - table 
+            //,[Private]
+            //,[Closed]
+            //,[Location]
+            //,[MaxAttendees]
+            //  FROM[Project1].[dbo].[Events]
 
-            SqlDataReader reader;
-            try
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY Status", conn))
             {
-                connection.Open();
-                reader = command.ExecuteReader();
-                while (reader.Read())
+                List<string> partlist = new List<string>();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    partList.Add(new Event()
+                    //UserData();
+                    while (reader.Read())
                     {
-                        CategoryDescription = reader.GetString(reader.GetOrdinal("CategoryDescription")),
-                        EventName = reader.GetString(reader.GetOrdinal("EventName"))
-                    });
+                        string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                        string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
+                        string startDate = reader.GetString(reader.GetOrdinal("Start Date"));
+                        string status = reader.GetString(reader.GetOrdinal("Status"));
+
+                        partlist.Add(eventName);
+                        partlist.Add(status);
+                        partlist.Add(eventDescription);
+                        partlist.Add(startDate);
+                        
+
+                        //eventName = eventInfo[0];
+                        //status = eventInfo[1];
+                        //eventDesciption = eventInfo[2];
+                        //startDate = eventInfo[3];
+                        //endDate = eventInfo[4];
+                        //startTime = eventInfo[5];
+                        //endTime = eventInfo[6];
+                        //eventNotes = eventInfo[7];
+                        //ageRequirement = eventInfo[8];
+                        //catergoryID = eventInfo[9];
+                        //privateID = eventInfo[10];
+                        //closed = eventInfo[11];
+                        //location = eventInfo[12];
+                        //maxAttendee = eventInfo[13];
+
+
+
+                    }
+
 
                 }
-                //}
-                reader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                throw;
+                return partlist;
             }
         }
 
@@ -258,7 +284,7 @@ namespace EventSystem
                     {
                         string eventName = reader.GetString(reader.GetOrdinal("EventName"));
                         string status = reader.GetString(reader.GetOrdinal("Status"));
-                        string eventDesciption = reader.GetString(reader.GetOrdinal("EventDescription"));
+                        string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
                         DateTime rawStartDate = reader.GetDateTime(reader.GetOrdinal("StartDate"));
                         DateTime rawEndDate = reader.GetDateTime(reader.GetOrdinal("EndDate"));
                         TimeSpan rawStartTime = reader.GetTimeSpan(reader.GetOrdinal("StartTime"));
@@ -270,11 +296,6 @@ namespace EventSystem
                         short rawClosed = reader.GetByte(reader.GetOrdinal("Closed"));
                         string location = reader.GetString(reader.GetOrdinal("Location"));
                         int rawMaxAttendee = reader.GetInt32(reader.GetOrdinal("MaxAttendees"));
-
-
-
-
-
 
                         string startDate = rawStartDate.ToString();
                         string endDate = rawEndDate.ToString();
@@ -288,7 +309,7 @@ namespace EventSystem
 
                         eventInfo.Add(eventName);
                         eventInfo.Add(status);
-                        eventInfo.Add(eventDesciption);
+                        eventInfo.Add(eventDescription);
                         eventInfo.Add(startDate);
                         eventInfo.Add(endDate);
                         eventInfo.Add(startTime);
