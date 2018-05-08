@@ -1,6 +1,6 @@
 ﻿namespace EventSystem
 {
-    partial class frmEventTeaserView
+    partial class EventTeaserView
     {
         /// <summary>
         /// Required designer variable.
