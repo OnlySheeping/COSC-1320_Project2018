@@ -65,13 +65,13 @@ namespace ProjectFinalExam1
         // {
         //     // Diana Bell added the following statement 5/4/2018
         //     Event teaserView = new Event();
-        //     teaserView.ShowEventsForTeaserView();
+        //     teaserView.GetEventForTeaser();
         // }
 
         // private void Populate()
         // {
         //     //Event teaserView = new Event();
-        //     //teaserView.ShowEventsForTeaserView();
+        //     //teaserView.GetEventForTeaser();
         //     List<Event> partList = new List<Event>();
         //     SqlConnection connection =
         //         new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
@@ -112,7 +112,7 @@ namespace ProjectFinalExam1
         // private void btnPopulate_Click(object sender, EventArgs e)
         // {
         //     //Event teaserView = new Event();
-        //     //teaserView.ShowEventsForTeaserView();
+        //     //teaserView.GetEventForTeaser();
         //     List<Event> partList = new List<Event>();
         //     SqlConnection connection = 
         //         new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");

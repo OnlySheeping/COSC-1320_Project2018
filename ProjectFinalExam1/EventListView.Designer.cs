@@ -92,6 +92,7 @@
             this.lvAllEvents.TabIndex = 5;
             this.lvAllEvents.UseCompatibleStateImageBehavior = false;
             this.lvAllEvents.View = System.Windows.Forms.View.Details;
+            
             // 
             // lblSearch
             // 

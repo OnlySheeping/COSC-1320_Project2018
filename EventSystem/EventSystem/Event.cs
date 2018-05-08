@@ -171,80 +171,27 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
-        public List<string> ShowEventsForTeaserView(int theEventID)
+        public List<string> GetEventForTeaser()
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
+            
 
-            //throw new System.NotImplementedException();
-            //      SELECT TOP 1[EventID]
-            //,[EventName]
-            //,[Status]
-            //,[EventDescription]
-            //,[StartDate]
-            //,[EndDate]
-            //,[StartTime]
-            //,[EndTime]
-            //,[EventNotes]
-            //,[AgeRequirement]
-            //, CategoryID replace with CategoryDescription - table 
-            //,[Private]
-            //,[Closed]
-            //,[Location]
-            //,[MaxAttendees]
-            //  FROM[Project1].[dbo].[Events]
-
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID ASC", conn)) //cg
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn)) //cg
             {
-                //List<string> partlist = new List<string>();
-                // Invoke ExecuteReader method.
-               // command.Parameters.AddWithValue("@eventID", theEventID);
-
-                SqlDataReader reader = command.ExecuteReader(); // cg
+                List<string> teaserEvents = new List<string>();
+                SqlDataReader reader = command.ExecuteReader(); 
                 //if (reader.HasRows)
 
-                while (reader.Read())// cg
+                while (reader.Read())
                 {
-                    //UserData();
-                    while (reader.Read()) //cg
-                    {
-                        ListViewitem item = new ListViewItem(reader["EventName"].ToString());
-                        item.SubItems.Add(reader["EventDescription"].ToString());
-                        item.SubItems.Add(reader["StartDate"].ToString());
-                        item.SubItems.Add(reader["Status"].ToString());
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
+                    string status = reader.GetString(reader.GetOrdinal("Status"));
 
-                        ListViewitem.item.Add(item);
-
-                        //string eventName = reader.GetString(reader.GetOrdinal("EventName"));                          ---- commented out for trial cg
-                        //string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
-                        //string startDate = reader.GetString(reader.GetOrdinal("Start Date"));
-                        //string status = reader.GetString(reader.GetOrdinal("Status"));
-
-                        //partlist.Add(eventName);
-                        //partlist.Add(status);
-                        //partlist.Add(eventDescription);
-                        //partlist.Add(startDate);                        ----- commented out for trial cg
-
-                        //eventName = eventInfo[0];
-                        //status = eventInfo[1];
-                        //eventDesciption = eventInfo[2];
-                        //startDate = eventInfo[3];
-                        //endDate = eventInfo[4];
-                        //startTime = eventInfo[5];
-                        //endTime = eventInfo[6];
-                        //eventNotes = eventInfo[7];
-                        //ageRequirement = eventInfo[8];
-                        //catergoryID = eventInfo[9];
-                        //privateID = eventInfo[10];
-                        //closed = eventInfo[11];
-                        //location = eventInfo[12];
-                        //maxAttendee = eventInfo[13];
-                    }
+                    teaserEvents.Add(eventName + " | " + eventDescription + " | " + status);
                 }
-                //return partlist;    ---commented out by cg for trial
-                
-                
-                   
+                return teaserEvents;
                 
             }
         }
