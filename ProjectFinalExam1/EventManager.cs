@@ -51,6 +51,12 @@ namespace ProjectFinalExam1
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new frmEventListView().Show();
+            this.Hide();
+        }
+
         //  private void btn3_Click(object sender, EventArgs e)
         //  {
         //     new EditEvent().Show();
