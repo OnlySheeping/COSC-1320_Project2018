@@ -1,6 +1,6 @@
-﻿namespace EventSystem
+﻿namespace ProjectFinalExam1
 {
-    partial class frmAllEvents
+    partial class EventListView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,143 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAllEvents));
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnAllEventsFullView = new System.Windows.Forms.Button();
-            this.btnAllEventsEdit = new System.Windows.Forms.Button();
-            this.btnAllEventsDelete = new System.Windows.Forms.Button();
-            this.txbAllEvents = new System.Windows.Forms.TextBox();
-            this.lvAllEvents = new System.Windows.Forms.ListView();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.lblAllEventBanner = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbpListView = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lviViewAllEvents = new System.Windows.Forms.ListView();
+            this.clmEventName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnFullView = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnBack
+            // tabControl1
             // 
-            this.btnBack.Location = new System.Drawing.Point(511, 392);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.tabControl1.Controls.Add(this.tbpListView);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 89);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(805, 397);
+            this.tabControl1.TabIndex = 0;
             // 
-            // btnAllEventsFullView
+            // tbpListView
             // 
-            this.btnAllEventsFullView.Location = new System.Drawing.Point(371, 263);
-            this.btnAllEventsFullView.Name = "btnAllEventsFullView";
-            this.btnAllEventsFullView.Size = new System.Drawing.Size(75, 23);
-            this.btnAllEventsFullView.TabIndex = 1;
-            this.btnAllEventsFullView.Text = "Full View";
-            this.btnAllEventsFullView.UseVisualStyleBackColor = true;
+            this.tbpListView.Location = new System.Drawing.Point(4, 22);
+            this.tbpListView.Name = "tbpListView";
+            this.tbpListView.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpListView.Size = new System.Drawing.Size(797, 371);
+            this.tbpListView.TabIndex = 0;
+            this.tbpListView.Text = "tabPage1";
+            this.tbpListView.UseVisualStyleBackColor = true;
             // 
-            // btnAllEventsEdit
+            // tabPage2
             // 
-            this.btnAllEventsEdit.Location = new System.Drawing.Point(523, 263);
-            this.btnAllEventsEdit.Name = "btnAllEventsEdit";
-            this.btnAllEventsEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnAllEventsEdit.TabIndex = 2;
-            this.btnAllEventsEdit.Text = "Edit";
-            this.btnAllEventsEdit.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.lviViewAllEvents);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(797, 371);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnAllEventsDelete
+            // lviViewAllEvents
             // 
-            this.btnAllEventsDelete.Location = new System.Drawing.Point(659, 263);
-            this.btnAllEventsDelete.Name = "btnAllEventsDelete";
-            this.btnAllEventsDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnAllEventsDelete.TabIndex = 3;
-            this.btnAllEventsDelete.Text = "Delete";
-            this.btnAllEventsDelete.UseVisualStyleBackColor = true;
+            this.lviViewAllEvents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmEventName,
+            this.clmDescription,
+            this.clmStatus});
+            this.lviViewAllEvents.Location = new System.Drawing.Point(3, 3);
+            this.lviViewAllEvents.Name = "lviViewAllEvents";
+            this.lviViewAllEvents.Size = new System.Drawing.Size(794, 368);
+            this.lviViewAllEvents.TabIndex = 0;
+            this.lviViewAllEvents.UseCompatibleStateImageBehavior = false;
+            this.lviViewAllEvents.View = System.Windows.Forms.View.Details;
             // 
-            // txbAllEvents
+            // clmEventName
             // 
-            this.txbAllEvents.Location = new System.Drawing.Point(89, 225);
-            this.txbAllEvents.Name = "txbAllEvents";
-            this.txbAllEvents.Size = new System.Drawing.Size(218, 26);
-            this.txbAllEvents.TabIndex = 4;
+            this.clmEventName.Text = "Event Name";
+            this.clmEventName.Width = 226;
             // 
-            // lvAllEvents
+            // clmDescription
             // 
-            this.lvAllEvents.Location = new System.Drawing.Point(89, 273);
-            this.lvAllEvents.Name = "lvAllEvents";
-            this.lvAllEvents.Size = new System.Drawing.Size(218, 155);
-            this.lvAllEvents.TabIndex = 5;
-            this.lvAllEvents.UseCompatibleStateImageBehavior = false;
-            this.lvAllEvents.View = System.Windows.Forms.View.Details;
-            
+            this.clmDescription.Text = "Event Description";
+            this.clmDescription.Width = 407;
             // 
-            // lblSearch
+            // clmStatus
             // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(86, 204);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(133, 20);
-            this.lblSearch.TabIndex = 6;
-            this.lblSearch.Text = "Search By Status";
+            this.clmStatus.Text = "Status";
+            this.clmStatus.Width = 156;
             // 
-            // lblAllEventBanner
+            // btnFullView
             // 
-            this.lblAllEventBanner.AutoSize = true;
-            this.lblAllEventBanner.BackColor = System.Drawing.Color.Transparent;
-            this.lblAllEventBanner.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllEventBanner.Location = new System.Drawing.Point(245, 9);
-            this.lblAllEventBanner.Name = "lblAllEventBanner";
-            this.lblAllEventBanner.Size = new System.Drawing.Size(329, 57);
-            this.lblAllEventBanner.TabIndex = 7;
-            this.lblAllEventBanner.Text = "Search All Events";
+            this.btnFullView.Location = new System.Drawing.Point(19, 491);
+            this.btnFullView.Name = "btnFullView";
+            this.btnFullView.Size = new System.Drawing.Size(75, 23);
+            this.btnFullView.TabIndex = 1;
+            this.btnFullView.Text = "Full View";
+            this.btnFullView.UseVisualStyleBackColor = true;
+            this.btnFullView.Click += new System.EventHandler(this.btnFullView_Click);
             // 
-            // pictureBox1
+            // EventListView
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 61);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(649, 125);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // frmAllEvents
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(822, 477);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblAllEventBanner);
-            this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.lvAllEvents);
-            this.Controls.Add(this.txbAllEvents);
-            this.Controls.Add(this.btnAllEventsDelete);
-            this.Controls.Add(this.btnAllEventsEdit);
-            this.Controls.Add(this.btnAllEventsFullView);
-            this.Controls.Add(this.btnBack);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmAllEvents";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "All Events ";
-            this.Load += new System.EventHandler(this.frmAllEvents_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(829, 526);
+            this.Controls.Add(this.btnFullView);
+            this.Controls.Add(this.tabControl1);
+            this.Name = "EventListView";
+            this.Text = "EventListView";
+            this.Load += new System.EventHandler(this.EventListView_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnAllEventsFullView;
-        private System.Windows.Forms.Button btnAllEventsEdit;
-        private System.Windows.Forms.Button btnAllEventsDelete;
-        private System.Windows.Forms.TextBox txbAllEvents;
-        private System.Windows.Forms.ListView lvAllEvents;
-        private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.Label lblAllEventBanner;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tbpListView;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ListView lviViewAllEvents;
+        private System.Windows.Forms.ColumnHeader clmEventName;
+        private System.Windows.Forms.ColumnHeader clmDescription;
+        private System.Windows.Forms.ColumnHeader clmStatus;
+        private System.Windows.Forms.Button btnFullView;
     }
 }

@@ -171,13 +171,13 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
-        public List<string> GetEventForTeaser()
+        public static List<string> GetEventForTeaser()
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
             
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn)) //cg
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn))
             {
                 List<string> teaserEvents = new List<string>();
                 SqlDataReader reader = command.ExecuteReader(); 
@@ -186,7 +186,7 @@ namespace EventSystem
                 while (reader.Read())
                 {
                     string eventName = reader.GetString(reader.GetOrdinal("EventName"));
-                    string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
                     string status = reader.GetString(reader.GetOrdinal("Status"));
 
                     teaserEvents.Add(eventName + " | " + eventDescription + " | " + status);
@@ -201,34 +201,16 @@ namespace EventSystem
             throw new System.NotImplementedException();
         }
 
-        public static List<string> ShowEventDetail(int theEventID)
+        public static List<string> ShowEventDetail(string theEventName)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
-            //throw new System.NotImplementedException();
-            //      SELECT TOP 1[EventID]
-            //,[EventName]
-            //,[Status]
-            //,[EventDescription]
-            //,[StartDate]
-            //,[EndDate]
-            //,[StartTime]
-            //,[EndTime]
-            //,[EventNotes]
-            //,[AgeRequirement]
-            //, CategoryID replace with CategoryDescription - table 
-            //,[Private]
-            //,[Closed]
-            //,[Location]
-            //,[MaxAttendees]
-            //  FROM[Project1].[dbo].[Events]
-
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventName = @eventID", conn))
             {
                 List<string> eventInfo = new List<string>();
                 // Invoke ExecuteReader method.
-                command.Parameters.AddWithValue("@eventID", theEventID);
+                command.Parameters.AddWithValue("@eventID", theEventName);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)

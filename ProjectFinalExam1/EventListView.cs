@@ -7,19 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventSystem;
 
-namespace EventSystem
+namespace ProjectFinalExam1
 {
-    public partial class frmAllEvents : Form
+    public partial class EventListView : Form
     {
-        public frmAllEvents()
+        public EventListView()
         {
             InitializeComponent();
         }
 
-        private void frmAllEvents_Load(object sender, EventArgs e)
+        private void EventListView_Load(object sender, EventArgs e)
         {
+            Event teaserView = new Event();
+            List<string> eventsTeaser = new List<string>();
+            eventsTeaser = Event.GetEventForTeaser();
 
+            //for (var i = 0; i < eventsTeaser.Length; i++)
+            //{
+
+            //}
+            int eventCount = 0;
+            foreach (string word in eventsTeaser)
+            {
+                // System.Diagnostics.Debug.WriteLine(word);
+                String[] eventDetail = word.Split('|');
+                lviViewAllEvents.Items.Add(eventDetail[0]);
+                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetail[1]);
+                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetail[2]);
+                eventCount++;
+            }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            //Event teaserView = new Event();
+            //List<string> eventsTeaser = new List<string>();
+            //eventsTeaser = Event.GetEventForTeaser();
+            //MessageBox.Show(eventsTeaser[1]);
+        }
+
+        private void btnFullView_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

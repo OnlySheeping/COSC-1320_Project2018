@@ -54,13 +54,16 @@ namespace EventSystem
             }
         }
 
+        string theUserName;
+        private object theUsername;
+
         public string VerifyFirstName(string theUsername)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
             //
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where UserFirstName = @username", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username = @username", conn))
             {
                 // Invoke ExecuteReader method.
                 command.Parameters.AddWithValue("@username", theUsername);
@@ -82,7 +85,7 @@ namespace EventSystem
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where roleID = @username", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username = @username", conn))
             {
                 // Invoke ExecuteReader method.
                 command.Parameters.AddWithValue("@username", theUsername);
@@ -98,5 +101,27 @@ namespace EventSystem
                 return lastName;
             }
         }
+
+        //public string VerifyUserName()
+        //{
+        //    SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+        //    conn.Open();
+
+        //    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username = @username", conn))
+        //    {
+        //        // Invoke ExecuteReader method.
+        //        command.Parameters.AddWithValue("@username", theUsername);
+
+        //        SqlDataReader reader = command.ExecuteReader();
+        //        if (reader.HasRows)
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                theUserName = reader.GetString(reader.GetOrdinal("Username"));
+        //            }
+        //        }
+        //        return theUserName;
+        //    }
+        //}
     }
 }

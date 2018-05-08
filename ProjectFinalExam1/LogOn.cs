@@ -53,6 +53,7 @@ namespace ProjectFinalExam1
             int roleID = currentUser.VerifyUserNamePassword(tbUserName.Text, tbPassword.Text);
             string firstName = currentUser.VerifyFirstName(tbUserName.Text);
             string lastName = currentUser.VerifyLastName(tbUserName.Text);
+            //string userName = currentUser.VerifyUserName();
 
             if (roleID == 1)
             {

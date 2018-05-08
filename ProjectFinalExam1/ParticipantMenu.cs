@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventSystem;
 
 namespace ProjectFinalExam1
 {
@@ -46,8 +47,11 @@ namespace ProjectFinalExam1
 
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
-            new frmEventListView().Show();
+            CurrentUser currentUser = new CurrentUser();
+            new EventListView().Show();
             this.Hide();
+            //string username = currentUser.VerifyUserName();
+            //MessageBox.Show(username);
 
         }
     }

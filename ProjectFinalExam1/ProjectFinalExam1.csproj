@@ -106,12 +106,6 @@
     <Compile Include="EventTeaserView.Designer.cs">
       <DependentUpon>EventTeaserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParticipantAllEvents.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ParticipantAllEvents.Designer.cs">
-      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogOn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventTeaserView.resx">
       <DependentUpon>EventTeaserView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParticipantAllEvents.resx">
-      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogOn.resx">
       <DependentUpon>LogOn.cs</DependentUpon>
