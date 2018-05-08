@@ -124,9 +124,7 @@
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageEvents.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ManageEvents.cs" />
     <Compile Include="ManageEvents.Designer.cs">
       <DependentUpon>ManageEvents.cs</DependentUpon>
     </Compile>
