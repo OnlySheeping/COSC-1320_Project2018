@@ -38,12 +38,12 @@
             this.lbxParticipantManagerList = new System.Windows.Forms.ListBox();
             this.lxbParticipantManager = new System.Windows.Forms.ListView();
             this.UserName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.EventName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.EventID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateRegistered = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Location = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
             this.button4.FlatAppearance.BorderSize = 10;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Snow;
-            this.button4.Location = new System.Drawing.Point(615, 405);
+            this.button4.Location = new System.Drawing.Point(651, 395);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 39);
             this.button4.TabIndex = 15;
@@ -124,11 +124,10 @@
             // 
             this.lbxParticipantManagerList.FormattingEnabled = true;
             this.lbxParticipantManagerList.ItemHeight = 14;
-            this.lbxParticipantManagerList.Location = new System.Drawing.Point(12, 413);
+            this.lbxParticipantManagerList.Location = new System.Drawing.Point(0, 427);
             this.lbxParticipantManagerList.Name = "lbxParticipantManagerList";
-            this.lbxParticipantManagerList.Size = new System.Drawing.Size(197, 32);
+            this.lbxParticipantManagerList.Size = new System.Drawing.Size(10, 32);
             this.lbxParticipantManagerList.TabIndex = 16;
-            this.lbxParticipantManagerList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // lxbParticipantManager
             // 
@@ -153,6 +152,14 @@
             this.UserName.Text = "UserName";
             this.UserName.Width = 96;
             // 
+            // LastName
+            // 
+            this.LastName.Text = "LastName";
+            // 
+            // FirstName
+            // 
+            this.FirstName.Text = "FirstName";
+            // 
             // EventName
             // 
             this.EventName.Text = "Event Name";
@@ -172,14 +179,6 @@
             // 
             this.Location.Text = "Location";
             this.Location.Width = 70;
-            // 
-            // LastName
-            // 
-            this.LastName.Text = "LastName";
-            // 
-            // FirstName
-            // 
-            this.FirstName.Text = "FirstName";
             // 
             // ManageParticipants
             // 

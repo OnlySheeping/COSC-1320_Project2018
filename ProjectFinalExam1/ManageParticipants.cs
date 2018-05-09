@@ -39,13 +39,14 @@ namespace ProjectFinalExam1
             this.Hide();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(lbxParticipantManagerList.SelectedItem !=null)
-                {
-                MessageBox.Show(lbxParticipantManagerList.SelectedItem.ToString());
-                }
-        }
+      //  private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+      //  {
+        //    if(lbxParticipantManagerList.SelectedItem !=null)
+       //         {
+       //         MessageBox.Show(lbxParticipantManagerList.SelectedItem.ToString());
+       //         }
+       //     lbxParticipantManagerList.Visible = false;
+      //  }
 
         private void ManageParticipants_Load(object sender, EventArgs e)
         {
