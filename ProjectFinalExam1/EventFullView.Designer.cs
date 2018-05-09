@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventFullView));
             this.lblDetailBanner = new System.Windows.Forms.Label();
             this.lbxDetailView = new System.Windows.Forms.ListView();
             this.clmDetailFields = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,6 +56,7 @@
             this.clmDetailFields,
             this.clmdetailfields2});
             this.lbxDetailView.GridLines = true;
+            this.lbxDetailView.HideSelection = false;
             this.lbxDetailView.Location = new System.Drawing.Point(116, 129);
             this.lbxDetailView.MultiSelect = false;
             this.lbxDetailView.Name = "lbxDetailView";
@@ -99,7 +99,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 749);
             this.Controls.Add(this.btnTest);
@@ -107,7 +106,6 @@
             this.Controls.Add(this.lbxDetailView);
             this.Controls.Add(this.lblDetailBanner);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEventFullView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
