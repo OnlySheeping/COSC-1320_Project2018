@@ -62,6 +62,7 @@
             this.chbPrivate = new System.Windows.Forms.CheckBox();
             this.cbxStartTime = new System.Windows.Forms.ComboBox();
             this.cbxEndTime = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbEventName
@@ -72,6 +73,7 @@
             this.txbEventName.Name = "txbEventName";
             this.txbEventName.Size = new System.Drawing.Size(443, 25);
             this.txbEventName.TabIndex = 0;
+            this.txbEventName.TextChanged += new System.EventHandler(this.txbEventName_TextChanged);
             // 
             // textBox3
             // 
@@ -91,7 +93,7 @@
             // 
             // txbAge
             // 
-            this.txbAge.Location = new System.Drawing.Point(348, 496);
+            this.txbAge.Location = new System.Drawing.Point(443, 323);
             this.txbAge.Margin = new System.Windows.Forms.Padding(4);
             this.txbAge.Name = "txbAge";
             this.txbAge.Size = new System.Drawing.Size(148, 25);
@@ -121,7 +123,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Location = new System.Drawing.Point(718, 408);
+            this.lblStatus.Location = new System.Drawing.Point(312, 366);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(47, 18);
@@ -212,7 +214,7 @@
             // 
             this.rdbCancelled.AutoSize = true;
             this.rdbCancelled.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.rdbCancelled.Location = new System.Drawing.Point(714, 510);
+            this.rdbCancelled.Location = new System.Drawing.Point(308, 468);
             this.rdbCancelled.Name = "rdbCancelled";
             this.rdbCancelled.Size = new System.Drawing.Size(87, 22);
             this.rdbCancelled.TabIndex = 17;
@@ -223,7 +225,7 @@
             // rdbPending
             // 
             this.rdbPending.AutoSize = true;
-            this.rdbPending.Location = new System.Drawing.Point(714, 470);
+            this.rdbPending.Location = new System.Drawing.Point(308, 428);
             this.rdbPending.Name = "rdbPending";
             this.rdbPending.Size = new System.Drawing.Size(80, 22);
             this.rdbPending.TabIndex = 18;
@@ -234,7 +236,7 @@
             // rdbActive
             // 
             this.rdbActive.AutoSize = true;
-            this.rdbActive.Location = new System.Drawing.Point(714, 429);
+            this.rdbActive.Location = new System.Drawing.Point(308, 387);
             this.rdbActive.Name = "rdbActive";
             this.rdbActive.Size = new System.Drawing.Size(66, 22);
             this.rdbActive.TabIndex = 19;
@@ -318,7 +320,7 @@
             // 
             this.lblNote.AutoSize = true;
             this.lblNote.BackColor = System.Drawing.Color.Transparent;
-            this.lblNote.Location = new System.Drawing.Point(35, 522);
+            this.lblNote.Location = new System.Drawing.Point(12, 515);
             this.lblNote.Name = "lblNote";
             this.lblNote.Size = new System.Drawing.Size(43, 18);
             this.lblNote.TabIndex = 32;
@@ -326,10 +328,10 @@
             // 
             // txbNotes
             // 
-            this.txbNotes.Location = new System.Drawing.Point(24, 543);
+            this.txbNotes.Location = new System.Drawing.Point(89, 515);
             this.txbNotes.Multiline = true;
             this.txbNotes.Name = "txbNotes";
-            this.txbNotes.Size = new System.Drawing.Size(163, 116);
+            this.txbNotes.Size = new System.Drawing.Size(502, 116);
             this.txbNotes.TabIndex = 33;
             // 
             // btnBack
@@ -354,7 +356,7 @@
             // chbClosed
             // 
             this.chbClosed.AutoSize = true;
-            this.chbClosed.Location = new System.Drawing.Point(41, 408);
+            this.chbClosed.Location = new System.Drawing.Point(207, 388);
             this.chbClosed.Name = "chbClosed";
             this.chbClosed.Size = new System.Drawing.Size(68, 22);
             this.chbClosed.TabIndex = 36;
@@ -364,7 +366,7 @@
             // chbPrivate
             // 
             this.chbPrivate.AutoSize = true;
-            this.chbPrivate.Location = new System.Drawing.Point(41, 437);
+            this.chbPrivate.Location = new System.Drawing.Point(207, 417);
             this.chbPrivate.Name = "chbPrivate";
             this.chbPrivate.Size = new System.Drawing.Size(73, 22);
             this.chbPrivate.TabIndex = 37;
@@ -387,6 +389,17 @@
             this.cbxEndTime.Size = new System.Drawing.Size(121, 26);
             this.cbxEndTime.TabIndex = 39;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(200, 367);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 18);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Registration";
+            // 
             // frmCreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -395,6 +408,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(849, 749);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxEndTime);
             this.Controls.Add(this.cbxStartTime);
             this.Controls.Add(this.chbPrivate);
@@ -475,5 +489,6 @@
         private System.Windows.Forms.CheckBox chbPrivate;
         private System.Windows.Forms.ComboBox cbxStartTime;
         private System.Windows.Forms.ComboBox cbxEndTime;
+        private System.Windows.Forms.Label label1;
     }
 }
