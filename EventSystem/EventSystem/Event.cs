@@ -214,19 +214,31 @@ namespace EventSystem
                 while (reader.Read())
                 {
                     string eventName = reader.GetString(reader.GetOrdinal("EventName"));
-                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
                     string status = reader.GetString(reader.GetOrdinal("Status"));
-                    string startDate = reader.GetString(reader.GetOrdinal("StartDate"));
-                    string endDate = reader.GetString(reader.GetOrdinal("EndDate"));
-                    string startTime = reader.GetString(reader.GetOrdinal("StartTime"));
-                    string endTime = reader.GetString(reader.GetOrdinal("EndTIme"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
+                    DateTime rawStartDate = reader.GetDateTime(reader.GetOrdinal("StartDate"));
+                    DateTime rawEndDate = reader.GetDateTime(reader.GetOrdinal("EndDate"));
+                    TimeSpan rawStartTime = reader.GetTimeSpan(reader.GetOrdinal("StartTime"));
+                    TimeSpan rawEndTime = reader.GetTimeSpan(reader.GetOrdinal("EndTime"));
                     string eventNotes = reader.GetString(reader.GetOrdinal("EventNotes"));
-                    string ageRequirement = reader.GetString(reader.GetOrdinal("AgeRequirement"));
-                    string categoryID = reader.GetString(reader.GetOrdinal("CategorID"));
+                    int rawAgeRequirement = reader.GetInt32(reader.GetOrdinal("AgeRequirement"));
+                    int rawCategoryID = reader.GetInt32(reader.GetOrdinal("CategoryID"));
+                    short rawPrivateID = reader.GetByte(reader.GetOrdinal("Private"));
+                    short rawClosed = reader.GetByte(reader.GetOrdinal("Closed"));
                     string location = reader.GetString(reader.GetOrdinal("Location"));
-                    string maxAttendees = reader.GetString(reader.GetOrdinal("MaxAttendees"));
+                    int rawMaxAttendee = reader.GetInt32(reader.GetOrdinal("MaxAttendees"));
 
-                    listEvents.Add(eventName + " | " + eventDescription + " | " + status +" | "+ startDate +" | "+ endDate +"|"+ startTime + "|" + eventNotes + "|" + ageRequirement + "|" + categoryID +"|"+ location +"|"+ maxAttendees );
+                    string startDate = rawStartDate.ToString();
+                    string endDate = rawEndDate.ToString();
+                    string startTime = rawStartTime.ToString();
+                    string endTime = rawEndTime.ToString();
+                    string ageRequirement = rawAgeRequirement.ToString();
+                    string closed = rawClosed.ToString();
+                    string maxAttendee = rawMaxAttendee.ToString();
+                    string privateID = rawPrivateID.ToString();
+                    string categoryID = rawCategoryID.ToString();
+
+                    listEvents.Add(eventName + " | " + eventDescription + " | " + status +" | "+ startDate +" | "+ endDate +"|"+ startTime + "|" + endTime + "|" + eventNotes + "|" + ageRequirement + "|" + categoryID +"|"+ location +"|"+ maxAttendee );
                 }
                 return listEvents;
 

@@ -94,11 +94,11 @@
     <Compile Include="EventFullView.Designer.cs">
       <DependentUpon>EventFullView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllEvents.cs">
+    <Compile Include="ParticipantAllEvents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllEvents.Designer.cs">
-      <DependentUpon>AllEvents.cs</DependentUpon>
+    <Compile Include="ParticipantAllEvents.Designer.cs">
+      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="EventManager.cs">
       <SubType>Form</SubType>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="EventFullView.resx">
       <DependentUpon>EventFullView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllEvents.resx">
-      <DependentUpon>AllEvents.cs</DependentUpon>
+    <EmbeddedResource Include="ParticipantAllEvents.resx">
+      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventManager.resx">
       <DependentUpon>EventManager.cs</DependentUpon>
