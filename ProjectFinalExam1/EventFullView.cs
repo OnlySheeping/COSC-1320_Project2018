@@ -51,6 +51,13 @@ namespace ProjectFinalExam1
 
         }
 
+        private void btnback_Click(object sender, EventArgs e)
+        {
+           
+           new ParticipantMenu().Show();
+            this.Hide();
+        }
+
 
 
         // private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
