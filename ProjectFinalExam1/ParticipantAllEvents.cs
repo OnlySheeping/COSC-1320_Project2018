@@ -11,14 +11,14 @@ using EventSystem;
 
 namespace ProjectFinalExam1
 {
-    public partial class AllEvents : Form
+    public partial class ParticipantAllEvents : Form
     {
         public string theUserName { get; set; }
-        public AllEvents()
+        public ParticipantAllEvents()
         {
             InitializeComponent();
         }
-        public AllEvents(string theUserName)
+        public ParticipantAllEvents(string theUserName)
         {
             InitializeComponent();
         }

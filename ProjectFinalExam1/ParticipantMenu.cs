@@ -53,9 +53,9 @@ namespace ProjectFinalExam1
 
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
-            EventAdminAllEvents participant = new EventAdminAllEvents();
-            participant.theUserName = theUserName;
-            participant.Show();
+            ParticipantAllEvents participant = new ParticipantAllEvents();
+            //participant.theUserName = theUserName;
+            //participant.Show();
             this.Hide();
         }
 

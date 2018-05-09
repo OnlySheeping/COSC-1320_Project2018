@@ -50,10 +50,7 @@ namespace ProjectFinalExam1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EditParticipant admin = new EditParticipant();
-            admin.theUserName = theUserName;
-            admin.Show();
-            this.Hide();
         }
+
     }
 }

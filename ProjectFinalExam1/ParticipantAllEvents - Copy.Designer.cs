@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class AllEvents
+    partial class ParticipantAllEvents
     {
         /// <summary>
         /// Required designer variable.

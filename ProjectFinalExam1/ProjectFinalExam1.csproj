@@ -76,11 +76,11 @@
     <Compile Include="EventFullView.Designer.cs">
       <DependentUpon>EventFullView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParticipantAllEvents - Copy.cs">
+    <Compile Include="ParticipantAllEvents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ParticipantAllEvents - Copy.Designer.cs">
-      <DependentUpon>ParticipantAllEvents - Copy.cs</DependentUpon>
+      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="EventAdminAllEvents.cs">
       <SubType>Form</SubType>
@@ -159,7 +159,7 @@
       <DependentUpon>EventFullView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParticipantAllEvents - Copy.resx">
-      <DependentUpon>ParticipantAllEvents - Copy.cs</DependentUpon>
+      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventAdminAllEvents.resx">
       <DependentUpon>EventAdminAllEvents.cs</DependentUpon>

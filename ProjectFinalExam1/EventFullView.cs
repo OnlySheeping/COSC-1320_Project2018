@@ -49,7 +49,7 @@ namespace ProjectFinalExam1
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            AllEvents participant = new AllEvents();
+            ParticipantAllEvents participant = new ParticipantAllEvents();
             participant.theUserName = theUserName;
             participant.Show();
             this.Hide();
