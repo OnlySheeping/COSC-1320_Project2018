@@ -53,7 +53,7 @@ namespace ProjectFinalExam1
 
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
-            EventListView participant = new EventListView();
+            AllEvents participant = new AllEvents();
             participant.theUserName = theUserName;
             participant.Show();
             this.Hide();
