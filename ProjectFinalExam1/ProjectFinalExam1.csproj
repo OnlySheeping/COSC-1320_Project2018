@@ -100,11 +100,11 @@
     <Compile Include="EventListView.Designer.cs">
       <DependentUpon>EventListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventTeaserView.cs">
+    <Compile Include="EventManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventTeaserView.Designer.cs">
-      <DependentUpon>EventTeaserView.cs</DependentUpon>
+    <Compile Include="EventManager.Designer.cs">
+      <DependentUpon>EventManager.cs</DependentUpon>
     </Compile>
     <Compile Include="LogOn.cs">
       <SubType>Form</SubType>
@@ -117,12 +117,6 @@
     </Compile>
     <Compile Include="EventAdminMenu.Designer.cs">
       <DependentUpon>EventAdminMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EventManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventManager.Designer.cs">
-      <DependentUpon>EventManager.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageParticipants.cs">
       <SubType>Form</SubType>
@@ -149,11 +143,6 @@
       <DependentUpon>ParticipantMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Project1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Project1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateNewEvent.resx">
       <DependentUpon>CreateNewEvent.cs</DependentUpon>
@@ -182,17 +171,11 @@
     <EmbeddedResource Include="EventListView.resx">
       <DependentUpon>EventListView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventTeaserView.resx">
-      <DependentUpon>EventTeaserView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LogOn.resx">
       <DependentUpon>LogOn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventAdminMenu.resx">
       <DependentUpon>EventAdminMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EventManager.resx">
-      <DependentUpon>EventManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageParticipants.resx">
       <DependentUpon>ManageParticipants.cs</DependentUpon>
@@ -217,17 +200,6 @@
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
-    <None Include="Project1DataSet.xsc">
-      <DependentUpon>Project1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Project1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Project1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Project1DataSet.xss">
-      <DependentUpon>Project1DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

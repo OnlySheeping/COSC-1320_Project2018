@@ -203,7 +203,7 @@ namespace EventSystem
             conn.Open();
 
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID", conn))
             {
                 List<string> listEvents = new List<string>();
                 SqlDataReader reader = command.ExecuteReader();

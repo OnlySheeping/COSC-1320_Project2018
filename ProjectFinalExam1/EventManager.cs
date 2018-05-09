@@ -13,8 +13,7 @@ namespace ProjectFinalExam1
     public partial class EventManager : Form
     {
         //Test commit.
-        public string theUserName { get; set; }
-        public EventManager(string theUserName)
+        public EventManager()
         {
             InitializeComponent();
         }
@@ -26,6 +25,8 @@ namespace ProjectFinalExam1
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'project1DataSet.Events' table. You can move, or remove it, as needed.
+            this.eventsTableAdapter.Fill(this.project1DataSet.Events);
 
         }
 
@@ -37,7 +38,7 @@ namespace ProjectFinalExam1
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            frmCreateEvent admin = new frmCreateEvent();
+            frmCreateEvent admin = new frmCreateEvent;
             theUserName = admin.theUserName;
             admin.Show();
             this.Hide();
@@ -45,7 +46,7 @@ namespace ProjectFinalExam1
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            frmEventEdit admin = new frmEventEdit();
+            frmEventEdit admin = new frmEventEdit;
             theUserName = admin.theUserName;
             admin.Show();
             this.Hide();
