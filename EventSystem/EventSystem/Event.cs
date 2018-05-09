@@ -177,7 +177,7 @@ namespace EventSystem
             conn.Open();
             
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID ASC", conn))
             {
                 List<string> teaserEvents = new List<string>();
                 SqlDataReader reader = command.ExecuteReader(); 
@@ -196,9 +196,39 @@ namespace EventSystem
             }
         }
 
-        public void ShowEventsForListView()
+        public static List<string> ShowEventsForListView()
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
+
+
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn))
+            {
+                List<string> listEvents = new List<string>();
+                SqlDataReader reader = command.ExecuteReader();
+                //if (reader.HasRows)
+
+                while (reader.Read())
+                {
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
+                    string status = reader.GetString(reader.GetOrdinal("Status"));
+                    string startDate = reader.GetString(reader.GetOrdinal("StartDate"));
+                    string endDate = reader.GetString(reader.GetOrdinal("EndDate"));
+                    string startTime = reader.GetString(reader.GetOrdinal("StartTime"));
+                    string endTime = reader.GetString(reader.GetOrdinal("EndTIme"));
+                    string eventNotes = reader.GetString(reader.GetOrdinal("EventNotes"));
+                    string ageRequirement = reader.GetString(reader.GetOrdinal("AgeRequirement"));
+                    string categoryID = reader.GetString(reader.GetOrdinal("CategorID"));
+                    string location = reader.GetString(reader.GetOrdinal("Location"));
+                    string maxAttendees = reader.GetString(reader.GetOrdinal("MaxAttendees"));
+
+                    listEvents.Add(eventName + " | " + eventDescription + " | " + status +" | "+ startDate +" | "+ endDate +"|"+ startTime + "|" + eventNotes + "|" + ageRequirement + "|" + categoryID +"|"+ location +"|"+ maxAttendees );
+                }
+                return listEvents;
+
+            }
         }
 
         public static List<string> ShowEventDetail(string theEventName)

@@ -25,26 +25,22 @@ namespace ProjectFinalExam1
 
         private void EventListView_Load(object sender, EventArgs e)
         {
-            this.Text = theUserName + " - Event Admin Menu";
-
             Event teaserView = new Event();
             List<string> eventsTeaser = new List<string>();
+            //Make list equal to method return value
             eventsTeaser = Event.GetEventForTeaser();
 
-            //for (var i = 0; i < eventsTeaser.Length; i++)
-            //{
-
-            //}
-            int eventCount = 0;
-            foreach (string word in eventsTeaser)
+            int eventCountTwo = 0;
+            foreach (string wordTwo in eventsTeaser)
             {
                 // System.Diagnostics.Debug.WriteLine(word);
-                String[] eventDetail = word.Split('|');
-                lviViewAllEvents.Items.Add(eventDetail[0]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetail[1]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetail[2]);
-                eventCount++;
+                String[] eventDetails = wordTwo.Split('|');
+                lviViewAllEvents.Items.Add(eventDetails[0]);
+                lviViewAllEvents.Items[eventCountTwo].SubItems.Add(eventDetails[1]);
+                lviViewAllEvents.Items[eventCountTwo].SubItems.Add(eventDetails[2]);
+                eventCountTwo++;
             }
+
         }
 
         private void btnTest_Click(object sender, EventArgs e)
