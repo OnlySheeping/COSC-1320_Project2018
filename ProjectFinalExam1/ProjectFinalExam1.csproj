@@ -70,6 +70,7 @@
     <Compile Include="CreateNewParticipant.Designer.cs">
       <DependentUpon>CreateNewParticipant.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventAdminMyEvents.cs" />
     <Compile Include="EventFullView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,12 +112,6 @@
     </Compile>
     <Compile Include="ManageParticipants.Designer.cs">
       <DependentUpon>ManageParticipants.cs</DependentUpon>
-    </Compile>
-    <None Include="EventAdminMyEvents">
-      <SubType>Form</SubType>
-    </None>
-    <Compile Include="ParticipantMyEvents - Copy.Designer.cs">
-      <DependentUpon>EventAdminMyEvents</DependentUpon>
     </Compile>
     <Compile Include="ParticipantMyEvents.cs">
       <SubType>Form</SubType>
@@ -175,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageParticipants.resx">
       <DependentUpon>ManageParticipants.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParticipantMyEvents - Copy.resx">
-      <DependentUpon>EventAdminMyEvents</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParticipantMyEvents.resx">
       <DependentUpon>ParticipantMyEvents.cs</DependentUpon>
