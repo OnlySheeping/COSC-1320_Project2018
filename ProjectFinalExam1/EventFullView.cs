@@ -47,6 +47,14 @@ namespace ProjectFinalExam1
 
         }
 
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            ParticipantAllEvents participant = new ParticipantAllEvents();
+            participant.theUserName = theUserName;
+            participant.Show();
+            this.Hide();
+        }
+
 
 
         // private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)

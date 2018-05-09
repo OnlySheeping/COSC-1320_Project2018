@@ -39,11 +39,14 @@ namespace EventSystem
             // Sql Statement String:
             string strSQL;
 
-            strSQL = "SELECT UPPER(Event_Users.UserName) AS Participants" +
-                     "Event_Users.DateRegistered, Events.Location " +
-                     "FROM Event_Users" +
-                     "INNER JOIN Events ON Event_Users.EventID = Events.EventID" +
-                     "ORDER BY UserName ASC, DateRegistered ASC";
+
+            strSQL = "SELECT UPPER(Users.Username) As UParticipant, Event_Users.UserName AS EVUserName," +
+                     "Users.UserLastName AS ULastName, Users.UserFirstName AS UFirstName, " +
+                     "EventName, Event_Users.EventID AS UEventID, Events.EventID as EEventID, " +
+                     "DateRegistered, Location " +
+                     "FROM Event_Users, Events, Users " +
+                     "WHERE Event_Users.EventID = Events.EventID and Event_Users.UserName = Users.Username " +
+                     "ORDER BY UParticipant ASC, DateRegistered ASC";
 
             // SQL placed strSQL in SqlCommand
             using (SqlCommand command = new SqlCommand(strSQL, conn))
@@ -53,11 +56,18 @@ namespace EventSystem
 
                 while (reader.Read())
                 {
-                    string participants = reader.GetString(reader.GetOrdinal("Participants"));
-                    string dateRegistered = reader.GetString(reader.GetOrdinal("DateRegistered"));
+                    string participants = reader.GetString(reader.GetOrdinal("UParticipant"));
+                    string lastName = reader.GetString(reader.GetOrdinal("ULastName"));
+                    string firstName = reader.GetString(reader.GetOrdinal("UFirstName"));
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    int eventID = reader.GetInt32(reader.GetOrdinal("UEventID"));
+                    DateTime dateRegistered = reader.GetDateTime(reader.GetOrdinal("DateRegistered"));
                     string location = reader.GetString(reader.GetOrdinal("Location"));
 
-                    allParticipants.Add(participants + " | " + dateRegistered + " | " + location);
+                    //allParticipants.Add(participants + " | " + dateRegistered + " | " + location);
+                    allParticipants.Add(participants + " | " + lastName + " | " + firstName + " | " + eventName + " | " 
+                    +  eventID + " | " + dateRegistered + " | " + location);
+
                 }
                 return allParticipants;
 

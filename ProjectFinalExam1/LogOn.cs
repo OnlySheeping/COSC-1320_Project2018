@@ -62,6 +62,7 @@ namespace ProjectFinalExam1
                 ParticipantMenu participant = new ParticipantMenu(userName);
                 participant.theUserName = userName;
                 participant.Show();
+                this.Hide();
             }
             else if (currentUser.roleID == 2)
             {
@@ -70,6 +71,7 @@ namespace ProjectFinalExam1
                 EventAdminMenu admin = new EventAdminMenu(userName);
                 admin.theUserName = userName;
                 admin.Show();
+                this.Hide();
                 
             }
             else

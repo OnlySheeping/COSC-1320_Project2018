@@ -75,5 +75,10 @@ namespace ProjectFinalExam1
             admin.Show();
             Visible = true;
     }
+
+        private void txbEventName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

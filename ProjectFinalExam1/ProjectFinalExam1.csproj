@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,24 +71,7 @@
     <Compile Include="CreateNewParticipant.Designer.cs">
       <DependentUpon>CreateNewParticipant.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteParticipant.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteParticipant.Designer.cs">
-      <DependentUpon>DeleteParticipant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditEvent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditEvent.Designer.cs">
-      <DependentUpon>EditEvent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditParticipant.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditParticipant.Designer.cs">
-      <DependentUpon>EditParticipant.cs</DependentUpon>
-    </Compile>
+    <Compile Include="EventAdminMyEvents.cs" />
     <Compile Include="EventFullView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +81,14 @@
     <Compile Include="ParticipantAllEvents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParticipantAllEvents.Designer.cs">
+    <Compile Include="ParticipantAllEvents - Copy.Designer.cs">
       <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventAdminAllEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventAdminAllEvents.Designer.cs">
+      <DependentUpon>EventAdminAllEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="EventManager.cs">
       <SubType>Form</SubType>
@@ -124,11 +114,11 @@
     <Compile Include="ManageParticipants.Designer.cs">
       <DependentUpon>ManageParticipants.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyEvents.cs">
+    <Compile Include="ParticipantMyEvents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyEvents.Designer.cs">
-      <DependentUpon>MyEvents.cs</DependentUpon>
+    <Compile Include="ParticipantMyEvents.Designer.cs">
+      <DependentUpon>ParticipantMyEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="ParticipantFullView.cs">
       <SubType>Form</SubType>
@@ -161,20 +151,14 @@
     <EmbeddedResource Include="CreateNewParticipant.resx">
       <DependentUpon>CreateNewParticipant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteParticipant.resx">
-      <DependentUpon>DeleteParticipant.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditEvent.resx">
-      <DependentUpon>EditEvent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditParticipant.resx">
-      <DependentUpon>EditParticipant.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EventFullView.resx">
       <DependentUpon>EventFullView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParticipantAllEvents.resx">
+    <EmbeddedResource Include="ParticipantAllEvents - Copy.resx">
       <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventAdminAllEvents.resx">
+      <DependentUpon>EventAdminAllEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventManager.resx">
       <DependentUpon>EventManager.cs</DependentUpon>
@@ -188,8 +172,11 @@
     <EmbeddedResource Include="ManageParticipants.resx">
       <DependentUpon>ManageParticipants.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyEvents.resx">
-      <DependentUpon>MyEvents.cs</DependentUpon>
+    <EmbeddedResource Include="ParticipantAllEvents.resx">
+      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParticipantMyEvents.resx">
+      <DependentUpon>ParticipantMyEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParticipantFullView.resx">
       <DependentUpon>ParticipantFullView.cs</DependentUpon>

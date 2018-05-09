@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class MyEvents : Form
+    public partial class ParticipantMyEvents : Form
     {
         public string theUserName { get; set; }
-        public MyEvents()
+        public ParticipantMyEvents()
         {
             InitializeComponent();
         }
-        public MyEvents(string theUserName)
+        public ParticipantMyEvents(string theUserName)
         {
             InitializeComponent();
         }

@@ -25,40 +25,35 @@ namespace ProjectFinalExam1
 
         private void EventListView_Load(object sender, EventArgs e)
         {
-            //Will change form title to username - All events
             this.Text = theUserName + " - All Events";
-            
-            //Instantiate Event object
+
             Event teaserView = new Event();
-            //Create a list to store method outpust
-            List<string> eventsList = new List<string>();
+            List<string> eventsTeaser = new List<string>();
             //Make list equal to method return value
-            eventsList = Event.ShowEventsForListView();
-            int eventCount = 0;
-            //int eventCountTwo = 0;
-            foreach (string word in eventsList)
+            eventsTeaser = Event.GetEventForTeaser();
+
+            int eventCountTwo = 0;
+            foreach (string wordTwo in eventsTeaser)
             {
-                //System.Diagnostics.Debug.WriteLine(word);
-                String[] eventDetails = word.Split('|');
-                lviListView.Items.Add(eventDetails[0]);
+                // System.Diagnostics.Debug.WriteLine(word);
+                String[] eventDetails = wordTwo.Split('|');
                 lviViewAllEvents.Items.Add(eventDetails[0]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[1]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[1]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[2]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[3]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[4]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[5]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[6]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[7]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[8]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[9]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[10]);
-                lviListView.Items[eventCount].SubItems.Add(eventDetails[11]);
-                
-                eventCount++;
-             }
+                lviViewAllEvents.Items[eventCountTwo].SubItems.Add(eventDetails[1]);
+                lviViewAllEvents.Items[eventCountTwo].SubItems.Add(eventDetails[2]);
+                eventCountTwo++;
             }
-             private void btnFullView_Click(object sender, EventArgs e)
+
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            //Event teaserView = new Event();
+            //List<string> eventsTeaser = new List<string>();
+            //eventsTeaser = Event.GetEventForTeaser();
+            //MessageBox.Show(eventsTeaser[1]);
+        }
+
+        private void btnFullView_Click(object sender, EventArgs e)
         {
             frmEventFullView admin = new frmEventFullView();
             admin.theUserName = theUserName;
@@ -66,10 +61,9 @@ namespace ProjectFinalExam1
             this.Hide();
         }
 
+        private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-
-       
-    }
-
-    
-
+}
