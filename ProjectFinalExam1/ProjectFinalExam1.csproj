@@ -171,6 +171,9 @@
     <EmbeddedResource Include="EventListView.resx">
       <DependentUpon>EventListView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventManager.resx">
+      <DependentUpon>EventManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogOn.resx">
       <DependentUpon>LogOn.cs</DependentUpon>
     </EmbeddedResource>
