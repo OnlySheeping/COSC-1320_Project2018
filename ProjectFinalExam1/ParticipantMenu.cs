@@ -44,24 +44,24 @@ namespace ProjectFinalExam1
 
         private void btnMyEvents_Click(object sender, EventArgs e)
         {
-            new MyEvents().Show();
+            MyEvents participant = new MyEvents();
+            participant.theUserName = theUserName;
+            participant.Show();
             this.Hide();
 
         }
 
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
-            CurrentUser currentUser = new CurrentUser();
-            new EventListView().Show();
+            EventListView participant = new EventListView();
+            participant.theUserName = theUserName;
+            participant.Show();
             this.Hide();
-            //string username = currentUser.VerifyUserName();
-            //MessageBox.Show(username);
-
         }
 
         private void ParticipantMenu_Load(object sender, EventArgs e)
         {
-            this.Text = theUserName + " - Event Admin Menu";
+            this.Text = theUserName + " - Participant Menu";
         }
 
 

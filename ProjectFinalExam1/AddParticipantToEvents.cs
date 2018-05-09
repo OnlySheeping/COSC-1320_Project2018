@@ -24,7 +24,7 @@ namespace EventSystem
         }
         private void frmAddParticipantToEvents_Load(object sender, EventArgs e)
         {
-            this.Text = theUserName + " - Event Admin Menu";
+            this.Text = theUserName + " - Add Participants";
         }
     }
 }

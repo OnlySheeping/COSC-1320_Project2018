@@ -37,7 +37,7 @@ namespace ProjectFinalExam1
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            frmCreateEvent admin = new frmCreateEvent;
+            frmCreateEvent admin = new frmCreateEvent();
             theUserName = admin.theUserName;
             admin.Show();
             this.Hide();
@@ -45,7 +45,7 @@ namespace ProjectFinalExam1
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            frmEventEdit admin = new frmEventEdit;
+            frmEventEdit admin = new frmEventEdit();
             theUserName = admin.theUserName;
             admin.Show();
             this.Hide();

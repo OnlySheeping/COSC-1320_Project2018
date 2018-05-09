@@ -25,6 +25,7 @@ namespace ProjectFinalExam1
 
         private void EventListView_Load(object sender, EventArgs e)
         {
+            this.Text = theUserName + "'s Events";
             Event teaserView = new Event();
             List<string> eventsTeaser = new List<string>();
             //Make list equal to method return value

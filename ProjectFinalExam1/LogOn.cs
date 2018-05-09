@@ -60,6 +60,7 @@ namespace ProjectFinalExam1
             {
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
                 ParticipantMenu participant = new ParticipantMenu(userName);
+                participant.theUserName = userName;
                 participant.Show();
             }
             else if (currentUser.roleID == 2)

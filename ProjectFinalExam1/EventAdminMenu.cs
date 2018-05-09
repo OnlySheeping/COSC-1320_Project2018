@@ -34,6 +34,7 @@ namespace ProjectFinalExam1
 
             ManageParticipants admin = new ManageParticipants();
             admin.theUserName = theUserName;
+            admin.Show();
             this.Hide();
 
         }
@@ -41,6 +42,15 @@ namespace ProjectFinalExam1
         private void AdminMenu_Load(object sender, EventArgs e)
         {
             this.Text = theUserName + " - Event Admin Menu";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmCreateEvent admin = new frmCreateEvent();
+            admin.theUserName = theUserName;
+            admin.Show();
+            this.Hide();
+
         }
     }
 }
