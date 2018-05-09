@@ -99,6 +99,7 @@
             this.Controls.Add(this.label4);
             this.Name = "ParticipantMenu";
             this.Text = "Participant Menu";
+            this.Load += new System.EventHandler(this.ParticipantMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
