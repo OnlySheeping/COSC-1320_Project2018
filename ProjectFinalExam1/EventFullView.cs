@@ -49,8 +49,9 @@ namespace ProjectFinalExam1
 
         private void btnback_Click(object sender, EventArgs e)
         {
-           
-           new ParticipantMenu().Show();
+            AllEvents participant = new AllEvents();
+            participant.theUserName = theUserName;
+            participant.Show();
             this.Hide();
         }
 
