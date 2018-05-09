@@ -39,7 +39,7 @@ namespace ProjectFinalExam1
 
         private void btnAllEvents_Click(object sender, EventArgs e)
         {
-            EventAdminAllEvents admin = new EventAdminAllEvents();
+            ParticipantAllEvents admin = new ParticipantAllEvents();
             admin.theUserName = theUserName;
             admin.Show();
             this.Hide();

@@ -70,6 +70,8 @@ namespace ProjectFinalExam1
                 lxbParticipantManager.Items[participantCount].SubItems.Add(participantDetail[2]);
                 lxbParticipantManager.Items[participantCount].SubItems.Add(participantDetail[3]);
                 lxbParticipantManager.Items[participantCount].SubItems.Add(participantDetail[4]);
+                lxbParticipantManager.Items[participantCount].SubItems.Add(participantDetail[5]);
+                lxbParticipantManager.Items[participantCount].SubItems.Add(participantDetail[6]);
                 participantCount++;
             }
         }

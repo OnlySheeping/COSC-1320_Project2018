@@ -44,7 +44,7 @@ namespace ProjectFinalExam1
 
         private void btnMyEvents_Click(object sender, EventArgs e)
         {
-            ParticipantMyEvents participant = new ParticipantMyEvents();
+            MyEvents participant = new MyEvents();
             participant.theUserName = theUserName;
             participant.Show();
             this.Hide();
@@ -54,8 +54,8 @@ namespace ProjectFinalExam1
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
             ParticipantAllEvents participant = new ParticipantAllEvents();
-            //participant.theUserName = theUserName;
-            //participant.Show();
+            participant.theUserName = theUserName;
+            participant.Show();
             this.Hide();
         }
 

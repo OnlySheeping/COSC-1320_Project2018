@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class EventAdminAllEvents
+    partial class AllEvents
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventAdminAllEvents));
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpListView = new System.Windows.Forms.TabPage();
             this.lviListView = new System.Windows.Forms.ListView();
@@ -90,8 +89,8 @@
             // 
             this.lviListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmEventNameOne,
-            this.clmStatusOne,
             this.clmEventDescriptionOne,
+            this.clmStatusOne,
             this.clmStartDate,
             this.clmEndDate,
             this.clmStartTime,
@@ -103,16 +102,16 @@
             this.clmMaxAttendees});
             this.lviListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lviListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10});
+            listViewItem21,
+            listViewItem22,
+            listViewItem23,
+            listViewItem24,
+            listViewItem25,
+            listViewItem26,
+            listViewItem27,
+            listViewItem28,
+            listViewItem29,
+            listViewItem30});
             this.lviListView.Location = new System.Drawing.Point(3, 3);
             this.lviListView.Name = "lviListView";
             this.lviListView.Size = new System.Drawing.Size(553, 365);
@@ -127,11 +126,13 @@
             // 
             // clmStatusOne
             // 
+            this.clmStatusOne.DisplayIndex = 1;
             this.clmStatusOne.Text = "Status";
             this.clmStatusOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // clmEventDescriptionOne
             // 
+            this.clmEventDescriptionOne.DisplayIndex = 2;
             this.clmEventDescriptionOne.Text = "Event Description";
             // 
             // clmStartDate
@@ -197,7 +198,6 @@
             this.lviViewAllEvents.TabIndex = 0;
             this.lviViewAllEvents.UseCompatibleStateImageBehavior = false;
             this.lviViewAllEvents.View = System.Windows.Forms.View.Details;
-            this.lviViewAllEvents.SelectedIndexChanged += new System.EventHandler(this.lviViewAllEvents_SelectedIndexChanged);
             // 
             // clmEventName
             // 
