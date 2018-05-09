@@ -122,12 +122,16 @@
             // 
             // lbxParticipantManagerList
             // 
+            this.lbxParticipantManagerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxParticipantManagerList.Enabled = false;
+            this.lbxParticipantManagerList.ForeColor = System.Drawing.Color.Transparent;
             this.lbxParticipantManagerList.FormattingEnabled = true;
             this.lbxParticipantManagerList.ItemHeight = 14;
-            this.lbxParticipantManagerList.Location = new System.Drawing.Point(0, 427);
+            this.lbxParticipantManagerList.Location = new System.Drawing.Point(90, 413);
             this.lbxParticipantManagerList.Name = "lbxParticipantManagerList";
-            this.lbxParticipantManagerList.Size = new System.Drawing.Size(10, 32);
+            this.lbxParticipantManagerList.Size = new System.Drawing.Size(10, 28);
             this.lbxParticipantManagerList.TabIndex = 16;
+            this.lbxParticipantManagerList.Visible = false;
             // 
             // lxbParticipantManager
             // 
