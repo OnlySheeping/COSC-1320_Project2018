@@ -39,10 +39,12 @@ namespace EventSystem
             // Sql Statement String:
             string strSQL;
 
-            strSQL = "SELECT UPPER(Event_Users.UserName) AS Participants" +
-                     "Event_Users.DateRegistered, Events.Location " +
-                     "FROM Event_Users" +
-                     "INNER JOIN Events ON Event_Users.EventID = Events.EventID" +
+
+            strSQL = "SELECT UPPER(UserName) As Participant, " +
+                     "EventName, Event_Users.EventID AS UEventID, Events.EventID as EEventID, " +
+                     "DateRegistered, Location " +
+                     "FROM Event_Users, Events " +
+                     "WHERE Event_Users.EventID = Events.EventID " +
                      "ORDER BY UserName ASC, DateRegistered ASC";
 
             // SQL placed strSQL in SqlCommand
@@ -53,11 +55,15 @@ namespace EventSystem
 
                 while (reader.Read())
                 {
-                    string participants = reader.GetString(reader.GetOrdinal("Participants"));
-                    string dateRegistered = reader.GetString(reader.GetOrdinal("DateRegistered"));
+                    string participants = reader.GetString(reader.GetOrdinal("Participant"));
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    int eventID = reader.GetInt32(reader.GetOrdinal("UEventID"));
+                    DateTime dateRegistered = reader.GetDateTime(reader.GetOrdinal("DateRegistered"));
                     string location = reader.GetString(reader.GetOrdinal("Location"));
 
-                    allParticipants.Add(participants + " | " + dateRegistered + " | " + location);
+                    //allParticipants.Add(participants + " | " + dateRegistered + " | " + location);
+                    allParticipants.Add(participants + " | " + eventName + " | " +  eventID + " | " + dateRegistered + " | " + location);
+
                 }
                 return allParticipants;
 
