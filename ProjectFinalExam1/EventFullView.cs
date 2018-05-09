@@ -27,30 +27,7 @@ namespace ProjectFinalExam1
         }
         private void btnTest_Click(object sender, EventArgs e)
         {
-            Event getDetail = new Event();
-            
-            List<string> eventInfo = new List<string>();
 
-            bool all = eventInfo.All(x => x.Length > 0);
-            eventInfo = Event.ShowEventDetail(2);
-            // MessageBox.Show(all.);
-            lbxDetailView.Items.Add("Event Name: " + eventInfo[0]);
-            lbxDetailView.Items.Add("Status: " + eventInfo[1]);
-            lbxDetailView.Items.Add("Event Description: " + eventInfo[2]);
-            lbxDetailView.Items.Add("Start Date: " + eventInfo[3]);
-            lbxDetailView.Items.Add("End Date: " + eventInfo[4]);
-            lbxDetailView.Items.Add("Start Time: " + eventInfo[5]);
-            lbxDetailView.Items.Add("End Time: " + eventInfo[6]);
-            lbxDetailView.Items.Add("Event Notes: " + eventInfo[7]);
-            lbxDetailView.Items.Add("Age Requirement: " + eventInfo[8]);
-            lbxDetailView.Items.Add("Category: " + eventInfo[9]);
-            lbxDetailView.Items.Add("Private: " + eventInfo[10]);
-            lbxDetailView.Items.Add("Status: " + eventInfo[11]);
-            lbxDetailView.Items.Add("Location: " + eventInfo[12]);
-            lbxDetailView.Items.Add("Max Attendees: " + eventInfo[13]);
-
-            
-            
         }
 
         private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,6 +44,11 @@ namespace ProjectFinalExam1
         private void frmEventFullView_Load_1(object sender, EventArgs e)
         {
             this.Text = theUserName + " - Event Admin Menu";
+        }
+
+        private void btnLoadEvent_Click(object sender, EventArgs e)
+        {
+
         }
 
 
