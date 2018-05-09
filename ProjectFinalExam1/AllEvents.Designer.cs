@@ -209,7 +209,7 @@
             this.Controls.Add(this.btnFullView);
             this.Controls.Add(this.tabControl1);
             this.Name = "AllEvents";
-            this.Text = "EventListView";
+            this.Text = "All Events";
             this.Load += new System.EventHandler(this.EventListView_Load);
             this.tabControl1.ResumeLayout(false);
             this.tbpListView.ResumeLayout(false);
