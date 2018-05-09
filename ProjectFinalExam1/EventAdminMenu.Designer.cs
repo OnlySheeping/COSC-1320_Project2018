@@ -29,42 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventAdminMenu));
-            this.btnManageParticipants = new System.Windows.Forms.Button();
-            this.btnManageEvents = new System.Windows.Forms.Button();
+            this.btnUserAccountManager = new System.Windows.Forms.Button();
+            this.btnEventManager = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnManageParticipants
+            // btnUserAccountManager
             // 
-            this.btnManageParticipants.Location = new System.Drawing.Point(333, 228);
-            this.btnManageParticipants.Name = "btnManageParticipants";
-            this.btnManageParticipants.Size = new System.Drawing.Size(69, 43);
-            this.btnManageParticipants.TabIndex = 16;
-            this.btnManageParticipants.Text = "Manage User";
-            this.btnManageParticipants.UseVisualStyleBackColor = true;
-            this.btnManageParticipants.Click += new System.EventHandler(this.button3_Click);
+            this.btnUserAccountManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserAccountManager.Location = new System.Drawing.Point(155, 279);
+            this.btnUserAccountManager.Name = "btnUserAccountManager";
+            this.btnUserAccountManager.Size = new System.Drawing.Size(200, 100);
+            this.btnUserAccountManager.TabIndex = 16;
+            this.btnUserAccountManager.Text = "User Account Manager";
+            this.btnUserAccountManager.UseVisualStyleBackColor = true;
+            this.btnUserAccountManager.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnManageEvents
+            // btnEventManager
             // 
-            this.btnManageEvents.Location = new System.Drawing.Point(218, 228);
-            this.btnManageEvents.Name = "btnManageEvents";
-            this.btnManageEvents.Size = new System.Drawing.Size(70, 43);
-            this.btnManageEvents.TabIndex = 15;
-            this.btnManageEvents.Text = "Manage Events";
-            this.btnManageEvents.UseVisualStyleBackColor = true;
-            this.btnManageEvents.Click += new System.EventHandler(this.button4_Click);
+            this.btnEventManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventManager.Location = new System.Drawing.Point(443, 279);
+            this.btnEventManager.Name = "btnEventManager";
+            this.btnEventManager.Size = new System.Drawing.Size(200, 100);
+            this.btnEventManager.TabIndex = 15;
+            this.btnEventManager.Text = "Event Manager";
+            this.btnEventManager.UseVisualStyleBackColor = true;
+            this.btnEventManager.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 84);
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 84);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(492, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(760, 116);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
@@ -72,24 +75,23 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(9, 19);
+            this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(492, 62);
+            this.label1.Size = new System.Drawing.Size(760, 62);
             this.label1.TabIndex = 11;
             this.label1.Text = "Event Admin Menu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.Location = new System.Drawing.Point(106, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 43);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Create New Event";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.Location = new System.Drawing.Point(672, 500);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(100, 50);
+            this.btnBack.TabIndex = 17;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // EventAdminMenu
             // 
@@ -98,10 +100,10 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(525, 370);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnManageParticipants);
-            this.Controls.Add(this.btnManageEvents);
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnUserAccountManager);
+            this.Controls.Add(this.btnEventManager);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -115,10 +117,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnManageParticipants;
-        private System.Windows.Forms.Button btnManageEvents;
+        private System.Windows.Forms.Button btnUserAccountManager;
+        private System.Windows.Forms.Button btnEventManager;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
     }
 }
