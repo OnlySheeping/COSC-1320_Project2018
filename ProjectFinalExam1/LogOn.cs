@@ -84,5 +84,10 @@ namespace ProjectFinalExam1
         {
 
         }
+
+        private void tbUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
