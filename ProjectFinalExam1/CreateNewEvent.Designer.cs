@@ -42,7 +42,6 @@
             this.lblAttendees = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAddEvent = new System.Windows.Forms.Label();
             this.rdbCancelled = new System.Windows.Forms.RadioButton();
             this.rdbPending = new System.Windows.Forms.RadioButton();
@@ -63,21 +62,20 @@
             this.chbPrivate = new System.Windows.Forms.CheckBox();
             this.cbxStartTime = new System.Windows.Forms.ComboBox();
             this.cbxEndTime = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txbEventName
             // 
-            this.txbEventName.Location = new System.Drawing.Point(185, 257);
+            this.txbEventName.Location = new System.Drawing.Point(121, 104);
             this.txbEventName.Margin = new System.Windows.Forms.Padding(4);
             this.txbEventName.Multiline = true;
             this.txbEventName.Name = "txbEventName";
-            this.txbEventName.Size = new System.Drawing.Size(443, 50);
+            this.txbEventName.Size = new System.Drawing.Size(443, 25);
             this.txbEventName.TabIndex = 0;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 266);
+            this.textBox3.Location = new System.Drawing.Point(121, 255);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(148, 25);
@@ -85,7 +83,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 337);
+            this.textBox4.Location = new System.Drawing.Point(443, 259);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(148, 25);
@@ -101,7 +99,7 @@
             // 
             // txbAttendees
             // 
-            this.txbAttendees.Location = new System.Drawing.Point(348, 546);
+            this.txbAttendees.Location = new System.Drawing.Point(121, 316);
             this.txbAttendees.Margin = new System.Windows.Forms.Padding(4);
             this.txbAttendees.Name = "txbAttendees";
             this.txbAttendees.Size = new System.Drawing.Size(148, 25);
@@ -111,7 +109,7 @@
             // 
             this.lblEventName.AutoSize = true;
             this.lblEventName.BackColor = System.Drawing.Color.Transparent;
-            this.lblEventName.Location = new System.Drawing.Point(182, 235);
+            this.lblEventName.Location = new System.Drawing.Point(10, 104);
             this.lblEventName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventName.Name = "lblEventName";
             this.lblEventName.Size = new System.Drawing.Size(87, 18);
@@ -134,7 +132,7 @@
             // 
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblStartDate.Location = new System.Drawing.Point(35, 244);
+            this.lblStartDate.Location = new System.Drawing.Point(10, 262);
             this.lblStartDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(74, 18);
@@ -145,7 +143,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.BackColor = System.Drawing.Color.Transparent;
-            this.lblAge.Location = new System.Drawing.Point(208, 499);
+            this.lblAge.Location = new System.Drawing.Point(300, 323);
             this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(119, 18);
@@ -156,7 +154,7 @@
             // 
             this.lblLocation.AutoSize = true;
             this.lblLocation.BackColor = System.Drawing.Color.Transparent;
-            this.lblLocation.Location = new System.Drawing.Point(231, 593);
+            this.lblLocation.Location = new System.Drawing.Point(10, 291);
             this.lblLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(65, 18);
@@ -167,7 +165,7 @@
             // 
             this.lblAttendees.AutoSize = true;
             this.lblAttendees.BackColor = System.Drawing.Color.Transparent;
-            this.lblAttendees.Location = new System.Drawing.Point(208, 546);
+            this.lblAttendees.Location = new System.Drawing.Point(10, 319);
             this.lblAttendees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAttendees.Name = "lblAttendees";
             this.lblAttendees.Size = new System.Drawing.Size(104, 18);
@@ -195,28 +193,16 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 97);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 5, 8, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(691, 122);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblAddEvent
             // 
             this.lblAddEvent.BackColor = System.Drawing.Color.Transparent;
             this.lblAddEvent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblAddEvent.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddEvent.ForeColor = System.Drawing.Color.Black;
-            this.lblAddEvent.Location = new System.Drawing.Point(185, 18);
+            this.lblAddEvent.Location = new System.Drawing.Point(13, 18);
             this.lblAddEvent.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblAddEvent.Name = "lblAddEvent";
-            this.lblAddEvent.Size = new System.Drawing.Size(443, 64);
+            this.lblAddEvent.Size = new System.Drawing.Size(819, 64);
             this.lblAddEvent.TabIndex = 15;
             this.lblAddEvent.Text = "Create New Event";
             this.lblAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,7 +246,7 @@
             // 
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblEndDate.Location = new System.Drawing.Point(38, 315);
+            this.lblEndDate.Location = new System.Drawing.Point(300, 262);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(71, 18);
             this.lblEndDate.TabIndex = 20;
@@ -268,7 +254,7 @@
             // 
             // txbDescription
             // 
-            this.txbDescription.Location = new System.Drawing.Point(185, 346);
+            this.txbDescription.Location = new System.Drawing.Point(121, 136);
             this.txbDescription.Multiline = true;
             this.txbDescription.Name = "txbDescription";
             this.txbDescription.Size = new System.Drawing.Size(443, 80);
@@ -278,7 +264,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescription.Location = new System.Drawing.Point(182, 325);
+            this.lblDescription.Location = new System.Drawing.Point(10, 139);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(83, 18);
             this.lblDescription.TabIndex = 22;
@@ -286,7 +272,7 @@
             // 
             // txbLocation
             // 
-            this.txbLocation.Location = new System.Drawing.Point(348, 590);
+            this.txbLocation.Location = new System.Drawing.Point(121, 287);
             this.txbLocation.Name = "txbLocation";
             this.txbLocation.Size = new System.Drawing.Size(148, 25);
             this.txbLocation.TabIndex = 23;
@@ -295,7 +281,7 @@
             // 
             this.lblStartTime.AutoSize = true;
             this.lblStartTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblStartTime.Location = new System.Drawing.Point(706, 245);
+            this.lblStartTime.Location = new System.Drawing.Point(10, 225);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(77, 18);
             this.lblStartTime.TabIndex = 24;
@@ -305,7 +291,7 @@
             // 
             this.lblEndTime.AutoSize = true;
             this.lblEndTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblEndTime.Location = new System.Drawing.Point(706, 325);
+            this.lblEndTime.Location = new System.Drawing.Point(300, 228);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(74, 18);
             this.lblEndTime.TabIndex = 25;
@@ -315,7 +301,7 @@
             // 
             this.lblCat.AutoSize = true;
             this.lblCat.BackColor = System.Drawing.Color.Transparent;
-            this.lblCat.Location = new System.Drawing.Point(234, 460);
+            this.lblCat.Location = new System.Drawing.Point(300, 294);
             this.lblCat.Name = "lblCat";
             this.lblCat.Size = new System.Drawing.Size(62, 18);
             this.lblCat.TabIndex = 28;
@@ -323,7 +309,7 @@
             // 
             // txbCategory
             // 
-            this.txbCategory.Location = new System.Drawing.Point(348, 460);
+            this.txbCategory.Location = new System.Drawing.Point(443, 291);
             this.txbCategory.Name = "txbCategory";
             this.txbCategory.Size = new System.Drawing.Size(148, 25);
             this.txbCategory.TabIndex = 29;
@@ -388,7 +374,7 @@
             // cbxStartTime
             // 
             this.cbxStartTime.FormattingEnabled = true;
-            this.cbxStartTime.Location = new System.Drawing.Point(680, 265);
+            this.cbxStartTime.Location = new System.Drawing.Point(121, 222);
             this.cbxStartTime.Name = "cbxStartTime";
             this.cbxStartTime.Size = new System.Drawing.Size(121, 26);
             this.cbxStartTime.TabIndex = 38;
@@ -396,7 +382,7 @@
             // cbxEndTime
             // 
             this.cbxEndTime.FormattingEnabled = true;
-            this.cbxEndTime.Location = new System.Drawing.Point(680, 346);
+            this.cbxEndTime.Location = new System.Drawing.Point(443, 225);
             this.cbxEndTime.Name = "cbxEndTime";
             this.cbxEndTime.Size = new System.Drawing.Size(121, 26);
             this.cbxEndTime.TabIndex = 39;
@@ -428,7 +414,6 @@
             this.Controls.Add(this.rdbActive);
             this.Controls.Add(this.rdbPending);
             this.Controls.Add(this.rdbCancelled);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAddEvent);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCreate);
@@ -450,7 +435,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create New Event";
             this.Load += new System.EventHandler(this.AddEvent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,7 +455,6 @@
         private System.Windows.Forms.Label lblAttendees;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblAddEvent;
         private System.Windows.Forms.RadioButton rdbCancelled;
         private System.Windows.Forms.RadioButton rdbPending;
