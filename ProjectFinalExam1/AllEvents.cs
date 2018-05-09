@@ -53,7 +53,10 @@ namespace ProjectFinalExam1
 
         private void btnFullView_Click(object sender, EventArgs e)
         {
-            
+            frmEventFullView admin = new frmEventFullView();
+            admin.theUserName = theUserName;
+            admin.Show();
+            this.Hide();
         }
 
         private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)
