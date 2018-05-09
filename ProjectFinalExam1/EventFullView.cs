@@ -25,10 +25,6 @@ namespace ProjectFinalExam1
         {
             InitializeComponent();
         }
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
         {
