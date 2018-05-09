@@ -171,6 +171,9 @@
     <EmbeddedResource Include="ManageParticipants.resx">
       <DependentUpon>ManageParticipants.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ParticipantAllEvents.resx">
+      <DependentUpon>ParticipantAllEvents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParticipantMyEvents.resx">
       <DependentUpon>ParticipantMyEvents.cs</DependentUpon>
     </EmbeddedResource>
