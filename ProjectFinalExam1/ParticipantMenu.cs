@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventSystem;
 
 namespace ProjectFinalExam1
 {
     public partial class ParticipantMenu : Form
     {
+        public string theUserName { get; set; }
         public ParticipantMenu()
         {
             InitializeComponent();
         }
-
+        public ParticipantMenu(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -39,16 +44,26 @@ namespace ProjectFinalExam1
 
         private void btnMyEvents_Click(object sender, EventArgs e)
         {
-            new MyEvents().Show();
+            MyEvents participant = new MyEvents();
+            participant.theUserName = theUserName;
+            participant.Show();
             this.Hide();
 
         }
 
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
-            //new frmEventListView().Show();
-            //this.Hide();
-
+            AllEvents participant = new AllEvents();
+            participant.theUserName = theUserName;
+            participant.Show();
+            this.Hide();
         }
+
+        private void ParticipantMenu_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Participant Menu";
+        }
+
+
     }
 }

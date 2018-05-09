@@ -49,7 +49,7 @@
             this.lblEditUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditUsers.Location = new System.Drawing.Point(81, 196);
             this.lblEditUsers.Name = "lblEditUsers";
-            this.lblEditUsers.Size = new System.Drawing.Size(246, 39);
+            this.lblEditUsers.Size = new System.Drawing.Size(197, 31);
             this.lblEditUsers.TabIndex = 0;
             this.lblEditUsers.Text = "Edit Participant";
             // 
@@ -58,7 +58,7 @@
             this.lblEditUsersFirstName.AutoSize = true;
             this.lblEditUsersFirstName.Location = new System.Drawing.Point(54, 259);
             this.lblEditUsersFirstName.Name = "lblEditUsersFirstName";
-            this.lblEditUsersFirstName.Size = new System.Drawing.Size(76, 17);
+            this.lblEditUsersFirstName.Size = new System.Drawing.Size(57, 13);
             this.lblEditUsersFirstName.TabIndex = 1;
             this.lblEditUsersFirstName.Text = "First Name";
             // 
@@ -66,7 +66,7 @@
             // 
             this.tbxEditUsersFirstName.Location = new System.Drawing.Point(130, 252);
             this.tbxEditUsersFirstName.Name = "tbxEditUsersFirstName";
-            this.tbxEditUsersFirstName.Size = new System.Drawing.Size(148, 23);
+            this.tbxEditUsersFirstName.Size = new System.Drawing.Size(148, 20);
             this.tbxEditUsersFirstName.TabIndex = 2;
             // 
             // lblEditUsersLastName
@@ -74,7 +74,7 @@
             this.lblEditUsersLastName.AutoSize = true;
             this.lblEditUsersLastName.Location = new System.Drawing.Point(54, 294);
             this.lblEditUsersLastName.Name = "lblEditUsersLastName";
-            this.lblEditUsersLastName.Size = new System.Drawing.Size(76, 17);
+            this.lblEditUsersLastName.Size = new System.Drawing.Size(58, 13);
             this.lblEditUsersLastName.TabIndex = 3;
             this.lblEditUsersLastName.Text = "Last Name";
             // 
@@ -82,7 +82,7 @@
             // 
             this.tbxEditUsersLastName.Location = new System.Drawing.Point(130, 294);
             this.tbxEditUsersLastName.Name = "tbxEditUsersLastName";
-            this.tbxEditUsersLastName.Size = new System.Drawing.Size(148, 23);
+            this.tbxEditUsersLastName.Size = new System.Drawing.Size(148, 20);
             this.tbxEditUsersLastName.TabIndex = 4;
             // 
             // lblEditUsersAge
@@ -90,7 +90,7 @@
             this.lblEditUsersAge.AutoSize = true;
             this.lblEditUsersAge.Location = new System.Drawing.Point(66, 337);
             this.lblEditUsersAge.Name = "lblEditUsersAge";
-            this.lblEditUsersAge.Size = new System.Drawing.Size(33, 17);
+            this.lblEditUsersAge.Size = new System.Drawing.Size(26, 13);
             this.lblEditUsersAge.TabIndex = 5;
             this.lblEditUsersAge.Text = "Age";
             // 
@@ -98,7 +98,7 @@
             // 
             this.tbxEditUsersAge.Location = new System.Drawing.Point(130, 337);
             this.tbxEditUsersAge.Name = "tbxEditUsersAge";
-            this.tbxEditUsersAge.Size = new System.Drawing.Size(45, 23);
+            this.tbxEditUsersAge.Size = new System.Drawing.Size(45, 20);
             this.tbxEditUsersAge.TabIndex = 6;
             // 
             // btnUpdate
@@ -149,7 +149,7 @@
             // 
             // EditParticipant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -170,6 +170,7 @@
             this.Name = "EditParticipant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Participant Form";
+            this.Load += new System.EventHandler(this.EditParticipant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

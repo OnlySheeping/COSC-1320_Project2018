@@ -12,7 +12,12 @@ namespace EventSystem
 {
     public partial class frmParticipantFullView : Form
     {
+        public string theUserName { get; set; }
         public frmParticipantFullView()
+        {
+            InitializeComponent();
+        }
+        public frmParticipantFullView(string theUserName)
         {
             InitializeComponent();
         }
@@ -25,6 +30,11 @@ namespace EventSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmParticipantFullView_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
     }
 }

@@ -141,6 +141,7 @@
             this.Name = "DeleteParticipant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete Participant Form";
+            this.Load += new System.EventHandler(this.DeleteParticipant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

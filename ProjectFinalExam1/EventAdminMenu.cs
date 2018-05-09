@@ -12,27 +12,44 @@ namespace ProjectFinalExam1
 {
     public partial class EventAdminMenu : Form
     {
-        public EventAdminMenu()
+        public string theUserName { get; set; }
+
+
+        public EventAdminMenu(string theUserName)
         {
             InitializeComponent();
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {
-            new EventManager().Show();
+        { 
+            EventManager admin = new EventManager();
+            admin.theUserName = theUserName;
+            admin.Show();
             this.Hide();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new ManageParticipants().Show();
+
+            ManageParticipants admin = new ManageParticipants();
+            admin.theUserName = theUserName;
+            admin.Show();
             this.Hide();
 
         }
 
         private void AdminMenu_Load(object sender, EventArgs e)
         {
+            this.Text = theUserName + " - Event Admin Menu";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmCreateEvent admin = new frmCreateEvent();
+            admin.theUserName = theUserName;
+            admin.Show();
+            this.Hide();
 
         }
     }

@@ -171,74 +171,76 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
-        public static List<string> GetEventsForTeaserView()
+        public static List<string> GetEventForTeaser()
         {
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
+            
+
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID ASC", conn))
+            {
+                List<string> teaserEvents = new List<string>();
+                SqlDataReader reader = command.ExecuteReader(); 
+                //if (reader.HasRows)
+
+                while (reader.Read())
+                {
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
+                    string status = reader.GetString(reader.GetOrdinal("Status"));
+
+                    teaserEvents.Add(eventName + " | " + eventDescription + " | " + status);
+                }
+                return teaserEvents;
+                
+            }
+        }
+
+        public static List<string> ShowEventsForListView()
+        {
+            //throw new System.NotImplementedException();
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID ASC", conn)) //cg
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventID", conn))
             {
-               
-
+                List<string> listEvents = new List<string>();
                 SqlDataReader reader = command.ExecuteReader();
-                List<string> eventList = new List<string>();
+                //if (reader.HasRows)
+
                 while (reader.Read())
                 {
-                    
-                    while (reader.Read())
-                    {
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
+                    string status = reader.GetString(reader.GetOrdinal("Status"));
+                    string startDate = reader.GetString(reader.GetOrdinal("StartDate"));
+                    string endDate = reader.GetString(reader.GetOrdinal("EndDate"));
+                    string startTime = reader.GetString(reader.GetOrdinal("StartTime"));
+                    string endTime = reader.GetString(reader.GetOrdinal("EndTIme"));
+                    string eventNotes = reader.GetString(reader.GetOrdinal("EventNotes"));
+                    string ageRequirement = reader.GetString(reader.GetOrdinal("AgeRequirement"));
+                    string categoryID = reader.GetString(reader.GetOrdinal("CategorID"));
+                    string location = reader.GetString(reader.GetOrdinal("Location"));
+                    string maxAttendees = reader.GetString(reader.GetOrdinal("MaxAttendees"));
 
-
-                        string eventName = reader.GetString(reader.GetOrdinal("EventName")); 
-                        string eventDescription = reader.GetString(reader.GetOrdinal("Event Description"));
-                        string status = reader.GetString(reader.GetOrdinal("Status"));
-
-                        eventList.Add(eventName + " | " + eventDescription + " | " + status);
-                    }
+                    listEvents.Add(eventName + " | " + eventDescription + " | " + status +" | "+ startDate +" | "+ endDate +"|"+ startTime + "|" + eventNotes + "|" + ageRequirement + "|" + categoryID +"|"+ location +"|"+ maxAttendees );
                 }
-                return eventList;
-                //---commented out by cg for trial
-
-
-
+                return listEvents;
 
             }
         }
 
-        public void ShowEventsForListView()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public static List<string> ShowEventDetail(int theEventID)
+        public static List<string> ShowEventDetail(string theEventName)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
-            //throw new System.NotImplementedException();
-            //      SELECT TOP 1[EventID]
-            //,[EventName]
-            //,[Status]
-            //,[EventDescription]
-            //,[StartDate]
-            //,[EndDate]
-            //,[StartTime]
-            //,[EndTime]
-            //,[EventNotes]
-            //,[AgeRequirement]
-            //, CategoryID replace with CategoryDescription - table 
-            //,[Private]
-            //,[Closed]
-            //,[Location]
-            //,[MaxAttendees]
-            //  FROM[Project1].[dbo].[Events]
-
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventName = @eventID", conn))
             {
                 List<string> eventInfo = new List<string>();
                 // Invoke ExecuteReader method.
-                command.Parameters.AddWithValue("@eventID", theEventID);
+                command.Parameters.AddWithValue("@eventID", theEventName);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -317,5 +319,4 @@ namespace EventSystem
 
 
     }
- 
 }

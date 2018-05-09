@@ -13,7 +13,12 @@ namespace ProjectFinalExam1
 {
     public partial class frmCreateEvent : Form
     {
+        public string theUserName { get; set; }
         public frmCreateEvent()
+        {
+            InitializeComponent();
+        }
+        public frmCreateEvent(string theUserName)
         {
             InitializeComponent();
         }
@@ -25,7 +30,7 @@ namespace ProjectFinalExam1
 
         private void AddEvent_Load(object sender, EventArgs e)
         {
-
+            this.Text = theUserName + " - Create New Event";
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -65,7 +70,9 @@ namespace ProjectFinalExam1
 
         private void btnAddPart_Click(object sender, EventArgs e)
         {
-            new frmAddParticipantToEvents().Show();
+            frmAddParticipantToEvents admin = new frmAddParticipantToEvents();
+            admin.theUserName = theUserName;
+            admin.Show();
             Visible = true;
     }
     }

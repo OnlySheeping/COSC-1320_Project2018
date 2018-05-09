@@ -78,6 +78,7 @@
             this.Name = "frmParticipantFullView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Participant Full View";
+            this.Load += new System.EventHandler(this.frmParticipantFullView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

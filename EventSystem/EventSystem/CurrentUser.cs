@@ -11,58 +11,46 @@ using System.Windows.Forms;
 namespace EventSystem
 {
 
+
     public class CurrentUser
     {
-        string username;
-        string firstName;
-        string lastName;
-        int age;
-        int roleID;
+        public string userName { get; private set; }
+        public string firstName { get; private set; }
+        public string lastName { get; private set; }
+        public int roleID { get; private set; }
 
-        //Verifies Username and Password and returns roleID to send to proper form in UI with if statement reading roleID
-        public int VerifyUserNamePassword(string theUserName, string thePassWord)
+        public string GetUserName(string theUsername)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where Username =@username and Passsword = @password", conn))
-
-
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users WHERE Username = @username", conn))
             {
-                // Invoke ExecuteReader method.
-                command.Parameters.AddWithValue("@username", theUserName);
-                command.Parameters.AddWithValue("@password", thePassWord);
+                command.Parameters.AddWithValue("@username", theUsername);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        username = reader.GetString(reader.GetOrdinal("Username"));
-                        firstName = reader.GetString(reader.GetOrdinal("UserFirstName"));
-                        lastName = reader.GetString(reader.GetOrdinal("UserLastName"));
-                        age = reader.GetInt32(reader.GetOrdinal("UserAge"));
-                        roleID = reader.GetInt32(reader.GetOrdinal("RoleID"));
+                        userName = reader.GetString(reader.GetOrdinal("Username"));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Contact Administrator");
-                }
-                return roleID;
-
+                return userName;
             }
         }
 
-        public string VerifyFirstName(string theUsername)
+
+
+
+        public string GetFirstName(string theUsername)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
             //
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where UserFirstName = @username", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users WHERE Username = @username", conn))
             {
-                // Invoke ExecuteReader method.
                 command.Parameters.AddWithValue("@username", theUsername);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -77,14 +65,14 @@ namespace EventSystem
             }
         }
 
-        public string VerifyLastName(string theUsername)
+        public string GetLastName(string theUsername)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users where roleID = @username", conn))
+            //
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users WHERE Username = @username", conn))
             {
-                // Invoke ExecuteReader method.
                 command.Parameters.AddWithValue("@username", theUsername);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -96,6 +84,30 @@ namespace EventSystem
                     }
                 }
                 return lastName;
+            }
+        }
+
+
+        public int VerifyUserNamePassword(string theUsername, string thePassword)
+        {
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Users WHERE Username = @username and Passsword = @password", conn))
+            {
+                // Invoke ExecuteReader method.
+                command.Parameters.AddWithValue("@username", theUsername);
+                command.Parameters.AddWithValue("@password", thePassword);
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        roleID = reader.GetInt32(reader.GetOrdinal("RoleID"));
+                    }
+                }
+                return roleID;
             }
         }
     }
