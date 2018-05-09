@@ -93,7 +93,7 @@
             this.btnLoadEvent.TabIndex = 16;
             this.btnLoadEvent.Text = "Load Event";
             this.btnLoadEvent.UseVisualStyleBackColor = true;
-            this.btnLoadEvent.Click += new System.EventHandler(this.btnTest_Click);
+            this.btnLoadEvent.Click += new System.EventHandler(this.btnLoadEvent_Click);
             // 
             // frmEventFullView
             // 
