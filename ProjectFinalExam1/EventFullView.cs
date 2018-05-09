@@ -16,11 +16,15 @@ namespace ProjectFinalExam1
 {
     public partial class frmEventFullView : Form
     {
+        public string theUserName { get; set; }
         public frmEventFullView()
         {
             InitializeComponent();
         }
-
+        public frmEventFullView(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void btnTest_Click(object sender, EventArgs e)
         {
             Event getDetail = new Event();
@@ -57,6 +61,11 @@ namespace ProjectFinalExam1
         private void frmEventFullView_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmEventFullView_Load_1(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
 
 

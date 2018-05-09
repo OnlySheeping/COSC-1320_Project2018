@@ -86,7 +86,7 @@
             // 
             this.btnClear.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(705, 753);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(112, 32);
             this.btnClear.TabIndex = 29;
@@ -97,7 +97,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(450, 753);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(112, 32);
             this.btnAdd.TabIndex = 28;
@@ -108,7 +108,7 @@
             // 
             this.cbxEventEditEndTime.FormattingEnabled = true;
             this.cbxEventEditEndTime.Location = new System.Drawing.Point(683, 336);
-            this.cbxEventEditEndTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxEventEditEndTime.Margin = new System.Windows.Forms.Padding(4);
             this.cbxEventEditEndTime.Name = "cbxEventEditEndTime";
             this.cbxEventEditEndTime.Size = new System.Drawing.Size(180, 26);
             this.cbxEventEditEndTime.TabIndex = 67;
@@ -117,7 +117,7 @@
             // 
             this.cbxEventEditStartTime.FormattingEnabled = true;
             this.cbxEventEditStartTime.Location = new System.Drawing.Point(683, 258);
-            this.cbxEventEditStartTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxEventEditStartTime.Margin = new System.Windows.Forms.Padding(4);
             this.cbxEventEditStartTime.Name = "cbxEventEditStartTime";
             this.cbxEventEditStartTime.Size = new System.Drawing.Size(180, 26);
             this.cbxEventEditStartTime.TabIndex = 66;
@@ -127,7 +127,7 @@
             this.chbEventEditPrivate.AutoSize = true;
             this.chbEventEditPrivate.BackColor = System.Drawing.Color.Transparent;
             this.chbEventEditPrivate.Location = new System.Drawing.Point(22, 453);
-            this.chbEventEditPrivate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbEventEditPrivate.Margin = new System.Windows.Forms.Padding(4);
             this.chbEventEditPrivate.Name = "chbEventEditPrivate";
             this.chbEventEditPrivate.Size = new System.Drawing.Size(73, 22);
             this.chbEventEditPrivate.TabIndex = 65;
@@ -139,7 +139,7 @@
             this.chbEventEditClosed.AutoSize = true;
             this.chbEventEditClosed.BackColor = System.Drawing.Color.Transparent;
             this.chbEventEditClosed.Location = new System.Drawing.Point(22, 415);
-            this.chbEventEditClosed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbEventEditClosed.Margin = new System.Windows.Forms.Padding(4);
             this.chbEventEditClosed.Name = "chbEventEditClosed";
             this.chbEventEditClosed.Size = new System.Drawing.Size(68, 22);
             this.chbEventEditClosed.TabIndex = 64;
@@ -149,7 +149,7 @@
             // txbEventEditNotes
             // 
             this.txbEventEditNotes.Location = new System.Drawing.Point(13, 596);
-            this.txbEventEditNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbEventEditNotes.Margin = new System.Windows.Forms.Padding(4);
             this.txbEventEditNotes.Multiline = true;
             this.txbEventEditNotes.Name = "txbEventEditNotes";
             this.txbEventEditNotes.Size = new System.Drawing.Size(201, 131);
@@ -169,7 +169,7 @@
             // txbEventEditCategory
             // 
             this.txbEventEditCategory.Location = new System.Drawing.Point(385, 481);
-            this.txbEventEditCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbEventEditCategory.Margin = new System.Windows.Forms.Padding(4);
             this.txbEventEditCategory.Name = "txbEventEditCategory";
             this.txbEventEditCategory.Size = new System.Drawing.Size(220, 25);
             this.txbEventEditCategory.TabIndex = 61;
@@ -221,7 +221,7 @@
             // txbEventEditDescription
             // 
             this.txbEventEditDescription.Location = new System.Drawing.Point(238, 336);
-            this.txbEventEditDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbEventEditDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txbEventEditDescription.Multiline = true;
             this.txbEventEditDescription.Name = "txbEventEditDescription";
             this.txbEventEditDescription.Size = new System.Drawing.Size(367, 102);
@@ -243,7 +243,7 @@
             this.rdbEventEditActive.AutoSize = true;
             this.rdbEventEditActive.BackColor = System.Drawing.Color.Transparent;
             this.rdbEventEditActive.Location = new System.Drawing.Point(702, 477);
-            this.rdbEventEditActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbEventEditActive.Margin = new System.Windows.Forms.Padding(4);
             this.rdbEventEditActive.Name = "rdbEventEditActive";
             this.rdbEventEditActive.Size = new System.Drawing.Size(66, 22);
             this.rdbEventEditActive.TabIndex = 54;
@@ -257,7 +257,7 @@
             this.rdbEventEditPending.AutoSize = true;
             this.rdbEventEditPending.BackColor = System.Drawing.Color.Transparent;
             this.rdbEventEditPending.Location = new System.Drawing.Point(702, 509);
-            this.rdbEventEditPending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbEventEditPending.Margin = new System.Windows.Forms.Padding(4);
             this.rdbEventEditPending.Name = "rdbEventEditPending";
             this.rdbEventEditPending.Size = new System.Drawing.Size(80, 22);
             this.rdbEventEditPending.TabIndex = 53;
@@ -270,7 +270,7 @@
             this.rdbEventEditCancelled.AutoSize = true;
             this.rdbEventEditCancelled.BackColor = System.Drawing.Color.Transparent;
             this.rdbEventEditCancelled.Location = new System.Drawing.Point(702, 539);
-            this.rdbEventEditCancelled.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbEventEditCancelled.Margin = new System.Windows.Forms.Padding(4);
             this.rdbEventEditCancelled.Name = "rdbEventEditCancelled";
             this.rdbEventEditCancelled.Size = new System.Drawing.Size(87, 22);
             this.rdbEventEditCancelled.TabIndex = 52;
@@ -494,6 +494,7 @@
             this.Name = "frmEventEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event Edit";
+            this.Load += new System.EventHandler(this.frmEventEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

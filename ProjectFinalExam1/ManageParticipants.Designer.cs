@@ -140,6 +140,7 @@
             this.Name = "ManageParticipants";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Participants";
+            this.Load += new System.EventHandler(this.ManageParticipants_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -12,11 +12,15 @@ namespace ProjectFinalExam1
 {
     public partial class EditParticipant : Form
     {
+        public string theUserName { get; set; }
         public EditParticipant()
         {
             InitializeComponent();
         }
-
+        public EditParticipant(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -27,6 +31,11 @@ namespace ProjectFinalExam1
             new ManageParticipants().Show();
             this.Hide();
 
+        }
+
+        private void EditParticipant_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
     }
 }

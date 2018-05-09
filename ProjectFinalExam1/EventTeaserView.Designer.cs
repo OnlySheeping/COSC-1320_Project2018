@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace EventSystem
 {
-    partial class EventTeaserView
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -58,18 +58,12 @@ namespace EventSystem
             this.panel3.Size = new System.Drawing.Size(200, 131);
             this.panel3.TabIndex = 1;
             // 
-            // frmEventTeaserView
+            // Form1
             // 
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.ClientSize = new System.Drawing.Size(780, 542);
-            //this.Controls.Add(this.panel3);
-            //this.Controls.Add(this.panel2);
-            //this.Controls.Add(this.panel1);
-            //this.Name = "frmEventTeaserView";
-            //this.Text = "Event Teaser View";
-            //this.Load += new System.EventHandler(this.Form1_Load);
-            //this.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.ResumeLayout(false);
 
         }
 

@@ -13,7 +13,8 @@ namespace ProjectFinalExam1
     public partial class EventManager : Form
     {
         //Test commit.
-        public EventManager()
+        public string theUserName { get; set; }
+        public EventManager(string theUserName)
         {
             InitializeComponent();
         }
@@ -25,7 +26,7 @@ namespace ProjectFinalExam1
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            this.Text = theUserName + " - Event Admin Menu";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -36,13 +37,17 @@ namespace ProjectFinalExam1
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            new frmCreateEvent().Show();
+            frmCreateEvent admin = new frmCreateEvent;
+            theUserName = admin.theUserName;
+            admin.Show();
             this.Hide();
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            new frmEventEdit().Show();
+            frmEventEdit admin = new frmEventEdit;
+            theUserName = admin.theUserName;
+            admin.Show();
             this.Hide();
         }
 

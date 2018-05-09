@@ -13,6 +13,7 @@ namespace ProjectFinalExam1
 {
     public partial class ParticipantMenu : Form
     {
+        public string theUserName { get; set; }
         public ParticipantMenu()
         {
             InitializeComponent();
@@ -60,7 +61,9 @@ namespace ProjectFinalExam1
 
         private void ParticipantMenu_Load(object sender, EventArgs e)
         {
-
+            this.Text = theUserName + " - Event Admin Menu";
         }
+
+
     }
 }

@@ -13,13 +13,20 @@ namespace ProjectFinalExam1
 {
     public partial class EventListView : Form
     {
+        public string theUserName { get; set; }
         public EventListView()
+        {
+            InitializeComponent();
+        }
+        public EventListView(string theUserName)
         {
             InitializeComponent();
         }
 
         private void EventListView_Load(object sender, EventArgs e)
         {
+            this.Text = theUserName + " - Event Admin Menu";
+
             Event teaserView = new Event();
             List<string> eventsTeaser = new List<string>();
             eventsTeaser = Event.GetEventForTeaser();

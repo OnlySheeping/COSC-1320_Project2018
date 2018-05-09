@@ -44,10 +44,10 @@
             // lbMyEvents
             // 
             this.lbMyEvents.FormattingEnabled = true;
-            this.lbMyEvents.ItemHeight = 16;
+            this.lbMyEvents.ItemHeight = 14;
             this.lbMyEvents.Location = new System.Drawing.Point(38, 263);
             this.lbMyEvents.Name = "lbMyEvents";
-            this.lbMyEvents.Size = new System.Drawing.Size(738, 212);
+            this.lbMyEvents.Size = new System.Drawing.Size(738, 200);
             this.lbMyEvents.TabIndex = 0;
             // 
             // pictureBox1
@@ -91,7 +91,7 @@
             // 
             this.txbSearchEvents.Location = new System.Drawing.Point(235, 213);
             this.txbSearchEvents.Name = "txbSearchEvents";
-            this.txbSearchEvents.Size = new System.Drawing.Size(362, 22);
+            this.txbSearchEvents.Size = new System.Drawing.Size(362, 19);
             this.txbSearchEvents.TabIndex = 16;
             // 
             // lblSearch
@@ -100,7 +100,7 @@
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Location = new System.Drawing.Point(144, 218);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(91, 16);
+            this.lblSearch.Size = new System.Drawing.Size(72, 14);
             this.lblSearch.TabIndex = 17;
             this.lblSearch.Text = "Search Events ";
             // 
@@ -137,7 +137,7 @@
             // 
             // MyEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -156,6 +156,7 @@
             this.Name = "MyEvents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Events";
+            this.Load += new System.EventHandler(this.MyEvents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
