@@ -51,8 +51,9 @@ namespace ProjectFinalExam1
             EventSystem.CurrentUser currentUser = new EventSystem.CurrentUser();
             string firstName = currentUser.GetFirstName(tbUserName.Text);
             string lastName = currentUser.GetLastName(tbUserName.Text);
-            string userName = currentUser.GetUserName(tbUserName.Text);
+            string userName = tbUserName.Text;
             int roleID = currentUser.VerifyUserNamePassword(tbUserName.Text, tbPassword.Text);
+
 
 
             if (currentUser.roleID == 1)
@@ -60,20 +61,21 @@ namespace ProjectFinalExam1
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
                 ParticipantMenu participant = new ParticipantMenu(userName);
                 participant.Show();
-                Visible = false;
             }
             else if (currentUser.roleID == 2)
             {
+
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                EventAdminMenu admin = new EventAdminMenu();
+                EventAdminMenu admin = new EventAdminMenu(userName);
+                admin.theUserName = userName;
                 admin.Show();
-                Visible = false;
+                
             }
             else
             {
                 MessageBox.Show("Please enter correct Username and Password");
             }
-
+            
 
         }
 

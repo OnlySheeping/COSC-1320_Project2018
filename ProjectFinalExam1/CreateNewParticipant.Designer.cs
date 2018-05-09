@@ -62,6 +62,7 @@
             this.Controls.Add(this.lstbxCreateNewParticipant);
             this.Name = "frmCreateNewParticipant";
             this.Text = "Create New Participant";
+            this.Load += new System.EventHandler(this.frmCreateNewParticipant_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

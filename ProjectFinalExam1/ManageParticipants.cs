@@ -12,11 +12,15 @@ namespace ProjectFinalExam1
 {
     public partial class ManageParticipants : Form
     {
+        public string theUserName { get; set; }
         public ManageParticipants()
         {
             InitializeComponent();
         }
-
+        public ManageParticipants(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
            // new Participant().Show();
@@ -35,6 +39,11 @@ namespace ProjectFinalExam1
                 {
                 MessageBox.Show(lbxParticipantManagerList.SelectedItem.ToString());
                 }
+        }
+
+        private void ManageParticipants_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
     }
 }

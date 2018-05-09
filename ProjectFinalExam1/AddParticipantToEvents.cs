@@ -12,9 +12,19 @@ namespace EventSystem
 {
     public partial class frmAddParticipantToEvents : Form
     {
+        public string theUserName { get; set; }
+
         public frmAddParticipantToEvents()
         {
             InitializeComponent();
+        }
+        public frmAddParticipantToEvents(string theUserName)
+        {
+            InitializeComponent();
+        }
+        private void frmAddParticipantToEvents_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
     }
 }

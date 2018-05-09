@@ -112,6 +112,7 @@
             this.Name = "frmEventFullView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event Full View";
+            this.Load += new System.EventHandler(this.frmEventFullView_Load_1);
             this.ResumeLayout(false);
 
         }

@@ -12,11 +12,15 @@ namespace ProjectFinalExam1
 {
     public partial class frmEventEdit : Form
     {
+        public string theUserName { get; set; }
         public frmEventEdit()
         {
             InitializeComponent();
         }
-
+        public frmEventEdit(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void btnClear_Click(object sender, EventArgs e)
         {
           
@@ -36,6 +40,11 @@ namespace ProjectFinalExam1
         private void rdbEventEditActive_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmEventEdit_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
     }
 }

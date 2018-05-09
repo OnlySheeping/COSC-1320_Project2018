@@ -12,11 +12,16 @@ namespace ProjectFinalExam1
 {
     public partial class MyEvents : Form
     {
+        public string theUserName { get; set; }
+        public string theUserName { get; set; }
         public MyEvents()
         {
             InitializeComponent();
         }
-
+        public MyEvents(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void btnEventDetailView_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -27,6 +32,11 @@ namespace ProjectFinalExam1
         {
             new frmEventFullView().Show();
             this.Close();
+        }
+
+        private void MyEvents_Load(object sender, EventArgs e)
+        {
+            this.Text = theUserName + " - Event Admin Menu";
         }
     }
 }
