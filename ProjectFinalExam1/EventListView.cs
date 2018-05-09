@@ -20,8 +20,8 @@ namespace ProjectFinalExam1
 
         private void EventListView_Load(object sender, EventArgs e)
         {
-            ////Instantiate an Event object
-            //Event view = new Event();
+            //Instantiate an Event object
+            Event view = new Event();
 
 
             ////The following code is for the List View
@@ -35,18 +35,18 @@ namespace ProjectFinalExam1
             //{
             //    System.Diagnostics.Debug.WriteLine(wordOne);
             //    String[] eventDetail = wordOne.Split('|');
-            //    lviViewAllEvents.Items.Add(eventDetail[0]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[1]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[2]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[3]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[4]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[5]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[6]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[7]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[8]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[9]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[10]);
-            //    lviViewAllEvents.Items[eventCountOne].SubItems.Add(eventDetail[11]);
+            //    lviListView.Items.Add(eventDetail[0]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[1]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[2]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[3]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[4]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[5]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[6]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[7]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[8]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[9]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[10]);
+            //    lviListView.Items[eventCountOne].SubItems.Add(eventDetail[11]);
             //    eventCountOne++;
             //}
 
