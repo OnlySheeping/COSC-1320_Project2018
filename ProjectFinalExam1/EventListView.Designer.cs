@@ -170,10 +170,11 @@
             this.clmStatus});
             this.lviViewAllEvents.Location = new System.Drawing.Point(3, 3);
             this.lviViewAllEvents.Name = "lviViewAllEvents";
-            this.lviViewAllEvents.Size = new System.Drawing.Size(794, 368);
+            this.lviViewAllEvents.Size = new System.Drawing.Size(550, 368);
             this.lviViewAllEvents.TabIndex = 0;
             this.lviViewAllEvents.UseCompatibleStateImageBehavior = false;
             this.lviViewAllEvents.View = System.Windows.Forms.View.Details;
+            this.lviViewAllEvents.SelectedIndexChanged += new System.EventHandler(this.lviViewAllEvents_SelectedIndexChanged);
             // 
             // clmEventName
             // 

@@ -314,6 +314,35 @@ namespace EventSystem
             }
         }
 
+//        // Cameron 
+//        public Event(int eid)
+//        {
+//            Event eid = new Event;
+//        }
+
+//        public void event()
+//{
+
+//            // this is where we compaire the eventID taken from the for each loop and // compaire it to our eventIDs and post the rest of the data for that event.
+
+
+//            System.out.printline(EventName + StartDate + StartTime + EndDate + EndTime + location)
+//}
+
+//        String [] = new [] String
+//Populate[] EventID
+//String2[] = new [] String
+//Populate 2[]
+//        userEventID
+
+
+//foreach(String[])
+//{
+//if(userEventID = EventID)
+//{
+//System.out.printline(eventID.Event())
+//}
+//}
 
                 
 
