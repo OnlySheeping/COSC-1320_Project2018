@@ -46,20 +46,21 @@ namespace ProjectFinalExam1
             {
                 //System.Diagnostics.Debug.WriteLine(word);
                 String[] eventDetails = word.Split('|');
-                lviListView.Items.Add(eventDetails[0]);
-                lviViewAllEvents.Items.Add(eventDetails[0]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[1]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[1]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[2]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[3]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[4]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[5]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[6]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[7]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[8]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[9]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[10]);
-                lviViewAllEvents.Items[eventCount].SubItems.Add(eventDetails[11]);
+                lviListViewEvents.Items.Add(eventDetails[0]);
+                lviListViewEvents.Items[eventCount].SubItems.Add(eventDetails[1]);
+
+                lviList.Items.Add(eventDetails[0]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[1]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[2]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[3]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[4]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[5]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[6]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[7]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[8]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[9]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[10]);
+                lviList.Items[eventCount].SubItems.Add(eventDetails[11]);
 
                 eventCount++;
             }
@@ -73,6 +74,11 @@ namespace ProjectFinalExam1
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lviList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lviListView = new System.Windows.Forms.ListView();
+            this.lviList = new System.Windows.Forms.ListView();
             this.clmEventName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEventDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,7 +44,7 @@
             this.clmCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmMaxAttendee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lviViewAllEvents = new System.Windows.Forms.ListView();
+            this.lviListViewEvents = new System.Windows.Forms.ListView();
             this.clmEventNamee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEventDesc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.lviViewAllEvents);
+            this.tabPage1.Controls.Add(this.lviListViewEvents);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -76,7 +76,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lviListView);
+            this.tabPage2.Controls.Add(this.lviList);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -86,9 +86,9 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // lviListView
+            // lviList
             // 
-            this.lviListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lviList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmEventName,
             this.clmEventDescription,
             this.clmStatus,
@@ -101,12 +101,13 @@
             this.clmCategory,
             this.clmLocation,
             this.clmMaxAttendee});
-            this.lviListView.Location = new System.Drawing.Point(3, 3);
-            this.lviListView.Name = "lviListView";
-            this.lviListView.Size = new System.Drawing.Size(699, 441);
-            this.lviListView.TabIndex = 0;
-            this.lviListView.UseCompatibleStateImageBehavior = false;
-            this.lviListView.View = System.Windows.Forms.View.Details;
+            this.lviList.Location = new System.Drawing.Point(-4, -3);
+            this.lviList.Name = "lviList";
+            this.lviList.Size = new System.Drawing.Size(699, 441);
+            this.lviList.TabIndex = 0;
+            this.lviList.UseCompatibleStateImageBehavior = false;
+            this.lviList.View = System.Windows.Forms.View.Details;
+            this.lviList.SelectedIndexChanged += new System.EventHandler(this.lviList_SelectedIndexChanged);
             // 
             // clmEventName
             // 
@@ -158,18 +159,18 @@
             this.clmLocation.DisplayIndex = 11;
             this.clmLocation.Text = "Location";
             // 
-            // lviViewAllEvents
+            // lviListViewEvents
             // 
-            this.lviViewAllEvents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lviListViewEvents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmEventNamee,
             this.clmEventDesc});
-            this.lviViewAllEvents.Location = new System.Drawing.Point(3, 3);
-            this.lviViewAllEvents.Name = "lviViewAllEvents";
-            this.lviViewAllEvents.Size = new System.Drawing.Size(699, 441);
-            this.lviViewAllEvents.TabIndex = 0;
-            this.lviViewAllEvents.UseCompatibleStateImageBehavior = false;
-            this.lviViewAllEvents.View = System.Windows.Forms.View.Details;
-            this.lviViewAllEvents.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.lviListViewEvents.Location = new System.Drawing.Point(3, 3);
+            this.lviListViewEvents.Name = "lviListViewEvents";
+            this.lviListViewEvents.Size = new System.Drawing.Size(699, 441);
+            this.lviListViewEvents.TabIndex = 0;
+            this.lviListViewEvents.UseCompatibleStateImageBehavior = false;
+            this.lviListViewEvents.View = System.Windows.Forms.View.Details;
+            this.lviListViewEvents.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // clmEventNamee
             // 
@@ -202,7 +203,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListView lviListView;
+        private System.Windows.Forms.ListView lviList;
         private System.Windows.Forms.ColumnHeader clmEventName;
         private System.Windows.Forms.ColumnHeader clmEventDescription;
         private System.Windows.Forms.ColumnHeader clmStatus;
@@ -215,7 +216,7 @@
         private System.Windows.Forms.ColumnHeader clmCategory;
         private System.Windows.Forms.ColumnHeader clmLocation;
         private System.Windows.Forms.ColumnHeader clmMaxAttendee;
-        private System.Windows.Forms.ListView lviViewAllEvents;
+        private System.Windows.Forms.ListView lviListViewEvents;
         private System.Windows.Forms.ColumnHeader clmEventNamee;
         private System.Windows.Forms.ColumnHeader clmEventDesc;
     }
