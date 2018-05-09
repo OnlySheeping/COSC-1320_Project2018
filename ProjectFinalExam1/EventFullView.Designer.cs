@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventFullView));
             this.lblDetailBanner = new System.Windows.Forms.Label();
             this.lbxDetailView = new System.Windows.Forms.ListView();
-            this.btnback = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
             this.clmDetailFields = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmdetailfields2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnback = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDetailBanner
@@ -66,25 +66,6 @@
             this.lbxDetailView.View = System.Windows.Forms.View.Details;
             this.lbxDetailView.SelectedIndexChanged += new System.EventHandler(this.lvDetailView_SelectedIndexChanged);
             // 
-            // btnback
-            // 
-            this.btnback.Location = new System.Drawing.Point(350, 640);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(111, 42);
-            this.btnback.TabIndex = 15;
-            this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = true;
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(561, 640);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
-            this.btnTest.TabIndex = 16;
-            this.btnTest.Text = "test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
             // clmDetailFields
             // 
             this.clmDetailFields.Text = "";
@@ -94,6 +75,25 @@
             // 
             this.clmdetailfields2.Text = "";
             this.clmdetailfields2.Width = 0;
+            // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(467, 640);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(111, 42);
+            this.btnback.TabIndex = 15;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(233, 640);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(111, 42);
+            this.btnTest.TabIndex = 16;
+            this.btnTest.Text = "Load Event";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // frmEventFullView
             // 

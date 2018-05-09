@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjectFinalExam1
 {
-    public partial class ManageEvents : Form
+    public partial class EventManager : Form
     {
         //Test commit.
-        public ManageEvents()
+        public EventManager()
         {
             InitializeComponent();
         }
@@ -40,10 +40,31 @@ namespace ProjectFinalExam1
             this.Hide();
         }
 
-      //  private void btn3_Click(object sender, EventArgs e)
-      //  {
-       //     new EditEvent().Show();
-      //      this.Hide();
-      //  }
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            new frmEventEdit().Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //  private void btn3_Click(object sender, EventArgs e)
+        //  {
+        //     new EditEvent().Show();
+        //      this.Hide();
+        //  }
     }
 }

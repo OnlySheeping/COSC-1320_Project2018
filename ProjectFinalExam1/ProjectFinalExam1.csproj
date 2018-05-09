@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEvent.cs">
+    <Compile Include="CreateNewEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEvent.Designer.cs">
-      <DependentUpon>AddEvent.cs</DependentUpon>
+    <Compile Include="CreateNewEvent.Designer.cs">
+      <DependentUpon>CreateNewEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEventsToParticipants.cs">
       <SubType>Form</SubType>
@@ -88,11 +88,11 @@
     <Compile Include="EditParticipant.Designer.cs">
       <DependentUpon>EditParticipant.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventDetailView.cs">
+    <Compile Include="EventFullView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventDetailView.Designer.cs">
-      <DependentUpon>EventDetailView.cs</DependentUpon>
+    <Compile Include="EventFullView.Designer.cs">
+      <DependentUpon>EventFullView.cs</DependentUpon>
     </Compile>
     <Compile Include="EventListView.cs">
       <SubType>Form</SubType>
@@ -106,29 +106,23 @@
     <Compile Include="EventTeaserView.Designer.cs">
       <DependentUpon>EventTeaserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListAllEvents.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListAllEvents.Designer.cs">
-      <DependentUpon>ListAllEvents.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogOn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogOn.Designer.cs">
       <DependentUpon>LogOn.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminMenu.cs">
+    <Compile Include="EventAdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMenu.Designer.cs">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
+    <Compile Include="EventAdminMenu.Designer.cs">
+      <DependentUpon>EventAdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageEvents.cs">
+    <Compile Include="EventManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageEvents.Designer.cs">
-      <DependentUpon>ManageEvents.cs</DependentUpon>
+    <Compile Include="EventManager.Designer.cs">
+      <DependentUpon>EventManager.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageParticipants.cs">
       <SubType>Form</SubType>
@@ -159,8 +153,8 @@
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="AddEvent.resx">
-      <DependentUpon>AddEvent.cs</DependentUpon>
+    <EmbeddedResource Include="CreateNewEvent.resx">
+      <DependentUpon>CreateNewEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEventsToParticipants.resx">
       <DependentUpon>AddEventsToParticipants.cs</DependentUpon>
@@ -180,8 +174,8 @@
     <EmbeddedResource Include="EditParticipant.resx">
       <DependentUpon>EditParticipant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventDetailView.resx">
-      <DependentUpon>EventDetailView.cs</DependentUpon>
+    <EmbeddedResource Include="EventFullView.resx">
+      <DependentUpon>EventFullView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventListView.resx">
       <DependentUpon>EventListView.cs</DependentUpon>
@@ -189,17 +183,14 @@
     <EmbeddedResource Include="EventTeaserView.resx">
       <DependentUpon>EventTeaserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListAllEvents.resx">
-      <DependentUpon>ListAllEvents.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LogOn.resx">
       <DependentUpon>LogOn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminMenu.resx">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
+    <EmbeddedResource Include="EventAdminMenu.resx">
+      <DependentUpon>EventAdminMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageEvents.resx">
-      <DependentUpon>ManageEvents.cs</DependentUpon>
+    <EmbeddedResource Include="EventManager.resx">
+      <DependentUpon>EventManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageParticipants.resx">
       <DependentUpon>ManageParticipants.cs</DependentUpon>

@@ -3,7 +3,7 @@
   <Class Name="EventSystem.Event">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAQBAAAmQAAqAAAAICIBAAAiMoAgIAEAACABAMCCIgA=</HashCode>
+      <HashCode>QAQBAAAmQAAqAAAAICIAAAAiMoAgIAEAACABAMCCIgA=</HashCode>
       <FileName>Event.cs</FileName>
     </TypeIdentifier>
   </Class>

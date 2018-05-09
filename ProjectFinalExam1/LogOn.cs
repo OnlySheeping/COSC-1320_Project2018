@@ -53,6 +53,7 @@ namespace ProjectFinalExam1
             int roleID = currentUser.VerifyUserNamePassword(tbUserName.Text, tbPassword.Text);
             string firstName = currentUser.VerifyFirstName(tbUserName.Text);
             string lastName = currentUser.VerifyLastName(tbUserName.Text);
+            //string userName = currentUser.VerifyUserName();
 
             if (roleID == 1)
             {
@@ -64,7 +65,7 @@ namespace ProjectFinalExam1
             else if (roleID == 2)
             {
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                AdminMenu admin = new AdminMenu();
+                EventAdminMenu admin = new EventAdminMenu();
                 admin.Show();
                 Visible = false;
             }

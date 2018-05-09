@@ -27,7 +27,7 @@ namespace ProjectFinalExam1
             List<string> eventInfo = new List<string>();
 
             //bool all = eventInfo.All(x => x.Length > 0);
-            eventInfo = Event.ShowEventDetail(2);
+            //eventInfo = Event.ShowEventDetail(2);
             // MessageBox.Show(all.);
             lbxDetailView.Items.Add("Event Name: " + eventInfo[0]);
             lbxDetailView.Items.Add("Status: " + eventInfo[1]);
@@ -54,19 +54,24 @@ namespace ProjectFinalExam1
 
         }
 
+        private void frmEventFullView_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         // private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
         // {
         //     // Diana Bell added the following statement 5/4/2018
         //     Event teaserView = new Event();
-        //     teaserView.ShowEventsForTeaserView();
+        //     teaserView.GetEventForTeaser();
         // }
 
         // private void Populate()
         // {
         //     //Event teaserView = new Event();
-        //     //teaserView.ShowEventsForTeaserView();
+        //     //teaserView.GetEventForTeaser();
         //     List<Event> partList = new List<Event>();
         //     SqlConnection connection =
         //         new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
@@ -107,7 +112,7 @@ namespace ProjectFinalExam1
         // private void btnPopulate_Click(object sender, EventArgs e)
         // {
         //     //Event teaserView = new Event();
-        //     //teaserView.ShowEventsForTeaserView();
+        //     //teaserView.GetEventForTeaser();
         //     List<Event> partList = new List<Event>();
         //     SqlConnection connection = 
         //         new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");

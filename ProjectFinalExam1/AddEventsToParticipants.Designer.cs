@@ -41,15 +41,15 @@
             // 
             this.cklstbxAddEventsToParticipants.FormattingEnabled = true;
             this.cklstbxAddEventsToParticipants.Location = new System.Drawing.Point(152, 152);
-            this.cklstbxAddEventsToParticipants.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklstbxAddEventsToParticipants.Margin = new System.Windows.Forms.Padding(4);
             this.cklstbxAddEventsToParticipants.Name = "cklstbxAddEventsToParticipants";
-            this.cklstbxAddEventsToParticipants.Size = new System.Drawing.Size(367, 344);
+            this.cklstbxAddEventsToParticipants.Size = new System.Drawing.Size(367, 340);
             this.cklstbxAddEventsToParticipants.TabIndex = 0;
             // 
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(152, 525);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(112, 32);
             this.btnConfirm.TabIndex = 1;
@@ -59,7 +59,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(407, 525);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 32);
             this.btnBack.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.btnReg.Location = new System.Drawing.Point(95, 88);
             this.btnReg.Margin = new System.Windows.Forms.Padding(4);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(112, 32);
+            this.btnReg.Size = new System.Drawing.Size(131, 32);
             this.btnReg.TabIndex = 3;
             this.btnReg.Text = "Registration ";
             this.btnReg.UseVisualStyleBackColor = true;
@@ -93,22 +93,23 @@
             this.btnWaitList.Name = "btnWaitList";
             this.btnWaitList.Size = new System.Drawing.Size(112, 32);
             this.btnWaitList.TabIndex = 5;
-            this.btnWaitList.Text = "Wiatlist";
+            this.btnWaitList.Text = "Waitlist";
             this.btnWaitList.UseVisualStyleBackColor = true;
+            this.btnWaitList.Click += new System.EventHandler(this.btnWaitList_Click);
             // 
             // lblAddEventsPart
             // 
             this.lblAddEventsPart.AutoSize = true;
             this.lblAddEventsPart.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddEventsPart.Location = new System.Drawing.Point(97, 9);
+            this.lblAddEventsPart.Location = new System.Drawing.Point(33, 9);
             this.lblAddEventsPart.Name = "lblAddEventsPart";
-            this.lblAddEventsPart.Size = new System.Drawing.Size(491, 57);
+            this.lblAddEventsPart.Size = new System.Drawing.Size(609, 72);
             this.lblAddEventsPart.TabIndex = 6;
             this.lblAddEventsPart.Text = "Add Events to Participants";
             // 
             // frmAddEventsToParticipants
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 637);
             this.Controls.Add(this.lblAddEventsPart);
@@ -119,7 +120,7 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.cklstbxAddEventsToParticipants);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddEventsToParticipants";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Events To Participants";

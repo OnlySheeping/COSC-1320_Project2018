@@ -47,7 +47,7 @@ namespace EventSystem
             }
         }
 
-        private DateTime startDate
+        private string startDate
         {
             get
             {
@@ -59,7 +59,7 @@ namespace EventSystem
             }
         }
 
-        private DateTime endDate
+        private string endDate
         {
             get
             {
@@ -171,84 +171,46 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
-        public void ShowEventsForTeaserView()
+        public static List<string> GetEventForTeaser()
         {
+            SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
+            conn.Open();
             
-            // This is setup and able to call this method from EventDetailView Form
-            // Method is located in EventDetailView.cs under 
-            //Event teaserView = new Event();
-            //teaserView.ShowEventsForTeaserView();
-            List<Event> partList = new List<Event>();
-            SqlConnection connection = 
-                new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
 
-            SqlCommand command = 
-                new SqlCommand ("SELECT CategoryDescription, EventName " +
-                "FROM dbo.Categories.CategoryID " +
-                "INNER JOIN dbo.Events " +
-                "ON dbo.Categories.CategoryID = dbo.Events.CategoryID " +
-                "ORDER BY CategoryDescription ASC, EventName ASC;", connection);
-
-            SqlDataReader reader;
-            try
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events ORDER BY EventName ASC", conn))
             {
-                connection.Open();
-                reader = command.ExecuteReader();
+                List<string> teaserEvents = new List<string>();
+                SqlDataReader reader = command.ExecuteReader(); 
+                //if (reader.HasRows)
+
                 while (reader.Read())
                 {
-                    partList.Add(new Event()
-                    {
-                        CategoryDescription = reader.GetString(reader.GetOrdinal("CategoryDescription")),
-                        EventName = reader.GetString(reader.GetOrdinal("EventName"))
-                    });
+                    string eventName = reader.GetString(reader.GetOrdinal("EventName"));
+                    string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
+                    string status = reader.GetString(reader.GetOrdinal("Status"));
 
+                    teaserEvents.Add(eventName + " | " + eventDescription + " | " + status);
                 }
-                //}
-                reader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                throw;
+                return teaserEvents;
+                
             }
         }
-
-
 
         public void ShowEventsForListView()
         {
             throw new System.NotImplementedException();
         }
 
-        public static List<string> ShowEventDetail(int theEventID)
+        public static List<string> ShowEventDetail(string theEventName)
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");
             conn.Open();
 
-            //throw new System.NotImplementedException();
-            //      SELECT TOP 1[EventID]
-            //,[EventName]
-            //,[Status]
-            //,[EventDescription]
-            //,[StartDate]
-            //,[EndDate]
-            //,[StartTime]
-            //,[EndTime]
-            //,[EventNotes]
-            //,[AgeRequirement]
-            //, CategoryID replace with CategoryDescription - table 
-            //,[Private]
-            //,[Closed]
-            //,[Location]
-            //,[MaxAttendees]
-            //  FROM[Project1].[dbo].[Events]
-
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventID = @eventID", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Events where EventName = @eventID", conn))
             {
                 List<string> eventInfo = new List<string>();
                 // Invoke ExecuteReader method.
-                command.Parameters.AddWithValue("@eventID", theEventID);
+                command.Parameters.AddWithValue("@eventID", theEventName);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -258,7 +220,7 @@ namespace EventSystem
                     {
                         string eventName = reader.GetString(reader.GetOrdinal("EventName"));
                         string status = reader.GetString(reader.GetOrdinal("Status"));
-                        string eventDesciption = reader.GetString(reader.GetOrdinal("EventDescription"));
+                        string eventDescription = reader.GetString(reader.GetOrdinal("EventDescription"));
                         DateTime rawStartDate = reader.GetDateTime(reader.GetOrdinal("StartDate"));
                         DateTime rawEndDate = reader.GetDateTime(reader.GetOrdinal("EndDate"));
                         TimeSpan rawStartTime = reader.GetTimeSpan(reader.GetOrdinal("StartTime"));
@@ -270,11 +232,6 @@ namespace EventSystem
                         short rawClosed = reader.GetByte(reader.GetOrdinal("Closed"));
                         string location = reader.GetString(reader.GetOrdinal("Location"));
                         int rawMaxAttendee = reader.GetInt32(reader.GetOrdinal("MaxAttendees"));
-
-
-
-
-
 
                         string startDate = rawStartDate.ToString();
                         string endDate = rawEndDate.ToString();
@@ -288,7 +245,7 @@ namespace EventSystem
 
                         eventInfo.Add(eventName);
                         eventInfo.Add(status);
-                        eventInfo.Add(eventDesciption);
+                        eventInfo.Add(eventDescription);
                         eventInfo.Add(startDate);
                         eventInfo.Add(endDate);
                         eventInfo.Add(startTime);
