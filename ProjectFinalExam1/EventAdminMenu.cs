@@ -22,7 +22,7 @@ namespace ProjectFinalExam1
 
         private void button4_Click(object sender, EventArgs e)
         { 
-            EventManager admin = new EventManager(theUserName);
+            EventManager admin = new EventManager();
             admin.theUserName = theUserName;
             admin.Show();
             this.Hide();
