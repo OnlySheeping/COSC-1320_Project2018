@@ -28,10 +28,11 @@ namespace ProjectFinalExam1
         private void btnTest_Click(object sender, EventArgs e)
         {
             Event getDetail = new Event();
+            
             List<string> eventInfo = new List<string>();
 
-            //bool all = eventInfo.All(x => x.Length > 0);
-            //eventInfo = Event.ShowEventDetail(2);
+            bool all = eventInfo.All(x => x.Length > 0);
+            eventInfo = Event.ShowEventDetail(2);
             // MessageBox.Show(all.);
             lbxDetailView.Items.Add("Event Name: " + eventInfo[0]);
             lbxDetailView.Items.Add("Status: " + eventInfo[1]);

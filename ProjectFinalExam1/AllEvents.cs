@@ -11,20 +11,22 @@ using EventSystem;
 
 namespace ProjectFinalExam1
 {
-    public partial class EventListView : Form
+    public partial class AllEvents : Form
     {
         public string theUserName { get; set; }
-        public EventListView()
+        public AllEvents()
         {
             InitializeComponent();
         }
-        public EventListView(string theUserName)
+        public AllEvents(string theUserName)
         {
             InitializeComponent();
         }
 
         private void EventListView_Load(object sender, EventArgs e)
         {
+            this.Text = theUserName + " - All Events";
+
             Event teaserView = new Event();
             List<string> eventsTeaser = new List<string>();
             //Make list equal to method return value
@@ -53,7 +55,15 @@ namespace ProjectFinalExam1
 
         private void btnFullView_Click(object sender, EventArgs e)
         {
-            
+            frmEventFullView admin = new frmEventFullView();
+            admin.theUserName = theUserName;
+            admin.Show();
+            this.Hide();
+        }
+
+        private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)

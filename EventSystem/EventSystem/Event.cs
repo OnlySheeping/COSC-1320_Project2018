@@ -171,6 +171,8 @@ namespace EventSystem
         public string Location { get; set; }
         public string MaxAttendees { get; set; }
 
+
+        //  this is the LIST for our TEASER TAB in our "ALL EVENTS" FORM
         public static List<string> GetEventForTeaser()
         {
             SqlConnection conn = new SqlConnection(@"Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;");

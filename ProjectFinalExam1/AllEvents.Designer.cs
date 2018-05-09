@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class EventListView
+    partial class AllEvents
     {
         /// <summary>
         /// Required designer variable.
@@ -170,7 +170,7 @@
             this.clmStatus});
             this.lviViewAllEvents.Location = new System.Drawing.Point(3, 3);
             this.lviViewAllEvents.Name = "lviViewAllEvents";
-            this.lviViewAllEvents.Size = new System.Drawing.Size(550, 368);
+            this.lviViewAllEvents.Size = new System.Drawing.Size(553, 368);
             this.lviViewAllEvents.TabIndex = 0;
             this.lviViewAllEvents.UseCompatibleStateImageBehavior = false;
             this.lviViewAllEvents.View = System.Windows.Forms.View.Details;
@@ -201,15 +201,15 @@
             this.btnFullView.UseVisualStyleBackColor = true;
             this.btnFullView.Click += new System.EventHandler(this.btnFullView_Click);
             // 
-            // EventListView
+            // AllEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 526);
             this.Controls.Add(this.btnFullView);
             this.Controls.Add(this.tabControl1);
-            this.Name = "EventListView";
-            this.Text = "EventListView";
+            this.Name = "AllEvents";
+            this.Text = "All Events";
             this.Load += new System.EventHandler(this.EventListView_Load);
             this.tabControl1.ResumeLayout(false);
             this.tbpListView.ResumeLayout(false);
