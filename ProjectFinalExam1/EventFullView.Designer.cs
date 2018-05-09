@@ -33,7 +33,7 @@
             this.clmDetailFields = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmdetailfields2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnback = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
+            this.btnLoadEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDetailBanner
@@ -85,15 +85,15 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
-            // btnTest
+            // btnLoadEvent
             // 
-            this.btnTest.Location = new System.Drawing.Point(233, 640);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(111, 42);
-            this.btnTest.TabIndex = 16;
-            this.btnTest.Text = "Load Event";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.btnLoadEvent.Location = new System.Drawing.Point(233, 640);
+            this.btnLoadEvent.Name = "btnLoadEvent";
+            this.btnLoadEvent.Size = new System.Drawing.Size(111, 42);
+            this.btnLoadEvent.TabIndex = 16;
+            this.btnLoadEvent.Text = "Load Event";
+            this.btnLoadEvent.UseVisualStyleBackColor = true;
+            this.btnLoadEvent.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // frmEventFullView
             // 
@@ -101,7 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 749);
-            this.Controls.Add(this.btnTest);
+            this.Controls.Add(this.btnLoadEvent);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.lbxDetailView);
             this.Controls.Add(this.lblDetailBanner);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.Label lblDetailBanner;
         private System.Windows.Forms.ListView lbxDetailView;
         private System.Windows.Forms.Button btnback;
-        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Button btnLoadEvent;
         private System.Windows.Forms.ColumnHeader clmDetailFields;
         private System.Windows.Forms.ColumnHeader clmdetailfields2;
     }
