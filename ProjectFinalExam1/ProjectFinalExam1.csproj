@@ -94,11 +94,11 @@
     <Compile Include="EventFullView.Designer.cs">
       <DependentUpon>EventFullView.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventListView.cs">
+    <Compile Include="AllEvents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventListView.Designer.cs">
-      <DependentUpon>EventListView.cs</DependentUpon>
+    <Compile Include="AllEvents.Designer.cs">
+      <DependentUpon>AllEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="EventManager.cs">
       <SubType>Form</SubType>
@@ -143,6 +143,11 @@
       <DependentUpon>ParticipantMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateNewEvent.resx">
       <DependentUpon>CreateNewEvent.cs</DependentUpon>
@@ -168,8 +173,11 @@
     <EmbeddedResource Include="EventFullView.resx">
       <DependentUpon>EventFullView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventListView.resx">
-      <DependentUpon>EventListView.cs</DependentUpon>
+    <EmbeddedResource Include="AllEvents.resx">
+      <DependentUpon>AllEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventManager.resx">
+      <DependentUpon>EventManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogOn.resx">
       <DependentUpon>LogOn.cs</DependentUpon>
@@ -200,6 +208,17 @@
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="Project1DataSet.xsc">
+      <DependentUpon>Project1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Project1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project1DataSet.xss">
+      <DependentUpon>Project1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
