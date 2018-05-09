@@ -46,8 +46,8 @@ namespace ProjectFinalExam1
 
         private void btnListAllEvents_Click(object sender, EventArgs e)
         {
-            new frmEventListView().Show();
-            this.Hide();
+            //new frmEventListView().Show();
+            //this.Hide();
 
         }
     }
