@@ -30,46 +30,137 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpListView = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.clmEventNameOne = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmStatusOne = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEventDescriptionOne = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmStartDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEndDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmStartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEndTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEventNotes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmAgeRequirement = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmCategoryID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmMaxAttendees = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tbpTeaserView = new System.Windows.Forms.TabPage();
             this.lviViewAllEvents = new System.Windows.Forms.ListView();
             this.clmEventName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnFullView = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tbpListView.SuspendLayout();
+            this.tbpTeaserView.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tbpListView);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tbpTeaserView);
             this.tabControl1.Location = new System.Drawing.Point(12, 89);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(805, 397);
+            this.tabControl1.Size = new System.Drawing.Size(567, 397);
             this.tabControl1.TabIndex = 0;
             // 
             // tbpListView
             // 
+            this.tbpListView.Controls.Add(this.listView1);
             this.tbpListView.Location = new System.Drawing.Point(4, 22);
             this.tbpListView.Name = "tbpListView";
             this.tbpListView.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpListView.Size = new System.Drawing.Size(797, 371);
+            this.tbpListView.Size = new System.Drawing.Size(559, 371);
             this.tbpListView.TabIndex = 0;
-            this.tbpListView.Text = "tabPage1";
+            this.tbpListView.Text = "List View";
             this.tbpListView.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // listView1
             // 
-            this.tabPage2.Controls.Add(this.lviViewAllEvents);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(797, 371);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmEventNameOne,
+            this.clmStatusOne,
+            this.clmEventDescriptionOne,
+            this.clmStartDate,
+            this.clmEndDate,
+            this.clmStartTime,
+            this.clmEndTime,
+            this.clmEventNotes,
+            this.clmAgeRequirement,
+            this.clmCategoryID,
+            this.clmLocation,
+            this.clmMaxAttendees});
+            this.listView1.Location = new System.Drawing.Point(0, -3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(561, 374);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // clmEventNameOne
+            // 
+            this.clmEventNameOne.Text = "EventName";
+            this.clmEventNameOne.Width = 82;
+            // 
+            // clmStatusOne
+            // 
+            this.clmStatusOne.Text = "Status";
+            this.clmStatusOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // clmEventDescriptionOne
+            // 
+            this.clmEventDescriptionOne.Text = "Event Description";
+            // 
+            // clmStartDate
+            // 
+            this.clmStartDate.Text = "Start Date";
+            // 
+            // clmEndDate
+            // 
+            this.clmEndDate.Text = "End Date";
+            // 
+            // clmStartTime
+            // 
+            this.clmStartTime.Text = "Start Time";
+            // 
+            // clmEndTime
+            // 
+            this.clmEndTime.DisplayIndex = 7;
+            this.clmEndTime.Text = "End TIme";
+            // 
+            // clmEventNotes
+            // 
+            this.clmEventNotes.DisplayIndex = 8;
+            this.clmEventNotes.Text = "Event Notes";
+            // 
+            // clmAgeRequirement
+            // 
+            this.clmAgeRequirement.DisplayIndex = 9;
+            this.clmAgeRequirement.Text = "Age Requirement";
+            // 
+            // clmCategoryID
+            // 
+            this.clmCategoryID.DisplayIndex = 6;
+            this.clmCategoryID.Text = "Category";
+            // 
+            // clmLocation
+            // 
+            this.clmLocation.Text = "Location";
+            // 
+            // clmMaxAttendees
+            // 
+            this.clmMaxAttendees.Text = "Max Attendees";
+            // 
+            // tbpTeaserView
+            // 
+            this.tbpTeaserView.Controls.Add(this.lviViewAllEvents);
+            this.tbpTeaserView.Location = new System.Drawing.Point(4, 22);
+            this.tbpTeaserView.Name = "tbpTeaserView";
+            this.tbpTeaserView.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpTeaserView.Size = new System.Drawing.Size(559, 371);
+            this.tbpTeaserView.TabIndex = 1;
+            this.tbpTeaserView.Text = "Teaser View";
+            this.tbpTeaserView.UseVisualStyleBackColor = true;
             // 
             // lviViewAllEvents
             // 
@@ -113,14 +204,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 526);
+            this.ClientSize = new System.Drawing.Size(584, 526);
             this.Controls.Add(this.btnFullView);
             this.Controls.Add(this.tabControl1);
             this.Name = "EventListView";
             this.Text = "EventListView";
             this.Load += new System.EventHandler(this.EventListView_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tbpListView.ResumeLayout(false);
+            this.tbpTeaserView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -129,11 +221,24 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tbpListView;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbpTeaserView;
         private System.Windows.Forms.ListView lviViewAllEvents;
         private System.Windows.Forms.ColumnHeader clmEventName;
         private System.Windows.Forms.ColumnHeader clmDescription;
         private System.Windows.Forms.ColumnHeader clmStatus;
         private System.Windows.Forms.Button btnFullView;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader clmEventNameOne;
+        private System.Windows.Forms.ColumnHeader clmStatusOne;
+        private System.Windows.Forms.ColumnHeader clmEventDescriptionOne;
+        private System.Windows.Forms.ColumnHeader clmStartDate;
+        private System.Windows.Forms.ColumnHeader clmEndDate;
+        private System.Windows.Forms.ColumnHeader clmStartTime;
+        private System.Windows.Forms.ColumnHeader clmEndTime;
+        private System.Windows.Forms.ColumnHeader clmEventNotes;
+        private System.Windows.Forms.ColumnHeader clmAgeRequirement;
+        private System.Windows.Forms.ColumnHeader clmCategoryID;
+        private System.Windows.Forms.ColumnHeader clmLocation;
+        private System.Windows.Forms.ColumnHeader clmMaxAttendees;
     }
 }

@@ -25,6 +25,8 @@ namespace ProjectFinalExam1
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'project1DataSet.Events' table. You can move, or remove it, as needed.
+            this.eventsTableAdapter.Fill(this.project1DataSet.Events);
 
         }
 
@@ -57,6 +59,11 @@ namespace ProjectFinalExam1
         }
 
         private void btn2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
