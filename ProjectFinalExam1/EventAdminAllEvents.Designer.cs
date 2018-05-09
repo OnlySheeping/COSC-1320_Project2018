@@ -1,6 +1,6 @@
 ﻿namespace ProjectFinalExam1
 {
-    partial class AllEvents
+    partial class EventAdminAllEvents
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpListView = new System.Windows.Forms.TabPage();
             this.lviListView = new System.Windows.Forms.ListView();
@@ -58,11 +68,11 @@
             // 
             this.tabControl1.Controls.Add(this.tbpListView);
             this.tabControl1.Controls.Add(this.tbpTeaserView);
-            this.tabControl1.Location = new System.Drawing.Point(12, 89);
+            this.tabControl1.Location = new System.Drawing.Point(12, 88);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(567, 397);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 1;
             // 
             // tbpListView
             // 
@@ -90,9 +100,21 @@
             this.clmCategoryID,
             this.clmLocation,
             this.clmMaxAttendees});
-            this.lviListView.Location = new System.Drawing.Point(0, -3);
+            this.lviListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lviListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem21,
+            listViewItem22,
+            listViewItem23,
+            listViewItem24,
+            listViewItem25,
+            listViewItem26,
+            listViewItem27,
+            listViewItem28,
+            listViewItem29,
+            listViewItem30});
+            this.lviListView.Location = new System.Drawing.Point(3, 3);
             this.lviListView.Name = "lviListView";
-            this.lviListView.Size = new System.Drawing.Size(561, 374);
+            this.lviListView.Size = new System.Drawing.Size(553, 365);
             this.lviListView.TabIndex = 0;
             this.lviListView.UseCompatibleStateImageBehavior = false;
             this.lviListView.View = System.Windows.Forms.View.Details;
@@ -168,7 +190,7 @@
             this.clmEventName,
             this.clmDescription,
             this.clmStatus});
-            this.lviViewAllEvents.Location = new System.Drawing.Point(3, 3);
+            this.lviViewAllEvents.Location = new System.Drawing.Point(0, 0);
             this.lviViewAllEvents.Name = "lviViewAllEvents";
             this.lviViewAllEvents.Size = new System.Drawing.Size(553, 368);
             this.lviViewAllEvents.TabIndex = 0;

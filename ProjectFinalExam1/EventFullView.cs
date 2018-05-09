@@ -25,10 +25,6 @@ namespace ProjectFinalExam1
         {
             InitializeComponent();
         }
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lvDetailView_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -49,6 +45,14 @@ namespace ProjectFinalExam1
         private void btnLoadEvent_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            ParticipantAllEvents participant = new ParticipantAllEvents();
+            participant.theUserName = theUserName;
+            participant.Show();
+            this.Hide();
         }
 
 
