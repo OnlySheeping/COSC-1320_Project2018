@@ -17,7 +17,10 @@ namespace ProjectFinalExam1
         {
             InitializeComponent();
         }
-
+        public ParticipantMenu(string theUserName)
+        {
+            InitializeComponent();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -52,6 +55,11 @@ namespace ProjectFinalExam1
             this.Hide();
             //string username = currentUser.VerifyUserName();
             //MessageBox.Show(username);
+
+        }
+
+        private void ParticipantMenu_Load(object sender, EventArgs e)
+        {
 
         }
     }

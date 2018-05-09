@@ -21,7 +21,6 @@ namespace ProjectFinalExam1
             InitializeComponent();
             tbPassword.PasswordChar = '*';
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -50,19 +49,20 @@ namespace ProjectFinalExam1
         private void button1_Click(object sender, EventArgs e)
         {
             EventSystem.CurrentUser currentUser = new EventSystem.CurrentUser();
+            string firstName = currentUser.GetFirstName(tbUserName.Text);
+            string lastName = currentUser.GetLastName(tbUserName.Text);
+            string userName = currentUser.GetUserName(tbUserName.Text);
             int roleID = currentUser.VerifyUserNamePassword(tbUserName.Text, tbPassword.Text);
-            string firstName = currentUser.VerifyFirstName(tbUserName.Text);
-            string lastName = currentUser.VerifyLastName(tbUserName.Text);
-            //string userName = currentUser.VerifyUserName();
 
-            if (roleID == 1)
+
+            if (currentUser.roleID == 1)
             {
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
-                ParticipantMenu participant = new ParticipantMenu();
+                ParticipantMenu participant = new ParticipantMenu(userName);
                 participant.Show();
                 Visible = false;
             }
-            else if (roleID == 2)
+            else if (currentUser.roleID == 2)
             {
                 MessageBox.Show("Logon Successful" + Environment.NewLine + "Welcome" + " " + firstName + " " + lastName);
                 EventAdminMenu admin = new EventAdminMenu();
