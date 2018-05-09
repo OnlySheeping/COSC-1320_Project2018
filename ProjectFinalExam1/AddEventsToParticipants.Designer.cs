@@ -104,6 +104,7 @@
             // lblAddEventsPart
             // 
             this.lblAddEventsPart.AutoSize = true;
+            this.lblAddEventsPart.BackColor = System.Drawing.Color.Transparent;
             this.lblAddEventsPart.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddEventsPart.Location = new System.Drawing.Point(136, 10);
             this.lblAddEventsPart.Name = "lblAddEventsPart";

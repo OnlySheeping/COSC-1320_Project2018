@@ -59,8 +59,9 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlHeader.BackColor = System.Drawing.Color.Transparent;
             this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlHeader.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlHeader.Location = new System.Drawing.Point(12, 12);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(763, 100);
