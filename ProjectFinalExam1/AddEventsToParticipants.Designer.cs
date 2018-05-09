@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEventsToParticipants));
             this.cklstbxAddEventsToParticipants = new System.Windows.Forms.CheckedListBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.btnPrivate = new System.Windows.Forms.Button();
             this.btnWaitList = new System.Windows.Forms.Button();
             this.lblAddEventsPart = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cklstbxAddEventsToParticipants
@@ -48,22 +51,23 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(152, 525);
+            this.btnConfirm.Location = new System.Drawing.Point(210, 520);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(112, 32);
+            this.btnConfirm.Size = new System.Drawing.Size(115, 51);
             this.btnConfirm.TabIndex = 1;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(407, 525);
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Location = new System.Drawing.Point(393, 520);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(112, 32);
+            this.btnBack.Size = new System.Drawing.Size(112, 51);
             this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnReg
@@ -101,17 +105,29 @@
             // 
             this.lblAddEventsPart.AutoSize = true;
             this.lblAddEventsPart.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddEventsPart.Location = new System.Drawing.Point(33, 9);
+            this.lblAddEventsPart.Location = new System.Drawing.Point(136, 10);
             this.lblAddEventsPart.Name = "lblAddEventsPart";
-            this.lblAddEventsPart.Size = new System.Drawing.Size(609, 72);
+            this.lblAddEventsPart.Size = new System.Drawing.Size(491, 57);
             this.lblAddEventsPart.TabIndex = 6;
             this.lblAddEventsPart.Text = "Add Events to Participants";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 68);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmAddEventsToParticipants
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 637);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAddEventsPart);
             this.Controls.Add(this.btnWaitList);
             this.Controls.Add(this.btnPrivate);
@@ -119,12 +135,13 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.cklstbxAddEventsToParticipants);
-            this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddEventsToParticipants";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Events To Participants";
             this.Load += new System.EventHandler(this.frmAddEventsToParticipants_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +156,6 @@
         private System.Windows.Forms.Button btnPrivate;
         private System.Windows.Forms.Button btnWaitList;
         private System.Windows.Forms.Label lblAddEventsPart;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
