@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventFullView));
             this.lblDetailBanner = new System.Windows.Forms.Label();
             this.lbxDetailView = new System.Windows.Forms.ListView();
             this.clmDetailFields = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmdetailfields2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnback = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
+            this.btnLoadEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDetailBanner
@@ -57,6 +56,7 @@
             this.clmDetailFields,
             this.clmdetailfields2});
             this.lbxDetailView.GridLines = true;
+            this.lbxDetailView.HideSelection = false;
             this.lbxDetailView.Location = new System.Drawing.Point(116, 129);
             this.lbxDetailView.MultiSelect = false;
             this.lbxDetailView.Name = "lbxDetailView";
@@ -85,29 +85,27 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
-            // btnTest
+            // btnLoadEvent
             // 
-            this.btnTest.Location = new System.Drawing.Point(233, 640);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(111, 42);
-            this.btnTest.TabIndex = 16;
-            this.btnTest.Text = "Load Event";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.btnLoadEvent.Location = new System.Drawing.Point(233, 640);
+            this.btnLoadEvent.Name = "btnLoadEvent";
+            this.btnLoadEvent.Size = new System.Drawing.Size(111, 42);
+            this.btnLoadEvent.TabIndex = 16;
+            this.btnLoadEvent.Text = "Load Event";
+            this.btnLoadEvent.UseVisualStyleBackColor = true;
+            this.btnLoadEvent.Click += new System.EventHandler(this.btnLoadEvent_Click);
             // 
             // frmEventFullView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 749);
-            this.Controls.Add(this.btnTest);
+            this.Controls.Add(this.btnLoadEvent);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.lbxDetailView);
             this.Controls.Add(this.lblDetailBanner);
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEventFullView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -121,7 +119,7 @@
         private System.Windows.Forms.Label lblDetailBanner;
         private System.Windows.Forms.ListView lbxDetailView;
         private System.Windows.Forms.Button btnback;
-        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Button btnLoadEvent;
         private System.Windows.Forms.ColumnHeader clmDetailFields;
         private System.Windows.Forms.ColumnHeader clmdetailfields2;
     }

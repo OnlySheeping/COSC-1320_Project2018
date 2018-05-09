@@ -38,5 +38,15 @@ namespace ProjectFinalExam1
         {
             this.Text = theUserName + "'s Events";
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

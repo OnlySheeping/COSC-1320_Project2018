@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParticipantFullView));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.project1DataSet = new ProjectFinalExam1.Project1DataSet();
+            this.eventUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.event_UsersTableAdapter = new ProjectFinalExam1.Project1DataSetTableAdapters.Event_UsersTableAdapter();
+            this.lviViewAllParticipants = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.project1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -63,6 +70,28 @@
             this.label2.UseWaitCursor = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // project1DataSet
+            // 
+            this.project1DataSet.DataSetName = "Project1DataSet";
+            this.project1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eventUsersBindingSource
+            // 
+            this.eventUsersBindingSource.DataMember = "Event_Users";
+            this.eventUsersBindingSource.DataSource = this.project1DataSet;
+            // 
+            // event_UsersTableAdapter
+            // 
+            this.event_UsersTableAdapter.ClearBeforeFill = true;
+            // 
+            // lviViewAllParticipants
+            // 
+            this.lviViewAllParticipants.Location = new System.Drawing.Point(128, 225);
+            this.lviViewAllParticipants.Name = "lviViewAllParticipants";
+            this.lviViewAllParticipants.Size = new System.Drawing.Size(549, 249);
+            this.lviViewAllParticipants.TabIndex = 17;
+            this.lviViewAllParticipants.UseCompatibleStateImageBehavior = false;
+            // 
             // frmParticipantFullView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -70,6 +99,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(824, 520);
+            this.Controls.Add(this.lviViewAllParticipants);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,6 +110,8 @@
             this.Text = "Participant Full View";
             this.Load += new System.EventHandler(this.frmParticipantFullView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.project1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -88,5 +120,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private ProjectFinalExam1.Project1DataSet project1DataSet;
+        private System.Windows.Forms.BindingSource eventUsersBindingSource;
+        private ProjectFinalExam1.Project1DataSetTableAdapters.Event_UsersTableAdapter event_UsersTableAdapter;
+        private System.Windows.Forms.ListView lviViewAllParticipants;
     }
 }

@@ -25,6 +25,8 @@ namespace ProjectFinalExam1
 
         private void EventListView_Load(object sender, EventArgs e)
         {
+            this.Text = theUserName + " - All Events";
+
             Event teaserView = new Event();
             List<string> eventsTeaser = new List<string>();
             //Make list equal to method return value
@@ -57,6 +59,16 @@ namespace ProjectFinalExam1
             admin.theUserName = theUserName;
             admin.Show();
             this.Hide();
+        }
+
+        private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

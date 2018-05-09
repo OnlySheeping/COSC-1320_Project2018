@@ -46,5 +46,10 @@ namespace ProjectFinalExam1
         {
             this.Text = theUserName + " - Event Admin Menu";
         }
+
+        private void txbEventEditNme_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
