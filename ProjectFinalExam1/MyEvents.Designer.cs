@@ -44,10 +44,9 @@
             // lbMyEvents
             // 
             this.lbMyEvents.FormattingEnabled = true;
-            this.lbMyEvents.ItemHeight = 14;
-            this.lbMyEvents.Location = new System.Drawing.Point(38, 263);
+            this.lbMyEvents.Location = new System.Drawing.Point(38, 239);
             this.lbMyEvents.Name = "lbMyEvents";
-            this.lbMyEvents.Size = new System.Drawing.Size(738, 200);
+            this.lbMyEvents.Size = new System.Drawing.Size(738, 199);
             this.lbMyEvents.TabIndex = 0;
             // 
             // pictureBox1
@@ -78,8 +77,8 @@
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(618, 512);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(618, 518);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(158, 32);
             this.btnBack.TabIndex = 15;
@@ -91,7 +90,7 @@
             // 
             this.txbSearchEvents.Location = new System.Drawing.Point(235, 213);
             this.txbSearchEvents.Name = "txbSearchEvents";
-            this.txbSearchEvents.Size = new System.Drawing.Size(362, 19);
+            this.txbSearchEvents.Size = new System.Drawing.Size(362, 20);
             this.txbSearchEvents.TabIndex = 16;
             // 
             // lblSearch
@@ -100,14 +99,14 @@
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Location = new System.Drawing.Point(144, 218);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(72, 14);
+            this.lblSearch.Size = new System.Drawing.Size(80, 13);
             this.lblSearch.TabIndex = 17;
             this.lblSearch.Text = "Search Events ";
             // 
             // btnFullView
             // 
-            this.btnFullView.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFullView.Location = new System.Drawing.Point(38, 512);
+            this.btnFullView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFullView.Location = new System.Drawing.Point(38, 518);
             this.btnFullView.Name = "btnFullView";
             this.btnFullView.Size = new System.Drawing.Size(158, 32);
             this.btnFullView.TabIndex = 21;
@@ -117,8 +116,8 @@
             // 
             // btnTeaser
             // 
-            this.btnTeaser.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeaser.Location = new System.Drawing.Point(221, 512);
+            this.btnTeaser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeaser.Location = new System.Drawing.Point(439, 518);
             this.btnTeaser.Name = "btnTeaser";
             this.btnTeaser.Size = new System.Drawing.Size(158, 32);
             this.btnTeaser.TabIndex = 22;
@@ -127,17 +126,18 @@
             // 
             // btnList
             // 
-            this.btnList.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.Location = new System.Drawing.Point(419, 512);
+            this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Location = new System.Drawing.Point(244, 518);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(158, 32);
             this.btnList.TabIndex = 23;
             this.btnList.Text = "List View";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // MyEvents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -151,7 +151,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbMyEvents);
-            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MyEvents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

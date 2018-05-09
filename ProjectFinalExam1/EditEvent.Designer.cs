@@ -400,6 +400,7 @@
             this.txbEventEditNme.Name = "txbEventEditNme";
             this.txbEventEditNme.Size = new System.Drawing.Size(367, 63);
             this.txbEventEditNme.TabIndex = 40;
+            this.txbEventEditNme.TextChanged += new System.EventHandler(this.txbEventEditNme_TextChanged);
             // 
             // btnUpdate
             // 

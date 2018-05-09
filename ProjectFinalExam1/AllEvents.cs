@@ -65,5 +65,10 @@ namespace ProjectFinalExam1
         {
 
         }
+
+        private void lviViewAllEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -101,11 +101,12 @@
             // 
             // btnDeleteUsers
             // 
-            this.btnDeleteUsers.Location = new System.Drawing.Point(240, 375);
+            this.btnDeleteUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteUsers.BackgroundImage")));
+            this.btnDeleteUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteUsers.Location = new System.Drawing.Point(296, 335);
             this.btnDeleteUsers.Name = "btnDeleteUsers";
-            this.btnDeleteUsers.Size = new System.Drawing.Size(75, 25);
+            this.btnDeleteUsers.Size = new System.Drawing.Size(75, 60);
             this.btnDeleteUsers.TabIndex = 7;
-            this.btnDeleteUsers.Text = "DELETE";
             this.btnDeleteUsers.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
